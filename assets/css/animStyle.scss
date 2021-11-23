@@ -1,0 +1,242 @@
+@font-face {
+    font-family: "HelveticaNeueLTStd";
+    src: url("../fonts/HelveticaNeueLTStd-Th.woff") format("woff"),
+    url("../fonts/HelveticaNeueLTStd-Th.woff2") format("woff2");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "HelveticaNeueLTStd";
+    src: url("../fonts/HelveticaNeueLTStd-ThIt.woff") format("woff"),
+    url("../fonts/HelveticaNeueLTStd-ThIt.woff2") format("woff2");
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: "HelveticaNeueLTStd";
+    src: url("../fonts/HelveticaNeueLTStd-LtIt.woff") format("woff"),
+    url("../fonts/HelveticaNeueLTStd-LtIt.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: "HelveticaNeueLTStd";
+    src: url("../fonts/HelveticaNeueLTStd-Hv.woff") format("woff"),
+    url("../fonts/HelveticaNeueLTStd-Hv.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "HelveticaNeueLTStd";
+    src: url("../fonts/HelveticaNeueLTStd-Bd.woff") format("woff"),
+    url("../fonts/HelveticaNeueLTStd-Bd.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+/**********************/
+@font-face {
+    font-family: "HelveticaNeueLTStd-Th";
+    src: url("../fonts/HelveticaNeueLTStd-Th.woff") format("woff"),
+    url("../fonts/HelveticaNeueLTStd-Th.woff2") format("woff2");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "HelveticaNeueLTStd-ThIt";
+    src: url("../fonts/HelveticaNeueLTStd-ThIt.woff") format("woff"),
+    url("../fonts/HelveticaNeueLTStd-ThIt.woff2") format("woff2");
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: "HelveticaNeueLTStd-LtIt";
+    src: url("../fonts/HelveticaNeueLTStd-LtIt.woff") format("woff"),
+    url("../fonts/HelveticaNeueLTStd-LtIt.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: "HelveticaNeueLTStd-Hv";
+    src: url("../fonts/HelveticaNeueLTStd-Hv.woff") format("woff"),
+    url("../fonts/HelveticaNeueLTStd-Hv.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "HelveticaNeueLTStd-Bd";
+    src: url("../fonts/HelveticaNeueLTStd-Bd.woff") format("woff"),
+    url("../fonts/HelveticaNeueLTStd-Bd.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+.gs-dev-tools{
+    z-index: 100;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    //background: aquamarine;
+    font-family: "Roboto",sans-serif;
+}
+h1,h2,h3,h4,h5,p,span{
+    padding: 0;
+    margin: 0;
+}
+svg{
+    width: 100%;
+    height: 100%;
+}
+foreignObject{
+    overflow: initial;
+}
+.btnVersion{
+    position: relative;
+    z-index: 20;
+}
+.pointBg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+
+
+    svg{
+        width: 100%;
+        height: 100%;
+    }
+}
+.main_animation_container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    opacity: 0;
+    //perspective: 800px;
+    //perspective-origin: 50% 50%;
+    //background:  rgba(0,192,241,1);
+    background: rgb(0,31,72);
+    //background: linear-gradient(110deg, rgba(0,31,72,1) 10%, rgba(0,192,241,1) 10%, rgba(0,192,241,1) 90%, rgba(165,205,56,1) 90%);
+
+    *{
+        perspective: 800px;
+        perspective-origin: 50% 50%;
+    }
+
+    .bgColor{
+        opacity: 0;
+        visibility: hidden;
+    }
+    .moveElements > *{
+        will-change: transform;
+    }
+
+}
+.secAnim{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    //h2{
+    //    font-size: 58px;
+    //    color: white;
+    //    line-height: 1.5em;
+    //}
+    //p{
+    //    font-size: 24px;
+    //    color: white;
+    //    //line-height: 1.5em;
+    //}
+
+
+
+    .container{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 5% 10%;
+    }
+
+    .imgCon,
+    .imgBg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        img{
+            width: 100%;
+            height: auto;
+            //object-fit: cover;
+        }
+        svg{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .textContent{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+
+    }
+    //text{
+    //    opacity: 0;
+    //    overflow: hidden;
+    //}
+}
+.dearPlusRewards{
+    .text1 {
+        .textContent {
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+        p {
+            line-height: 1em;
+            font-family: 'HelveticaNeueLTStd-ThIt';
+            font-size: 336.497px;
+            color: #002C4F;
+        }
+    }
+
+    .text2 p{
+        text-align: left;
+        align-items: flex-start;
+        line-height: 1em;
+        font-family: "HelveticaNeueLTStd-Bd";
+        letter-spacing:-1;
+        font-size: 151.0856px;
+        color: #012B48;
+    }
+}
+
+

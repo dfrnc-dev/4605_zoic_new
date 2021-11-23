@@ -99,19 +99,43 @@ h1,h2,h3,h4,h5,p,span{
     padding: 0;
     margin: 0;
 }
+svg{
+    width: 100%;
+    height: 100%;
+}
 foreignObject{
     overflow: initial;
 }
-.main_animation_container{
+.btnVersion{
     position: relative;
+    z-index: 20;
+}
+.pointBg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+
+
+    svg{
+        width: 100%;
+        height: 100%;
+    }
+}
+.main_animation_container{
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
     overflow: hidden;
     opacity: 0;
     //perspective: 800px;
     //perspective-origin: 50% 50%;
-    background:  rgba(0,192,241,1);
-    //background: rgb(0,31,72);
+    //background:  rgba(0,192,241,1);
+    background: rgb(0,31,72);
     //background: linear-gradient(110deg, rgba(0,31,72,1) 10%, rgba(0,192,241,1) 10%, rgba(0,192,241,1) 90%, rgba(165,205,56,1) 90%);
 
     *{

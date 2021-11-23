@@ -52,27 +52,6 @@ const anim = () => {
     function getRandomInt(max) {
         return Math.floor(Math.random() * max);
     }
-    // let arrImgLogo = [
-    //     [
-    //         "assets/img/TestProducts/drione.png",
-    //         "assets/img/TestProducts/fertilizer.png",
-    //         "assets/img/TestProducts/fungicide.png",
-    //         "assets/img/TestProducts/herbicide.png",
-    //     ],
-    //     [
-    //         "assets/img/TestProducts/insect2.png",
-    //         "assets/img/TestProducts/pesticide.png",
-    //         "assets/img/TestProducts/roundup.png",
-    //         "assets/img/TestProducts/drione.png",
-    //     ],
-    //     [
-    //         "assets/img/TestProducts/herbicide.png",
-    //         "assets/img/TestProducts/roundup.png",
-    //         "assets/img/TestProducts/insect2.png",
-    //         "assets/img/TestProducts/pesticide.png",
-    //     ]
-    // ]
-    // let laptopImageUrl = "assets/img/TestProducts/6_logos.png";
     let arrImgLogo = [
         [
             "assets/img/TestProducts2/asgrow.png",
@@ -110,6 +89,45 @@ const anim = () => {
         document.querySelector("#laptopImage image").setAttribute("xlink:href",laptopImageUrl)
     }
 
+    /**
+     * anim for bg circle and line
+     */
+    document.querySelectorAll(".contForPoint").forEach(function (elem) {
+
+        elem.querySelectorAll(".contForPointA").forEach(function (child) {
+            child.style.display = "none"
+            elem.innerHTML += `
+                <use xlink:href="#forUseA" class="dotAnim" x="${child.getAttribute("x")}" y="${child.getAttribute("y")}"  width="${child.getAttribute("width")}" height="${child.getAttribute("height")}" />
+            `;
+        })
+
+        elem.querySelectorAll(".contForPointB").forEach(function (child) {
+            child.style.display = "none"
+            elem.innerHTML += `
+                <use xlink:href="#forUseA" class="dotAnim" x="${child.getAttribute("x")}" y="${child.getAttribute("y")}"  width="${child.getAttribute("width")}" height="${child.getAttribute("height")}" />
+            `;
+        })
+
+    })
+
+    gsap.to(".dots > *",{duration:1,scale:1.5,delay:-10,transformOrigin:"50% 50%",ease:"sine.inOut", stagger:{each:0.1,repeat:-1,yoyo:true}})
+    gsap.to(".lines > *",{duration:0.5,strokeDashoffset: 24,delay:-10,transformOrigin:"50% 50%",ease:"none", stagger:{each:0.1,repeat:-1}})
+
+    gsap.to(".rectBgAnim > *:nth-child(1)",{duration:25,delay:-5,rotation:-360,transformOrigin:"50% 50%",ease:"none", stagger:{each:0.1,repeat:-1}})
+    gsap.to(".rectBgAnim > *:nth-child(1)",{duration:22,delay:-5,scaleX:-1,transformOrigin:"50% 50%",ease:"none",repeat:-1,yoyo:true})
+
+    gsap.to(".rectBgAnim > *:nth-child(2)",{duration:25,delay:-15,rotation:360,transformOrigin:"50% 50%",ease:"none", stagger:{each:0.1,repeat:-1}})
+    gsap.to(".rectBgAnim > *:nth-child(2)",{duration:22,delay:-15,scaleX:-1,transformOrigin:"50% 50%",ease:"none",repeat:-1,yoyo:true})
+
+    gsap.to(".rectBgAnim > *:nth-child(3)",{duration:22,delay:-20,rotation:-360,transformOrigin:"50% 50%",ease:"none", stagger:{each:0.1,repeat:-1}})
+    gsap.to(".rectBgAnim > *:nth-child(3)",{duration:25,delay:-20,scaleX:-1,transformOrigin:"50% 50%",ease:"none",repeat:-1,yoyo:true})
+
+    gsap.to(".rectBgAnim > *:nth-child(4)",{duration:22,rotation:360,transformOrigin:"50% 50%",ease:"none", stagger:{each:0.1,repeat:-1}})
+    gsap.to(".rectBgAnim > *:nth-child(4)",{duration:25,scaleX:-1,transformOrigin:"50% 50%",ease:"none",repeat:-1,yoyo:true})
+
+
+
+
 
 
     // let pointArr = gsap.utils.toArray("#gPointScena2i1 > *:not(line),#gPointScena2i2 *:not(line)")
@@ -142,11 +160,11 @@ const anim = () => {
     let moveElements = []
     document.querySelectorAll(".secAnim").forEach(function (elem,index,arr) {
         elem.style.zIndex = arr.length - index;
-        console.log(index, elem);
+        // console.log(index, elem);
         moveElements.push(gsap.utils.toArray(".secAnim:nth-child("+(index+1)+") .contentScene .moveElements > * > g, .secAnim:nth-child("+(index+1)+") .bgScene .moveElements > * > g"))
     })
 
-    console.log(moveElements)
+    // console.log(moveElements)
 
     // let pointTlArr = []
     // for (let arr in moveElements) {
@@ -172,17 +190,17 @@ const anim = () => {
 
     function animationScene ( nameScene, typeAnimation){
         if(typeAnimation == 'scale-up-in'){
-            let temBgColor = document.querySelector(`${nameScene} .bgColor`).getAttribute("fill") 
+            let temBgColor = document.querySelector(`${nameScene} .bgColor`).getAttribute("fill")
             return gsap.timeline({paused: true})
                 .set(`${nameScene}`, { autoAlpha: 1 }, (nameScene == '.secAnim-greetings') ? ">" : "<")
                 .to(".main_animation_container",{duration: 2, background:temBgColor,ease:"sine.inOut"},"<")
                 .from(`${nameScene} .lineBG > *`, { duration: 2, autoAlpha: 0, ease: "power4.out", stagger: { each: 0.1, from: "end" } }, "<")
-                .from(`${nameScene} .moveElements > *`,{duration: 2, scale:0.5,autoAlpha:0,transformOrigin:"50% 50%",ease:"power4.inOut",stagger:{each:0.1,from:"end"}},"<")
+                .from(`${nameScene} .moveElements > *`,{duration: 2, scale:0.5,autoAlpha:0,transformOrigin:"50% 50%",ease:"power4.inOut",force3D:false,stagger:{each:0.1,from:"end"}},"<")
                 .from(`${nameScene} .contentScene`, { duration: 4, scale: 0.1,  transformOrigin: "50% 50%", ease: "power4.out" }, "<+1")
         }
         if (typeAnimation == 'scale-up-out') {
             return gsap.timeline({ paused: true })
-                .to(`${nameScene} .moveElements > *`, { duration: 2, scale: 2, transformOrigin: "50% 50%", ease: "power4.inOut", stagger: { each: 0.1, from: "end" } }, )
+                .to(`${nameScene} .moveElements > *`, { duration: 2, scale: 2, transformOrigin: "50% 50%", ease: "power4.inOut",force3D:false, stagger: { each: 0.1, from: "end" } }, )
                 .to(`${nameScene} .lineBG > *`, { duration: 2, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.1, from: "end" } }, "<")
                 .to(`${nameScene} .moveElements > *`, { duration: 0.5, autoAlpha: 0, ease: "none", stagger: { each: 0.1, from: "end" } }, "<+1")
                 .set(`${nameScene}`, { autoAlpha: 0 }, ">")
@@ -193,7 +211,7 @@ const anim = () => {
                 .set(`${nameScene}`, { autoAlpha: 1 }, (nameScene == '.secAnim-greetings') ? ">" : "<")
                 .to(".main_animation_container", { duration: 2, background: temBgColor, ease: "sine.inOut" }, "<")
                 .from(`${nameScene} .lineBG > *`, { duration: 2, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.1, from: "end" } }, "<")
-                .from(`${nameScene} .moveElements > *`, { duration: 2, scale: 2, autoAlpha: 0, transformOrigin: "50% 50%", ease: "power4.inOut", stagger: { each: 0.1, from: "end" } }, "<")
+                .from(`${nameScene} .moveElements > *`, { duration: 2, scale: 2, autoAlpha: 0, transformOrigin: "50% 50%", ease: "power4.inOut", force3D:false, stagger: { each: 0.1, from: "end" } }, "<")
                 .from(`${nameScene} .contentScene`, { duration: 4, scale: 1.3, transformOrigin: "50% 50%", ease: "power4.out" }, "<+1")
         }
         if (typeAnimation == 'scale-down-out') {
@@ -269,7 +287,7 @@ const anim = () => {
         }
     }
 
-   
+
     document.querySelector('.btn1').addEventListener('click', () => {
         stMainTl
             .add(animationScene('.secAnim-greetings', 'scale-up-in').restart())
@@ -451,65 +469,14 @@ const anim = () => {
     gsap.set(".main_animation_container",{opacity:1})
 
     // GSDevTools.create({paused:true,id:"stMainTl",animation:stMainTl,inTime: 0})
- 
+
 }
 setTimeout(()=>{
     anim()
 },2000)
-// console.log(window.location.hostname)
-if(window.location.hostname == "localhost") {
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/greetingsBg copy.svg", '.main_animation_container .secAnim-greetings .imgBg', null)
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/greetings copy.svg", '.main_animation_container .secAnim-greetings .imgCon', null)
 
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/thankYouForBg copy.svg", '.main_animation_container .secAnim-thankYouFor .imgBg', null)
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/thankYouFor copy.svg", '.main_animation_container .secAnim-thankYouFor .imgCon', null)
 
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/brainBg copy.svg", '.main_animation_container .secAnim-brain .imgBg', null)
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/brain copy.svg", '.main_animation_container .secAnim-brain .imgCon', null)
 
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/triangles copy.svg", '.main_animation_container .secAnim-triangles .imgCon', null)
-
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/andThoseChoicesBg copy.svg", '.main_animation_container .secAnim-andThoseChoices .imgBg', null)
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/andThoseChoices copy.svg", '.main_animation_container .secAnim-andThoseChoices .imgCon', null)
-
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/2455inRewardsBg copy.svg", '.main_animation_container .secAnim-2455inRewards .imgBg', null)
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/2455inRewards copy.svg", '.main_animation_container .secAnim-2455inRewards .imgCon', null)
-
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/745BalanceBg copy.svg", '.main_animation_container .secAnim-745Balance .imgBg', null)
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/745Balance copy.svg", '.main_animation_container .secAnim-745Balance .imgCon', null)
-
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/2022SeasonBg copy.svg", '.main_animation_container .secAnim-2022Season .imgBg', null)
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/2022Season copy.svg", '.main_animation_container .secAnim-2022Season .imgCon', null)
-
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/1250inRewardsBg copy.svg", '.main_animation_container .secAnim-1250inRewards .imgBg', null)
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/1250inRewards copy.svg", '.main_animation_container .secAnim-1250inRewards .imgCon', null)
-
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/2022Season2Bg copy.svg", '.main_animation_container .secAnim-2022Season2 .imgBg', null)
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/2022Season2 copy.svg", '.main_animation_container .secAnim-2022Season2 .imgCon', null)
-
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/asYouPlanBg copy.svg", '.main_animation_container .secAnim-asYouPlan .imgBg', null)
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/asYouPlan copy.svg", '.main_animation_container .secAnim-asYouPlan .imgCon', null)
-
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/considerBg copy.svg", '.main_animation_container .secAnim-consider .imgBg', null)
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/consider copy.svg", '.main_animation_container .secAnim-consider .imgCon', null)
-
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/laptopBg copy.svg", '.main_animation_container .secAnim-laptop .imgBg', null)
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/laptop copy.svg", '.main_animation_container .secAnim-laptop .imgCon', null)
-
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/andThisYear copy.svg", '.main_animation_container .secAnim-andThisYear .imgCon', null)
-
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/barGraphBg copy.svg", '.main_animation_container .secAnim-barGraph .imgBg', null)
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/barGraph copy.svg", '.main_animation_container .secAnim-barGraph .imgCon', null)
-
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/justSpendSomeBg copy.svg", '.main_animation_container .secAnim-justSpendSome .imgBg', null)
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/justSpendSome copy.svg", '.main_animation_container .secAnim-justSpendSome .imgCon', null)
-
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/thankYouAndBg copy.svg", '.main_animation_container .secAnim-thankYouAnd .imgBg', null)
-    getFile("http://localhost:63342/11(4528_zoomOut_test)/test1/assets/img/thankYouAnd copy.svg", '.main_animation_container .secAnim-thankYouAnd .imgCon', null)
-
-}
-
-else {
     getFile("assets/img/greetingsBg copy.svg", '.main_animation_container .secAnim-greetings .imgBg', null)
     getFile("assets/img/greetings copy.svg", '.main_animation_container .secAnim-greetings .imgCon', null)
 
@@ -558,5 +525,8 @@ else {
 
     getFile("assets/img/thankYouAndBg copy.svg", '.main_animation_container .secAnim-thankYouAnd .imgBg', null)
     getFile("assets/img/thankYouAnd copy.svg", '.main_animation_container .secAnim-thankYouAnd .imgCon', null)
-}
+
+    //
+    getFile("assets/img/Dots_N_Lines copy.svg", '.pointBgPre', null)
+    getFile("assets/img/DotsRectScena1 copy.svg", '.pointBgScena1', null)
 

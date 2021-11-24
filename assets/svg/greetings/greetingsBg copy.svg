@@ -35,13 +35,15 @@
 	</g>
 	<g id="_x2D_.lineBG-_1_">
 		<g>
-			<polygon fill="#012B48" points="998.79,-413.11 -205.72,2090.39 -197.52,2094.99 1006.99,-408.52 			"/>
+			
+				<line fill="#FFFFFF" stroke="#012B48" stroke-width="10" stroke-miterlimit="10" x1="-202.41" y1="2092.25" x2="1002.72" y2="-410.91"/>
 			<rect x="-22.43" y="-6.76" fill="none" width="3876.77" height="2183.28"/>
 		</g>
 	</g>
 	<g id="_x2D_.lineBG-">
 		<g>
-			<polygon fill="#FCFCFC" points="3739.44,-228.41 3312.65,2571.54 3321.91,2573.17 3748.7,-226.77 			"/>
+			
+				<line fill="#012B48" stroke="#FCFCFC" stroke-width="10" stroke-miterlimit="10" x1="3743.65" y1="-227.66" x2="3317.4" y2="2572.38"/>
 			<rect x="-31.67" fill="none" width="3876.77" height="2183.28"/>
 		</g>
 	</g>

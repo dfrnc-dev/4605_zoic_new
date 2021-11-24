@@ -183,9 +183,13 @@ const anim = () => {
     }
 
     gsap.set(".secAnim",{autoAlpha:0})
+    // gsap.set(".elLine", { strokeDasharray: 600, strokeDashoffset: 600})
+
 
     let stMainTl = gsap.timeline({id:"stMainTl",defaults:{ease:"sine.inOut"}})
     stMainTl.pause()
+
+
 
 
     function animationScene ( nameScene, typeAnimation){
@@ -197,7 +201,8 @@ const anim = () => {
                 .from(`${nameScene} .lineBG > *`, { duration: 1.2, autoAlpha: 0, ease: "power4.out", stagger: { each: 0.01, from: "end" } }, "<")
                 .from(`${nameScene} .moveElements > *`,{duration: 1.2, scale:0.5,autoAlpha:0,transformOrigin:"50% 50%",ease:"power4.inOut",force3D:false,stagger:{each:0.1,from:"end"}},"<")
                 .from(`${nameScene} .contentScene`, { duration: 6, scale: 0.8,  transformOrigin: "50% 50%", ease: "power4.out" }, "<+1")
-                .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "power4.out", stagger: { each: 0.05, from: "end" } }, "<+1")
+                .from(`${nameScene} .elLine`, { duration: 1, drawSVG: 0, ease: "power4.out", stagger: { each: 0.02, from: "end" } }, "<+1")
+                .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "power4.out", stagger: { each: 0.05, from: "end" } }, "<+0.5")
 
         }
         if (typeAnimation == 'scale-up-out') {
@@ -215,7 +220,8 @@ const anim = () => {
                 .from(`${nameScene} .lineBG > *`, { duration: 1.2, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.1, from: "end" } }, "<")
                 .from(`${nameScene} .moveElements > *`, { duration: 1.2, scale: 2, autoAlpha: 0, transformOrigin: "50% 50%", ease: "power4.inOut", force3D:false, stagger: { each: 0.1, from: "end" } }, "<")
                 .from(`${nameScene} .contentScene`, { duration: 6, scale: 1.3, transformOrigin: "50% 50%", ease: "power4.out" }, "<+1")
-                .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "power4.out", stagger: { each: 0.05, from: "end" } }, "<+1")
+                .from(`${nameScene} .elLine`, { duration: 1, drawSVG: 0, ease: "power4.out", stagger: { each: 0.02, from: "end" } }, "<+1")
+                .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "power4.out", stagger: { each: 0.05, from: "end" } }, "<+0.5")
         }
         if (typeAnimation == 'scale-down-out') {
             return gsap.timeline({ paused: true })
@@ -232,7 +238,8 @@ const anim = () => {
                 .from(`${nameScene} .lineBG > *`, { duration: 1, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.2, from: "end" } }, "<")
                 .from(`${nameScene} .moveElements > *`, { duration: 2, autoAlpha: 0, y: 2500, ease: "power4.inOut", stagger: { each: 0.08, from: "end" } }, "<")
                 .from(`${nameScene} .contentScene`, { duration: 6, y: 300, ease: "power4.out" }, "<+1")
-                .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "power4.out", stagger: { each: 0.05, from: "end" } }, "<+1")
+                .from(`${nameScene} .elLine`, { duration: 1, drawSVG: 0, ease: "power4.out", stagger: { each: 0.02, from: "end" } }, "<+1")
+                .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "power4.out", stagger: { each: 0.05, from: "end" } }, "<+0.5")
         }
         if (typeAnimation == 'translate-up-out') {
             return gsap.timeline({ paused: true })
@@ -249,7 +256,8 @@ const anim = () => {
                 .from(`${nameScene} .lineBG > *`, { duration: 1, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.2, from: "end" } }, "<")
                 .from(`${nameScene} .moveElements > *`, { duration: 2,  autoAlpha: 0, y: -2500, ease: "power4.inOut", stagger: { each: 0.08, from: "end" } }, "<")
                 .from(`${nameScene} .contentScene`, { duration: 6, y: -300, ease: "power4.out" }, "<+1")
-                .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "power4.out", stagger: { each: 0.05, from: "end" } }, "<+1")
+                .from(`${nameScene} .elLine`, { duration: 1, drawSVG: 0, ease: "power4.out", stagger: { each: 0.02, from: "end" } }, "<+1")
+                .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "power4.out", stagger: { each: 0.05, from: "end" } }, "<+0.5")
         }
         if (typeAnimation == 'translate-down-out') {
             return gsap.timeline({ paused: true })
@@ -266,7 +274,8 @@ const anim = () => {
                 .from(`${nameScene} .lineBG > *`, { duration: 1, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.2, from: "end" } }, "<")
                 .from(`${nameScene} .moveElements > *`, { duration: 2, autoAlpha: 0, x: -4000, ease: "power4.inOut", stagger: { each: 0.08, from: "end" } }, "<")
                 .from(`${nameScene} .contentScene`, { duration: 6, x: -300, ease: "power4.out" }, "<+1")
-                .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "power4.out", stagger: { each: 0.05, from: "end" } }, "<+1")
+                .from(`${nameScene} .elLine`, { duration: 1, drawSVG: 0, ease: "power4.out", stagger: { each: 0.02, from: "end" } }, "<+1")
+                .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "power4.out", stagger: { each: 0.05, from: "end" } }, "<+0.5")
         }
         if (typeAnimation == 'translate-right-out') {
             return gsap.timeline({ paused: true })
@@ -283,7 +292,8 @@ const anim = () => {
                 .from(`${nameScene} .lineBG > *`, { duration: 1, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.2, from: "end" } }, "<")
                 .from(`${nameScene} .moveElements > *`, { duration: 2, autoAlpha: 0, x: 4000, ease: "power4.inOut", stagger: { each: 0.08, from: "end" } }, "<")
                 .from(`${nameScene} .contentScene`, { duration: 6, x: 300, ease: "power4.out" }, "<+1")
-                .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "power4.out", stagger: { each: 0.05, from: "end" } }, "<+1")
+                .from(`${nameScene} .elLine`, { duration: 1, drawSVG: 0, ease: "power4.out", stagger: { each: 0.02, from: "end" } }, "<+1")
+                .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "power4.out", stagger: { each: 0.05, from: "end" } }, "<+0.5")
         }
         if (typeAnimation == 'translate-left-out') {
             return gsap.timeline({ paused: true })
@@ -341,6 +351,9 @@ const anim = () => {
 
             .add(animationScene('.secAnim-thankYouAnd', 'scale-up-in').restart(), `<+${animationScene('.secAnim-justSpendSome', 'scale-up-out').duration() - 4}`)
             .add(animationScene('.secAnim-thankYouAnd', 'scale-up-out').restart(), '>-3')
+
+            .add(animationScene('.secAnim-plus', 'scale-up-in').restart(), `<+${animationScene('.secAnim-justSpendSome', 'scale-up-out').duration() - 4}`)
+            .add(animationScene('.secAnim-plus', 'scale-up-out').restart(), '>-3')
 
             .add(animationScene('.secAnim-endScene', 'scale-up-in').restart(), `<+${animationScene('.secAnim-justSpendSome', 'scale-up-out').duration() - 4}`)
             .add(animationScene('.secAnim-endScene', 'scale-up-out').restart(), '>-3')
@@ -538,6 +551,8 @@ setTimeout(()=>{
 
     getFile("assets/img/thankYouAndBg copy.svg", '.main_animation_container .secAnim-thankYouAnd .imgBg', null)
     getFile("assets/img/thankYouAnd copy.svg", '.main_animation_container .secAnim-thankYouAnd .imgCon', null)
+
+    getFile("assets/img/plus copy.svg", '.main_animation_container .secAnim-plus .imgCon', null)
 
     getFile("assets/img/endScene copy.svg", '.main_animation_container .secAnim-endScene .imgCon', null)
 

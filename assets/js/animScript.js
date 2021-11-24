@@ -92,21 +92,26 @@ const anim = () => {
     /**
      * anim for bg circle and line
      */
-    document.querySelectorAll(".contForPoint").forEach(function (elem) {
+    document.querySelectorAll(".contForPoint .moveElements").forEach(function (elem) {
+        let tempAddHtml = ""
 
         elem.querySelectorAll(".contForPointA").forEach(function (child) {
-            child.style.display = "none"
-            elem.innerHTML += `
+            child.classList.add("pointBgTempPos")
+            tempAddHtml += `
                 <use xlink:href="#forUseA" class="dotAnim" x="${child.getAttribute("x")}" y="${child.getAttribute("y")}"  width="${child.getAttribute("width")}" height="${child.getAttribute("height")}" />
+            `;
+        })
+        elem.innerHTML += tempAddHtml
+        tempAddHtml = ""
+
+        elem.querySelectorAll(".contForPointB").forEach(function (child) {
+            child.classList.add("pointBgTempPos")
+            tempAddHtml += `
+                <use xlink:href="#forUseB" class="dotAnim" x="${child.getAttribute("x")}" y="${child.getAttribute("y")}"  width="${child.getAttribute("width")}" height="${child.getAttribute("height")}" />
             `;
         })
 
-        elem.querySelectorAll(".contForPointB").forEach(function (child) {
-            child.style.display = "none"
-            elem.innerHTML += `
-                <use xlink:href="#forUseA" class="dotAnim" x="${child.getAttribute("x")}" y="${child.getAttribute("y")}"  width="${child.getAttribute("width")}" height="${child.getAttribute("height")}" />
-            `;
-        })
+        elem.innerHTML += tempAddHtml
 
     })
 
@@ -162,6 +167,9 @@ const anim = () => {
         elem.style.zIndex = arr.length - index;
         // console.log(index, elem);
         moveElements.push(gsap.utils.toArray(".secAnim:nth-child("+(index+1)+") .contentScene .moveElements > * > g, .secAnim:nth-child("+(index+1)+") .bgScene .moveElements > * > g"))
+    })
+    document.querySelectorAll(".pointBg").forEach(function (elem,index,arr) {
+        moveElements.push(gsap.utils.toArray(elem.querySelectorAll(".moveElements > *")))
     })
 
     // console.log(moveElements)
@@ -297,10 +305,17 @@ const anim = () => {
 
     document.querySelector('.btn1').addEventListener('click', () => {
         stMainTl
-            .add(animationScene('.secAnim-greetings', 'scale-up-in').restart())
+            .to(".pointBgScena1",{duration:2,autoAlpha:0.5},">")
+            .from(".pointBgScena1 .contForPoint",{duration:2,scale:0.5,transformOrigin:"50% 50%"},"<")
+            .add(animationScene('.secAnim-greetings', 'scale-up-in').restart(),"<")
             .add(animationScene('.secAnim-greetings', 'scale-up-out').restart(), '>-3')
+            .to(".pointBgScena1 .contForPoint",{duration:2,scale:2,transformOrigin:"50% 30%"},"<")
+            .to(".pointBgScena1 .contForPoint > *:nth-last-child(1)",{duration:1,opacity:0.5},">-1")
+            .to(".pointBgScena1 .contForPoint > *:nth-last-child(2)",{duration:1,opacity:0.5},"<")
+            .to(".pointBgScena1 .contForPoint > *:nth-last-child(3)",{duration:1,opacity:0.4},"<")
 
-            .add(animationScene('.secAnim-thankYouFor', 'scale-up-in').restart(), `<+${animationScene('.secAnim-greetings', 'scale-up-in').duration() - 6.5 }`)
+            .to(".pointBgScena1",{duration:2,autoAlpha:0},">")
+            .add(animationScene('.secAnim-thankYouFor', 'scale-up-in').restart(), `<+${animationScene('.secAnim-greetings', 'scale-up-in').duration() - 10.5 }`)
             .add(animationScene('.secAnim-thankYouFor', 'translate-down-out').restart(), '>-3')
 
             .add(animationScene('.secAnim-brain', 'translate-down-in').restart(), `<+${animationScene('.secAnim-thankYouFor', 'translate-down-out').duration() - 6.5}`)
@@ -353,6 +368,7 @@ const anim = () => {
 
     document.querySelector('.btn2').addEventListener('click', () => {
         stMainTl
+            .to(".pointBg",{autoAlpha:1})
             .add(animationScene('.secAnim-greetings', 'scale-up-in').restart())
             .add(animationScene('.secAnim-greetings', 'scale-up-out').restart(), '>-3')
 

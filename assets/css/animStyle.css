@@ -104,7 +104,7 @@ foreignObject {
   height: 100vh;
   overflow: hidden;
   opacity: 0;
-  background: #001f48; }
+  background: #F2F2F2; }
   .main_animation_container * {
     perspective: 800px;
     perspective-origin: 50% 50%; }
@@ -113,6 +113,12 @@ foreignObject {
     visibility: hidden; }
   .main_animation_container .moveElements > * {
     will-change: transform; }
+
+.pointBg {
+  opacity: 0;
+  z-index: 0; }
+  .pointBg .pointBgTempPos {
+    display: none; }
 
 .secAnim {
   position: absolute;

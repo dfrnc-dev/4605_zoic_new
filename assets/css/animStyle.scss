@@ -135,8 +135,9 @@ foreignObject{
     //perspective: 800px;
     //perspective-origin: 50% 50%;
     //background:  rgba(0,192,241,1);
-    background: rgb(0,31,72);
-    //background: linear-gradient(110deg, rgba(0,31,72,1) 10%, rgba(0,192,241,1) 10%, rgba(0,192,241,1) 90%, rgba(165,205,56,1) 90%);
+    //background: rgb(0,31,72);
+    background: #F2F2F2;
+    //background: linsear-gradient(110deg, rgba(0,31,72,1) 10%, rgba(0,192,241,1) 10%, rgba(0,192,241,1) 90%, rgba(165,205,56,1) 90%);
 
     *{
         perspective: 800px;
@@ -152,6 +153,15 @@ foreignObject{
     }
 
 }
+.pointBg{
+    opacity: 0;
+    z-index: 0;
+
+    .pointBgTempPos{
+        display: none;
+    }
+}
+
 .secAnim{
     position: absolute;
     top: 0;

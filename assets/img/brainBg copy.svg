@@ -3,11 +3,11 @@
 <svg version="1.1" id="brainBgSvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="3840px" height="2165.6px" viewBox="0 0 3840 2165.6" enable-background="new 0 0 3840 2165.6" xml:space="preserve">
 <g id="_x2D_.bgScene-">
-	<rect id="_x2D_.bgColor-" x="-5.1" fill="#00C0F2" width="3850.19" height="2165.6"/>
+	<rect id="_x2D_.bgColor-" x="-5.1" fill="#F2F2F2" width="3850.19" height="2165.6"/>
 	<g id="_x2D_.moveElements-">
 		<g>
 			<g>
-				<polygon fill="#012B48" points="-70.86,-250.97 726.6,0.56 -7.57,2194.71 				"/>
+				<polygon fill="#012B48" points="50.33,151.24 605.4,73.18 281.51,667.58 				"/>
 				<rect x="-22.43" y="-6.76" fill="none" width="3876.77" height="2183.28"/>
 			</g>
 		</g>
@@ -15,20 +15,26 @@
 	<g id="_x2D_.moveElements-_1_">
 		<g>
 			<g>
-				<polygon fill="#A4CD38" points="3836.87,419.18 3096.26,2175.73 4023.34,2539.88 				"/>
+				<polygon fill="#00C0F2" points="3234.09,1285.8 2445.62,1214.72 3346.17,1521.88 				"/>
+				<rect x="-31.67" fill="none" width="3876.77" height="2183.28"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<polygon fill="#A4CD38" points="3840,439.61 3367.62,1402.88 3591.28,1905.16 				"/>
 				<rect x="-31.67" fill="none" width="3876.77" height="2183.28"/>
 			</g>
 		</g>
 	</g>
 	<g id="_x2D_.lineBG-">
 		<g>
-			<polygon fill="#FCFCFC" points="3739.44,-228.41 3312.65,2571.54 3321.91,2573.17 3748.7,-226.77 			"/>
+			<polygon fill="#012B48" points="3739.44,-228.41 3312.65,2571.54 3321.91,2573.17 3748.7,-226.77 			"/>
 			<rect x="-31.67" fill="none" width="3876.77" height="2183.28"/>
 		</g>
 	</g>
 	<g id="_x2D_.lineBG-_1_">
 		<g>
-			<polygon fill="#012B48" points="998.79,-413.11 -205.72,2090.39 -197.52,2094.99 1006.99,-408.52 			"/>
+			<polygon fill="#A4CD38" points="998.79,-413.11 -205.72,2090.39 -197.52,2094.99 1006.99,-408.52 			"/>
 			<rect x="-22.43" y="-6.76" fill="none" width="3876.77" height="2183.28"/>
 		</g>
 	</g>

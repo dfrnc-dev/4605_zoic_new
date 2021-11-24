@@ -193,47 +193,51 @@ const anim = () => {
             let temBgColor = document.querySelector(`${nameScene} .bgColor`).getAttribute("fill")
             return gsap.timeline({paused: true})
                 .set(`${nameScene}`, { autoAlpha: 1 }, (nameScene == '.secAnim-greetings') ? ">" : "<")
-                .to(".main_animation_container",{duration: 2, background:temBgColor,ease:"sine.inOut"},"<")
-                .from(`${nameScene} .lineBG > *`, { duration: 2, autoAlpha: 0, ease: "power4.out", stagger: { each: 0.1, from: "end" } }, "<")
-                .from(`${nameScene} .moveElements > *`,{duration: 2, scale:0.5,autoAlpha:0,transformOrigin:"50% 50%",ease:"power4.inOut",force3D:false,stagger:{each:0.1,from:"end"}},"<")
-                .from(`${nameScene} .contentScene`, { duration: 4, scale: 0.1,  transformOrigin: "50% 50%", ease: "power4.out" }, "<+1")
+                .to(".main_animation_container",{duration: 1.2, background:temBgColor,ease:"sine.inOut"},"<")
+                .from(`${nameScene} .lineBG > *`, { duration: 1.2, autoAlpha: 0, ease: "power4.out", stagger: { each: 0.01, from: "end" } }, "<")
+                .from(`${nameScene} .moveElements > *`,{duration: 1.2, scale:0.5,autoAlpha:0,transformOrigin:"50% 50%",ease:"power4.inOut",force3D:false,stagger:{each:0.1,from:"end"}},"<")
+                .from(`${nameScene} .contentScene`, { duration: 6, scale: 0.8,  transformOrigin: "50% 50%", ease: "power4.out" }, "<+1")
+                .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "power4.out", stagger: { each: 0.05, from: "end" } }, "<+1")
+
         }
         if (typeAnimation == 'scale-up-out') {
             return gsap.timeline({ paused: true })
-                .to(`${nameScene} .moveElements > *`, { duration: 2, scale: 2, transformOrigin: "50% 50%", ease: "power4.inOut",force3D:false, stagger: { each: 0.1, from: "end" } }, )
-                .to(`${nameScene} .lineBG > *`, { duration: 2, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.1, from: "end" } }, "<")
-                .to(`${nameScene} .moveElements > *`, { duration: 0.5, autoAlpha: 0, ease: "none", stagger: { each: 0.1, from: "end" } }, "<+1")
+                .to(`${nameScene} .moveElements > *`, { duration: 1, scale: 2, transformOrigin: "50% 50%", ease: "power4.inOut",force3D:false, stagger: { each: 0.1, from: "end" } }, )
+                .to(`${nameScene} .lineBG > *`, { duration: 1, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.1, from: "end" } }, "<")
+                .to(`${nameScene} .moveElements > *`, { duration: 0.5, autoAlpha: 0, ease: "none", stagger: { each: 0.1, from: "end" } }, "<+0.5")
                 .set(`${nameScene}`, { autoAlpha: 0 }, ">")
         }
         if (typeAnimation == 'scale-down-in') {
             let temBgColor = document.querySelector(`${nameScene} .bgColor`).getAttribute("fill")
             return gsap.timeline({ paused: true })
                 .set(`${nameScene}`, { autoAlpha: 1 }, (nameScene == '.secAnim-greetings') ? ">" : "<")
-                .to(".main_animation_container", { duration: 2, background: temBgColor, ease: "sine.inOut" }, "<")
-                .from(`${nameScene} .lineBG > *`, { duration: 2, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.1, from: "end" } }, "<")
-                .from(`${nameScene} .moveElements > *`, { duration: 2, scale: 2, autoAlpha: 0, transformOrigin: "50% 50%", ease: "power4.inOut", force3D:false, stagger: { each: 0.1, from: "end" } }, "<")
-                .from(`${nameScene} .contentScene`, { duration: 4, scale: 1.3, transformOrigin: "50% 50%", ease: "power4.out" }, "<+1")
+                .to(".main_animation_container", { duration: 1.2, background: temBgColor, ease: "sine.inOut" }, "<")
+                .from(`${nameScene} .lineBG > *`, { duration: 1.2, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.1, from: "end" } }, "<")
+                .from(`${nameScene} .moveElements > *`, { duration: 1.2, scale: 2, autoAlpha: 0, transformOrigin: "50% 50%", ease: "power4.inOut", force3D:false, stagger: { each: 0.1, from: "end" } }, "<")
+                .from(`${nameScene} .contentScene`, { duration: 6, scale: 1.3, transformOrigin: "50% 50%", ease: "power4.out" }, "<+1")
+                .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "power4.out", stagger: { each: 0.05, from: "end" } }, "<+1")
         }
         if (typeAnimation == 'scale-down-out') {
             return gsap.timeline({ paused: true })
-                .to(`${nameScene} .moveElements > *`, { duration: 2, scale: 0.5, transformOrigin: "50% 50%", ease: "power4.inOut", stagger: { each: 0.1, from: "end" } }, )
-                .to(`${nameScene} .lineBG > *`, { duration: 2, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.1, from: "end" } }, "<")
-                .to(`${nameScene} .moveElements > *`, { duration: 0.5, autoAlpha: 0, ease: "none", stagger: { each: 0.1, from: "end" } }, "<+1")
+                .to(`${nameScene} .moveElements > *`, { duration: 1, scale: 0.5, transformOrigin: "50% 50%", ease: "power4.inOut", stagger: { each: 0.1, from: "end" } }, )
+                .to(`${nameScene} .lineBG > *`, { duration: 1, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.1, from: "end" } }, "<")
+                .to(`${nameScene} .moveElements > *`, { duration: 0.5, autoAlpha: 0, ease: "none", stagger: { each: 0.1, from: "end" } }, "<+0.5")
                 .set(`${nameScene}`, { autoAlpha: 0 }, ">")
         }
         if (typeAnimation == 'translate-up-in') {
             let temBgColor = document.querySelector(`${nameScene} .bgColor`).getAttribute("fill")
             return gsap.timeline({ paused: true })
                 .set(`${nameScene}`, { autoAlpha: 1 }, (nameScene == '.secAnim-greetings') ? ">" : "<")
-                .to(".main_animation_container", { duration: 2, background: temBgColor, ease: "sine.inOut" }, "<")
-                .from(`${nameScene} .lineBG > *`, { duration: 2, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.2, from: "end" } }, "<")
-                .from(`${nameScene} .moveElements > *`, { duration: 4, autoAlpha: 0, y: 2500, ease: "power4.inOut", stagger: { each: 0.08, from: "end" } }, "<")
-                .from(`${nameScene} .contentScene`, { duration: 4, y: 100, ease: "power4.out" }, "<+1")
+                .to(".main_animation_container", { duration: 1, background: temBgColor, ease: "sine.inOut" }, "<")
+                .from(`${nameScene} .lineBG > *`, { duration: 1, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.2, from: "end" } }, "<")
+                .from(`${nameScene} .moveElements > *`, { duration: 2, autoAlpha: 0, y: 2500, ease: "power4.inOut", stagger: { each: 0.08, from: "end" } }, "<")
+                .from(`${nameScene} .contentScene`, { duration: 6, y: 300, ease: "power4.out" }, "<+1")
+                .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "power4.out", stagger: { each: 0.05, from: "end" } }, "<+1")
         }
         if (typeAnimation == 'translate-up-out') {
             return gsap.timeline({ paused: true })
-                .to(`${nameScene} .moveElements > *`, { duration: 4, y: -2500, transformOrigin: "50% 50%", ease: "power4.inOut", stagger: { each: 0.08, from: "end" } }, )
-                .to(`${nameScene} .lineBG > *`, { duration: 2, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.2, from: "end" } }, "<")
+                .to(`${nameScene} .moveElements > *`, { duration: 2, y: -2500, transformOrigin: "50% 50%", ease: "power4.inOut", stagger: { each: 0.08, from: "end" } }, )
+                .to(`${nameScene} .lineBG > *`, { duration: 1, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.2, from: "end" } }, "<")
                 .to(`${nameScene} .moveElements > *`, { duration: 0.2, autoAlpha: 0, ease: "none", stagger: { each: 0.1, from: "end" } }, "<+4")
                 .set(`${nameScene}`, { autoAlpha: 0 }, ">")
         }
@@ -241,15 +245,16 @@ const anim = () => {
             let temBgColor = document.querySelector(`${nameScene} .bgColor`).getAttribute("fill")
             return gsap.timeline({ paused: true })
                 .set(`${nameScene}`, { autoAlpha: 1 }, (nameScene == '.secAnim-greetings') ? ">" : "<")
-                .to(".main_animation_container", { duration: 2, background: temBgColor, ease: "sine.inOut" }, "<")
-                .from(`${nameScene} .lineBG > *`, { duration: 2, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.2, from: "end" } }, "<")
-                .from(`${nameScene} .moveElements > *`, { duration: 4,  autoAlpha: 0, y: -2500, ease: "power4.inOut", stagger: { each: 0.08, from: "end" } }, "<")
-                .from(`${nameScene} .contentScene`, { duration: 4, y: -100, ease: "power4.out" }, "<+1")
+                .to(".main_animation_container", { duration: 1, background: temBgColor, ease: "sine.inOut" }, "<")
+                .from(`${nameScene} .lineBG > *`, { duration: 1, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.2, from: "end" } }, "<")
+                .from(`${nameScene} .moveElements > *`, { duration: 2,  autoAlpha: 0, y: -2500, ease: "power4.inOut", stagger: { each: 0.08, from: "end" } }, "<")
+                .from(`${nameScene} .contentScene`, { duration: 6, y: -300, ease: "power4.out" }, "<+1")
+                .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "power4.out", stagger: { each: 0.05, from: "end" } }, "<+1")
         }
         if (typeAnimation == 'translate-down-out') {
             return gsap.timeline({ paused: true })
-                .to(`${nameScene} .moveElements > *`, { duration: 4, y: 2500, transformOrigin: "50% 50%", ease: "power4.inOut", stagger: { each: 0.08, from: "end" } }, )
-                .to(`${nameScene} .lineBG > *`, { duration: 2, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.2, from: "end" } }, "<")
+                .to(`${nameScene} .moveElements > *`, { duration: 2, y: 2500, transformOrigin: "50% 50%", ease: "power4.inOut", stagger: { each: 0.08, from: "end" } }, )
+                .to(`${nameScene} .lineBG > *`, { duration: 1, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.2, from: "end" } }, "<")
                 .to(`${nameScene} .moveElements > *`, { duration: 0.2, autoAlpha: 0, ease: "none", stagger: { each: 0.1, from: "end" } }, "<+4")
                 .set(`${nameScene}`, { autoAlpha: 0 }, ">")
         }
@@ -257,15 +262,16 @@ const anim = () => {
             let temBgColor = document.querySelector(`${nameScene} .bgColor`).getAttribute("fill")
             return gsap.timeline({ paused: true })
                 .set(`${nameScene}`, { autoAlpha: 1 }, (nameScene == '.secAnim-greetings') ? ">" : "<")
-                .to(".main_animation_container", { duration: 2, background: temBgColor, ease: "sine.inOut" }, "<")
-                .from(`${nameScene} .lineBG > *`, { duration: 2, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.2, from: "end" } }, "<")
-                .from(`${nameScene} .moveElements > *`, { duration: 4, autoAlpha: 0, x: -4000, ease: "power4.inOut", stagger: { each: 0.08, from: "end" } }, "<")
-                .from(`${nameScene} .contentScene`, { duration: 4, x: -100, ease: "power4.out" }, "<+1")
+                .to(".main_animation_container", { duration: 1, background: temBgColor, ease: "sine.inOut" }, "<")
+                .from(`${nameScene} .lineBG > *`, { duration: 1, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.2, from: "end" } }, "<")
+                .from(`${nameScene} .moveElements > *`, { duration: 2, autoAlpha: 0, x: -4000, ease: "power4.inOut", stagger: { each: 0.08, from: "end" } }, "<")
+                .from(`${nameScene} .contentScene`, { duration: 6, x: -300, ease: "power4.out" }, "<+1")
+                .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "power4.out", stagger: { each: 0.05, from: "end" } }, "<+1")
         }
         if (typeAnimation == 'translate-right-out') {
             return gsap.timeline({ paused: true })
-                .to(`${nameScene} .moveElements > *`, { duration: 4, x: 4000, transformOrigin: "50% 50%", ease: "power4.inOut", stagger: { each: 0.08, from: "end" } }, )
-                .to(`${nameScene} .lineBG > *`, { duration: 2, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.2, from: "end" } }, "<")
+                .to(`${nameScene} .moveElements > *`, { duration: 2, x: 4000, transformOrigin: "50% 50%", ease: "power4.inOut", stagger: { each: 0.08, from: "end" } }, )
+                .to(`${nameScene} .lineBG > *`, { duration: 1, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.2, from: "end" } }, "<")
                 .to(`${nameScene} .moveElements > *`, { duration: 0.2, autoAlpha: 0, ease: "none", stagger: { each: 0.1, from: "end" } }, "<+4")
                 .set(`${nameScene}`, { autoAlpha: 0 }, ">")
         }
@@ -273,15 +279,16 @@ const anim = () => {
             let temBgColor = document.querySelector(`${nameScene} .bgColor`).getAttribute("fill")
             return gsap.timeline({ paused: true })
                 .set(`${nameScene}`, { autoAlpha: 1 }, (nameScene == '.secAnim-greetings') ? ">" : "<")
-                .to(".main_animation_container", { duration: 2, background: temBgColor, ease: "sine.inOut" }, "<")
-                .from(`${nameScene} .lineBG > *`, { duration: 2, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.2, from: "end" } }, "<")
-                .from(`${nameScene} .moveElements > *`, { duration: 4, autoAlpha: 0, x: 4000, ease: "power4.inOut", stagger: { each: 0.08, from: "end" } }, "<")
-                .from(`${nameScene} .contentScene`, { duration: 4, x: 100, ease: "power4.out" }, "<+1")
+                .to(".main_animation_container", { duration: 1, background: temBgColor, ease: "sine.inOut" }, "<")
+                .from(`${nameScene} .lineBG > *`, { duration: 1, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.2, from: "end" } }, "<")
+                .from(`${nameScene} .moveElements > *`, { duration: 2, autoAlpha: 0, x: 4000, ease: "power4.inOut", stagger: { each: 0.08, from: "end" } }, "<")
+                .from(`${nameScene} .contentScene`, { duration: 6, x: 300, ease: "power4.out" }, "<+1")
+                .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "power4.out", stagger: { each: 0.05, from: "end" } }, "<+1")
         }
         if (typeAnimation == 'translate-left-out') {
             return gsap.timeline({ paused: true })
-                .to(`${nameScene} .moveElements > *`, { duration: 4, x: -4000, transformOrigin: "50% 50%", ease: "power4.inOut", stagger: { each: 0.08, from: "end" } }, )
-                .to(`${nameScene} .lineBG > *`, { duration: 2, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.2, from: "end" } }, "<")
+                .to(`${nameScene} .moveElements > *`, { duration: 2, x: -4000, transformOrigin: "50% 50%", ease: "power4.inOut", stagger: { each: 0.08, from: "end" } }, )
+                .to(`${nameScene} .lineBG > *`, { duration: 1, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.2, from: "end" } }, "<")
                 .to(`${nameScene} .moveElements > *`, { duration: 0.2, autoAlpha: 0, ease: "none", stagger: { each: 0.1, from: "end" } }, "<+4")
                 .set(`${nameScene}`, { autoAlpha: 0 }, ">")
         }
@@ -291,49 +298,52 @@ const anim = () => {
     document.querySelector('.btn1').addEventListener('click', () => {
         stMainTl
             .add(animationScene('.secAnim-greetings', 'scale-up-in').restart())
-            .add(animationScene('.secAnim-greetings', 'scale-up-out').restart(), '>-2')
+            .add(animationScene('.secAnim-greetings', 'scale-up-out').restart(), '>-3')
 
-            .add(animationScene('.secAnim-thankYouFor', 'scale-up-in').restart(), `<+${animationScene('.secAnim-greetings', 'scale-up-in').duration() - 4.5 }`)
-            .add(animationScene('.secAnim-thankYouFor', 'translate-down-out').restart(), '>-2')
+            .add(animationScene('.secAnim-thankYouFor', 'scale-up-in').restart(), `<+${animationScene('.secAnim-greetings', 'scale-up-in').duration() - 6.5 }`)
+            .add(animationScene('.secAnim-thankYouFor', 'translate-down-out').restart(), '>-3')
 
-            .add(animationScene('.secAnim-brain', 'translate-down-in').restart(), `<+${animationScene('.secAnim-thankYouFor', 'translate-down-out').duration() - 4.5}`)
-            .add(animationScene('.secAnim-brain', 'translate-left-out').restart(), '>-2')
+            .add(animationScene('.secAnim-brain', 'translate-down-in').restart(), `<+${animationScene('.secAnim-thankYouFor', 'translate-down-out').duration() - 6.5}`)
+            .add(animationScene('.secAnim-brain', 'translate-left-out').restart(), '>-3')
 
-            .add(animationScene('.secAnim-triangles', 'translate-left-in').restart(), `<+${animationScene('.secAnim-brain', 'translate-left-out').duration() - 4.5}`)
+            .add(animationScene('.secAnim-triangles', 'translate-left-in').restart(), `<+${animationScene('.secAnim-brain', 'translate-left-out').duration() - 6.5}`)
             .add(animationScene('.secAnim-triangles', 'scale-up-out').restart(), '>-2')
 
-            .add(animationScene('.secAnim-andThoseChoices', 'scale-up-in').restart(), `<+${animationScene('.secAnim-triangles', 'scale-up-out').duration() - 2}`)
-            .add(animationScene('.secAnim-andThoseChoices', 'translate-up-out').restart(), '>-2')
+            .add(animationScene('.secAnim-andThoseChoices', 'scale-up-in').restart(), `<+${animationScene('.secAnim-triangles', 'scale-up-out').duration() - 4}`)
+            .add(animationScene('.secAnim-andThoseChoices', 'translate-up-out').restart(), '>-3')
 
-            .add(animationScene('.secAnim-2455inRewards', 'translate-up-in').restart(), `<+${animationScene('.secAnim-andThoseChoices', 'translate-up-out').duration() - 4.5}`)
-            .add(animationScene('.secAnim-2455inRewards', 'translate-right-out').restart(), '>-2')
+            .add(animationScene('.secAnim-2455inRewards', 'translate-up-in').restart(), `<+${animationScene('.secAnim-andThoseChoices', 'translate-up-out').duration() - 6.5}`)
+            .add(animationScene('.secAnim-2455inRewards', 'translate-right-out').restart(), '>-3')
 
-            .add(animationScene('.secAnim-745Balance', 'translate-right-in').restart(), `<+${animationScene('.secAnim-2455inRewards', 'translate-right-out').duration() - 4.5}`)
-            .add(animationScene('.secAnim-745Balance', 'translate-down-out').restart(), '>-2')
+            .add(animationScene('.secAnim-745Balance', 'translate-right-in').restart(), `<+${animationScene('.secAnim-2455inRewards', 'translate-right-out').duration() - 6.5}`)
+            .add(animationScene('.secAnim-745Balance', 'translate-down-out').restart(), '>-3')
 
-            .add(animationScene('.secAnim-2022Season', 'translate-down-in').restart(), `<+${animationScene('.secAnim-745Balance', 'translate-down-out').duration() - 4.5}`)
-            .add(animationScene('.secAnim-2022Season', 'scale-down-out').restart(), '>-2')
+            .add(animationScene('.secAnim-2022Season', 'translate-down-in').restart(), `<+${animationScene('.secAnim-745Balance', 'translate-down-out').duration() - 6.5}`)
+            .add(animationScene('.secAnim-2022Season', 'scale-down-out').restart(), '>-3')
 
-            .add(animationScene('.secAnim-asYouPlan', 'scale-down-in').restart(), `<+${animationScene('.secAnim-2022Season', 'scale-down-out').duration() - 2}`)
-            .add(animationScene('.secAnim-asYouPlan', 'translate-left-out').restart(), '>-2')
+            .add(animationScene('.secAnim-asYouPlan', 'scale-down-in').restart(), `<+${animationScene('.secAnim-2022Season', 'scale-down-out').duration() - 4}`)
+            .add(animationScene('.secAnim-asYouPlan', 'translate-left-out').restart(), '>-3')
 
-            .add(animationScene('.secAnim-consider', 'translate-left-in').restart(), `<+${animationScene('.secAnim-asYouPlan', 'translate-left-out').duration() - 4.5}`)
-            .add(animationScene('.secAnim-consider', 'scale-down-out').restart(), '>-2')
+            .add(animationScene('.secAnim-consider', 'translate-left-in').restart(), `<+${animationScene('.secAnim-asYouPlan', 'translate-left-out').duration() - 6.5}`)
+            .add(animationScene('.secAnim-consider', 'scale-down-out').restart(), '>-3')
 
-            .add(animationScene('.secAnim-laptop', 'scale-down-in').restart(), `<+${animationScene('.secAnim-consider', 'scale-down-out').duration() - 2}`)
-            .add(animationScene('.secAnim-laptop', 'translate-left-out').restart(), '>-2')
+            .add(animationScene('.secAnim-laptop', 'scale-down-in').restart(), `<+${animationScene('.secAnim-consider', 'scale-down-out').duration() - 4}`)
+            .add(animationScene('.secAnim-laptop', 'translate-left-out').restart(), '>-3')
 
-            .add(animationScene('.secAnim-andThisYear', 'translate-left-in').restart(), `<+${animationScene('.secAnim-laptop', 'translate-left-out').duration() - 4.5}`)
-            .add(animationScene('.secAnim-andThisYear', 'translate-right-out').restart(), '>-2')
+            .add(animationScene('.secAnim-andThisYear', 'translate-left-in').restart(), `<+${animationScene('.secAnim-laptop', 'translate-left-out').duration() - 6.5}`)
+            .add(animationScene('.secAnim-andThisYear', 'translate-right-out').restart(), '>-3')
 
-            .add(animationScene('.secAnim-barGraph', 'translate-right-in').restart(), `<+${animationScene('.secAnim-andThisYear', 'translate-right-out').duration() - 4.5}`)
-            .add(animationScene('.secAnim-barGraph', 'translate-up-out').restart(), '>-2')
+            .add(animationScene('.secAnim-barGraph', 'translate-right-in').restart(), `<+${animationScene('.secAnim-andThisYear', 'translate-right-out').duration() - 6.5}`)
+            .add(animationScene('.secAnim-barGraph', 'translate-up-out').restart(), '>-3')
 
-            .add(animationScene('.secAnim-justSpendSome', 'translate-up-in').restart(), `<+${animationScene('.secAnim-barGraph', 'translate-up-out').duration() - 4.5}`)
-            .add(animationScene('.secAnim-justSpendSome', 'scale-up-out').restart(), '>-2')
+            .add(animationScene('.secAnim-justSendAll', 'translate-up-in').restart(), `<+${animationScene('.secAnim-barGraph', 'translate-up-out').duration() - 6.5}`)
+            .add(animationScene('.secAnim-justSendAll', 'scale-up-out').restart(), '>-3')
 
-            .add(animationScene('.secAnim-thankYouAnd', 'scale-up-in').restart(), `<+${animationScene('.secAnim-justSpendSome', 'scale-up-out').duration() - 2}`)
-            .add(animationScene('.secAnim-thankYouAnd', 'scale-up-out').restart(), '>-2')
+            .add(animationScene('.secAnim-thankYouAnd', 'scale-up-in').restart(), `<+${animationScene('.secAnim-justSpendSome', 'scale-up-out').duration() - 4}`)
+            .add(animationScene('.secAnim-thankYouAnd', 'scale-up-out').restart(), '>-3')
+
+            .add(animationScene('.secAnim-endScene', 'scale-up-in').restart(), `<+${animationScene('.secAnim-justSpendSome', 'scale-up-out').duration() - 4}`)
+            .add(animationScene('.secAnim-endScene', 'scale-up-out').restart(), '>-3')
 
         GSDevTools.create({ paused: true, id: "stMainTl", animation: stMainTl, inTime: 0 })
         stMainTl.play()
@@ -344,43 +354,43 @@ const anim = () => {
     document.querySelector('.btn2').addEventListener('click', () => {
         stMainTl
             .add(animationScene('.secAnim-greetings', 'scale-up-in').restart())
-            .add(animationScene('.secAnim-greetings', 'scale-up-out').restart(), '>-2')
+            .add(animationScene('.secAnim-greetings', 'scale-up-out').restart(), '>-3')
 
-            .add(animationScene('.secAnim-thankYouFor', 'scale-up-in').restart(), `<+${animationScene('.secAnim-greetings', 'scale-up-in').duration() - 4.5}`)
-            .add(animationScene('.secAnim-thankYouFor', 'translate-down-out').restart(), '>-2')
+            .add(animationScene('.secAnim-thankYouFor', 'scale-up-in').restart(), `<+${animationScene('.secAnim-greetings', 'scale-up-in').duration() - 6.5}`)
+            .add(animationScene('.secAnim-thankYouFor', 'translate-down-out').restart(), '>-3')
 
-            .add(animationScene('.secAnim-brain', 'translate-down-in').restart(), `<+${animationScene('.secAnim-thankYouFor', 'translate-down-out').duration() - 4.5}`)
-            .add(animationScene('.secAnim-brain', 'translate-left-out').restart(), '>-2')
+            .add(animationScene('.secAnim-brain', 'translate-down-in').restart(), `<+${animationScene('.secAnim-thankYouFor', 'translate-down-out').duration() - 6.5}`)
+            .add(animationScene('.secAnim-brain', 'translate-left-out').restart(), '>-3')
 
-            .add(animationScene('.secAnim-triangles', 'translate-left-in').restart(), `<+${animationScene('.secAnim-brain', 'translate-left-out').duration() - 4.5}`)
-            .add(animationScene('.secAnim-triangles', 'scale-up-out').restart(), '>-2')
+            .add(animationScene('.secAnim-triangles', 'translate-left-in').restart(), `<+${animationScene('.secAnim-brain', 'translate-left-out').duration() - 6.5}`)
+            .add(animationScene('.secAnim-triangles', 'scale-up-out').restart(), '>-3')
 
-            .add(animationScene('.secAnim-1250inRewards', 'scale-up-in').restart(), `<+${animationScene('.secAnim-triangles', 'scale-up-out').duration() - 2}`)
-            .add(animationScene('.secAnim-1250inRewards', 'translate-up-out').restart(), '>-2')
+            .add(animationScene('.secAnim-1250inRewards', 'scale-up-in').restart(), `<+${animationScene('.secAnim-triangles', 'scale-up-out').duration() - 4}`)
+            .add(animationScene('.secAnim-1250inRewards', 'translate-up-out').restart(), '>-3')
 
-            .add(animationScene('.secAnim-2022Season2', 'translate-up-in').restart(), `<+${animationScene('.secAnim-1250inRewards', 'translate-up-out').duration() - 4.5}`)
-            .add(animationScene('.secAnim-2022Season2', 'scale-down-out').restart(), '>-2')
+            .add(animationScene('.secAnim-2022Season2', 'translate-up-in').restart(), `<+${animationScene('.secAnim-1250inRewards', 'translate-up-out').duration() - 6.5}`)
+            .add(animationScene('.secAnim-2022Season2', 'scale-down-out').restart(), '>-3')
 
-            .add(animationScene('.secAnim-asYouPlan', 'scale-down-in').restart(), `<+${animationScene('.secAnim-2022Season', 'scale-down-out').duration() - 2}`)
-            .add(animationScene('.secAnim-asYouPlan', 'translate-left-out').restart(), '>-2')
+            .add(animationScene('.secAnim-asYouPlan', 'scale-down-in').restart(), `<+${animationScene('.secAnim-2022Season', 'scale-down-out').duration() - 4}`)
+            .add(animationScene('.secAnim-asYouPlan', 'translate-left-out').restart(), '>-3')
 
-            .add(animationScene('.secAnim-consider', 'translate-left-in').restart(), `<+${animationScene('.secAnim-asYouPlan', 'translate-left-out').duration() - 4.5}`)
-            .add(animationScene('.secAnim-consider', 'scale-down-out').restart(), '>-2')
+            .add(animationScene('.secAnim-consider', 'translate-left-in').restart(), `<+${animationScene('.secAnim-asYouPlan', 'translate-left-out').duration() - 6.5}`)
+            .add(animationScene('.secAnim-consider', 'scale-down-out').restart(), '>-3')
 
-            .add(animationScene('.secAnim-laptop', 'scale-down-in').restart(), `<+${animationScene('.secAnim-consider', 'scale-down-out').duration() - 2}`)
-            .add(animationScene('.secAnim-laptop', 'translate-left-out').restart(), '>-2')
+            .add(animationScene('.secAnim-laptop', 'scale-down-in').restart(), `<+${animationScene('.secAnim-consider', 'scale-down-out').duration() - 4}`)
+            .add(animationScene('.secAnim-laptop', 'translate-left-out').restart(), '>-3')
 
-            .add(animationScene('.secAnim-andThisYear', 'translate-left-in').restart(), `<+${animationScene('.secAnim-laptop', 'translate-left-out').duration() - 4.5}`)
-            .add(animationScene('.secAnim-andThisYear', 'translate-right-out').restart(), '>-2')
+            .add(animationScene('.secAnim-andThisYear', 'translate-left-in').restart(), `<+${animationScene('.secAnim-laptop', 'translate-left-out').duration() - 6.5}`)
+            .add(animationScene('.secAnim-andThisYear', 'translate-right-out').restart(), '>-3')
 
-            .add(animationScene('.secAnim-barGraph', 'translate-right-in').restart(), `<+${animationScene('.secAnim-andThisYear', 'translate-right-out').duration() - 4.5}`)
-            .add(animationScene('.secAnim-barGraph', 'translate-up-out').restart(), '>-2')
+            .add(animationScene('.secAnim-barGraph', 'translate-right-in').restart(), `<+${animationScene('.secAnim-andThisYear', 'translate-right-out').duration() - 6.5}`)
+            .add(animationScene('.secAnim-barGraph', 'translate-up-out').restart(), '>-3')
 
-            .add(animationScene('.secAnim-justSpendSome', 'translate-up-in').restart(), `<+${animationScene('.secAnim-barGraph', 'translate-up-out').duration() - 4.5}`)
-            .add(animationScene('.secAnim-justSpendSome', 'scale-up-out').restart(), '>-2')
+            .add(animationScene('.secAnim-justSpendSome', 'translate-up-in').restart(), `<+${animationScene('.secAnim-barGraph', 'translate-up-out').duration() - 6.5}`)
+            .add(animationScene('.secAnim-justSpendSome', 'scale-up-out').restart(), '>-3')
 
-            .add(animationScene('.secAnim-thankYouAnd', 'scale-up-in').restart(), `<+${animationScene('.secAnim-justSpendSome', 'scale-up-out').duration() - 2}`)
-            .add(animationScene('.secAnim-thankYouAnd', 'scale-up-out').restart(), '>-2')
+            .add(animationScene('.secAnim-thankYouAnd', 'scale-up-in').restart(), `<+${animationScene('.secAnim-justSpendSome', 'scale-up-out').duration() - 4}`)
+            .add(animationScene('.secAnim-thankYouAnd', 'scale-up-out').restart(), '>-3')
         stMainTl.play()
         GSDevTools.create({ paused: true, id: "stMainTl", animation: stMainTl, inTime: 0 })
         document.querySelector('.btn1').style.display = 'none'
@@ -523,8 +533,13 @@ setTimeout(()=>{
     getFile("assets/img/justSpendSomeBg copy.svg", '.main_animation_container .secAnim-justSpendSome .imgBg', null)
     getFile("assets/img/justSpendSome copy.svg", '.main_animation_container .secAnim-justSpendSome .imgCon', null)
 
+    getFile("assets/img/justSendAllBg copy.svg", '.main_animation_container .secAnim-justSendAll .imgBg', null)
+    getFile("assets/img/justSendAll copy.svg", '.main_animation_container .secAnim-justSendAll .imgCon', null)
+
     getFile("assets/img/thankYouAndBg copy.svg", '.main_animation_container .secAnim-thankYouAnd .imgBg', null)
     getFile("assets/img/thankYouAnd copy.svg", '.main_animation_container .secAnim-thankYouAnd .imgCon', null)
+
+    getFile("assets/img/endScene copy.svg", '.main_animation_container .secAnim-endScene .imgCon', null)
 
     //
     getFile("assets/img/Dots_N_Lines copy.svg", '.pointBgPre', null)

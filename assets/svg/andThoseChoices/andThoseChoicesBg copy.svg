@@ -4,7 +4,7 @@
 	 x="0px" y="0px" width="3840px" height="2160px" viewBox="0 0 3840 2160" enable-background="new 0 0 3840 2160"
 	 xml:space="preserve">
 <g id="_x2D_.bgScene-">
-	<rect id="_x2D_.bgColor-" x="-7.43" y="-14" fill="#FFFFFF" width="3860" height="2188.53"/>
+	<rect id="_x2D_.bgColor-" x="-7.43" y="-14" fill="#F2F2F2" width="3860" height="2188.53"/>
 	<g id="_x2D_.moveElements-">
 		<g>
 			<g>
@@ -30,7 +30,7 @@
 	<rect x="-5.43" y="-25.96" fill="none" width="3859.51" height="2188.66"/>
 </g>
 <g id="_x2D_.lineBG-">
-	<polygon fill="#A4CD38" points="1295.18,2209.85 1290.43,2207.56 2776.12,-86.3 2780.87,-84 	"/>
+	<polygon fill="#A4CD38" points="2663.29,2327.67 2658.54,2325.38 4144.24,31.52 4148.99,33.82 	"/>
 	<rect x="-5.43" y="-25.96" fill="none" width="3859.51" height="2188.66"/>
 </g>
 <rect x="-5.43" y="-25.96" fill="none" width="3859.51" height="2188.66"/>

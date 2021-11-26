@@ -73,6 +73,7 @@ const anim = () => {
         ]
     ]
     let laptopImageUrl = "assets/img/TestProducts2/6_logos_v2.svg";
+    let plusEndLogoUrl = "assets/img/TestProducts2/plus.png";
 
     if(document.querySelector(".gTriangleImage")) {
         for (let i = 0; i < 4; i++) {
@@ -87,6 +88,10 @@ const anim = () => {
     if(document.querySelector("#laptopImage")){
         let logoImage = getRandomInt(arrImgLogo.length)
         document.querySelector("#laptopImage image").setAttribute("xlink:href",laptopImageUrl)
+    }
+    if(document.querySelector("#plusEndLogo")){
+        let logoImage = getRandomInt(arrImgLogo.length)
+        document.querySelector("#plusEndLogo image").setAttribute("xlink:href",plusEndLogoUrl)
     }
 
     /**
@@ -313,19 +318,19 @@ const anim = () => {
     }
 
 
-    document.querySelector('.btn1').addEventListener('click', () => {
+    function varAnim1() {
         stMainTl
-            .to(".pointBgScena1",{duration:2,autoAlpha:0.5},">")
-            .from(".pointBgScena1 .contForPoint",{duration:2,scale:0.5,transformOrigin:"50% 50%"},"<")
-            .add(animationScene('.secAnim-greetings', 'scale-up-in').restart(),"<")
+            .to(".pointBgScena1", {duration: 2, autoAlpha: 0.5}, ">")
+            .from(".pointBgScena1 .contForPoint", {duration: 2, scale: 0.5, transformOrigin: "50% 50%"}, "<")
+            .add(animationScene('.secAnim-greetings', 'scale-up-in').restart(), "<")
             .add(animationScene('.secAnim-greetings', 'scale-up-out').restart(), '>-3')
-            .to(".pointBgScena1 .contForPoint",{duration:2,scale:2,transformOrigin:"50% 30%"},"<")
-            .to(".pointBgScena1 .contForPoint > *:nth-last-child(1)",{duration:1,opacity:0.5},">-1")
-            .to(".pointBgScena1 .contForPoint > *:nth-last-child(2)",{duration:1,opacity:0.5},"<")
-            .to(".pointBgScena1 .contForPoint > *:nth-last-child(3)",{duration:1,opacity:0.4},"<")
+            .to(".pointBgScena1 .contForPoint", {duration: 2, scale: 2, transformOrigin: "50% 30%"}, "<")
+            .to(".pointBgScena1 .contForPoint > *:nth-last-child(1)", {duration: 1, opacity: 0.5}, ">-1")
+            .to(".pointBgScena1 .contForPoint > *:nth-last-child(2)", {duration: 1, opacity: 0.5}, "<")
+            .to(".pointBgScena1 .contForPoint > *:nth-last-child(3)", {duration: 1, opacity: 0.4}, "<")
 
-            .to(".pointBgScena1",{duration:2,autoAlpha:0},">")
-            .add(animationScene('.secAnim-thankYouFor', 'scale-up-in').restart(), `<+${animationScene('.secAnim-greetings', 'scale-up-in').duration() - 10.5 }`)
+            .to(".pointBgScena1", {duration: 2, autoAlpha: 0}, ">")
+            .add(animationScene('.secAnim-thankYouFor', 'scale-up-in').restart(), `<+${animationScene('.secAnim-greetings', 'scale-up-in').duration() - 10.5}`)
             .add(animationScene('.secAnim-thankYouFor', 'translate-down-out').restart(), '>-3')
 
             .add(animationScene('.secAnim-brain', 'translate-down-in').restart(), `<+${animationScene('.secAnim-thankYouFor', 'translate-down-out').duration() - 6.5}`)
@@ -373,58 +378,61 @@ const anim = () => {
             .add(animationScene('.secAnim-endScene', 'scale-up-in').restart(), `<+${animationScene('.secAnim-justSpendSome', 'scale-up-out').duration() - 4}`)
             .add(animationScene('.secAnim-endScene', 'scale-up-out').restart(), '>-3')
 
-        GSDevTools.create({ paused: true, id: "stMainTl", animation: stMainTl, inTime: 0 })
+        GSDevTools.create({paused: true, id: "stMainTl", animation: stMainTl, inTime: 0})
         stMainTl.play()
         document.querySelector('.btn1').style.display = 'none'
         document.querySelector('.btn2').style.display = 'none'
-    })
-
-    document.querySelector('.btn2').addEventListener('click', () => {
-        stMainTl
-            .to(".pointBg",{autoAlpha:1})
-            .add(animationScene('.secAnim-greetings', 'scale-up-in').restart())
-            .add(animationScene('.secAnim-greetings', 'scale-up-out').restart(), '>-3')
-
-            .add(animationScene('.secAnim-thankYouFor', 'scale-up-in').restart(), `<+${animationScene('.secAnim-greetings', 'scale-up-in').duration() - 6.5}`)
-            .add(animationScene('.secAnim-thankYouFor', 'translate-down-out').restart(), '>-3')
-
-            .add(animationScene('.secAnim-brain', 'translate-down-in').restart(), `<+${animationScene('.secAnim-thankYouFor', 'translate-down-out').duration() - 6.5}`)
-            .add(animationScene('.secAnim-brain', 'translate-left-out').restart(), '>-3')
-
-            .add(animationScene('.secAnim-triangles', 'translate-left-in').restart(), `<+${animationScene('.secAnim-brain', 'translate-left-out').duration() - 6.5}`)
-            .add(animationScene('.secAnim-triangles', 'scale-up-out').restart(), '>-3')
-
-            .add(animationScene('.secAnim-1250inRewards', 'scale-up-in').restart(), `<+${animationScene('.secAnim-triangles', 'scale-up-out').duration() - 4}`)
-            .add(animationScene('.secAnim-1250inRewards', 'translate-up-out').restart(), '>-3')
-
-            .add(animationScene('.secAnim-2022Season2', 'translate-up-in').restart(), `<+${animationScene('.secAnim-1250inRewards', 'translate-up-out').duration() - 6.5}`)
-            .add(animationScene('.secAnim-2022Season2', 'scale-down-out').restart(), '>-3')
-
-            .add(animationScene('.secAnim-asYouPlan', 'scale-down-in').restart(), `<+${animationScene('.secAnim-2022Season', 'scale-down-out').duration() - 4}`)
-            .add(animationScene('.secAnim-asYouPlan', 'translate-left-out').restart(), '>-3')
-
-            .add(animationScene('.secAnim-consider', 'translate-left-in').restart(), `<+${animationScene('.secAnim-asYouPlan', 'translate-left-out').duration() - 6.5}`)
-            .add(animationScene('.secAnim-consider', 'scale-down-out').restart(), '>-3')
-
-            .add(animationScene('.secAnim-laptop', 'scale-down-in').restart(), `<+${animationScene('.secAnim-consider', 'scale-down-out').duration() - 4}`)
-            .add(animationScene('.secAnim-laptop', 'translate-left-out').restart(), '>-3')
-
-            .add(animationScene('.secAnim-andThisYear', 'translate-left-in').restart(), `<+${animationScene('.secAnim-laptop', 'translate-left-out').duration() - 6.5}`)
-            .add(animationScene('.secAnim-andThisYear', 'translate-right-out').restart(), '>-3')
-
-            .add(animationScene('.secAnim-barGraph', 'translate-right-in').restart(), `<+${animationScene('.secAnim-andThisYear', 'translate-right-out').duration() - 6.5}`)
-            .add(animationScene('.secAnim-barGraph', 'translate-up-out').restart(), '>-3')
-
-            .add(animationScene('.secAnim-justSpendSome', 'translate-up-in').restart(), `<+${animationScene('.secAnim-barGraph', 'translate-up-out').duration() - 6.5}`)
-            .add(animationScene('.secAnim-justSpendSome', 'scale-up-out').restart(), '>-3')
-
-            .add(animationScene('.secAnim-thankYouAnd', 'scale-up-in').restart(), `<+${animationScene('.secAnim-justSpendSome', 'scale-up-out').duration() - 4}`)
-            .add(animationScene('.secAnim-thankYouAnd', 'scale-up-out').restart(), '>-3')
-        stMainTl.play()
-        GSDevTools.create({ paused: true, id: "stMainTl", animation: stMainTl, inTime: 0 })
-        document.querySelector('.btn1').style.display = 'none'
-        document.querySelector('.btn2').style.display = 'none'
-    })
+    }
+    varAnim1()
+    // setTimeout(()=>{varAnim1()}, 2000)
+    // document.querySelector('.btn1').addEventListener('click', varAnim1)
+    //
+    // document.querySelector('.btn2').addEventListener('click', () => {
+    //     stMainTl
+    //         .to(".pointBg",{autoAlpha:1})
+    //         .add(animationScene('.secAnim-greetings', 'scale-up-in').restart())
+    //         .add(animationScene('.secAnim-greetings', 'scale-up-out').restart(), '>-3')
+    //
+    //         .add(animationScene('.secAnim-thankYouFor', 'scale-up-in').restart(), `<+${animationScene('.secAnim-greetings', 'scale-up-in').duration() - 6.5}`)
+    //         .add(animationScene('.secAnim-thankYouFor', 'translate-down-out').restart(), '>-3')
+    //
+    //         .add(animationScene('.secAnim-brain', 'translate-down-in').restart(), `<+${animationScene('.secAnim-thankYouFor', 'translate-down-out').duration() - 6.5}`)
+    //         .add(animationScene('.secAnim-brain', 'translate-left-out').restart(), '>-3')
+    //
+    //         .add(animationScene('.secAnim-triangles', 'translate-left-in').restart(), `<+${animationScene('.secAnim-brain', 'translate-left-out').duration() - 6.5}`)
+    //         .add(animationScene('.secAnim-triangles', 'scale-up-out').restart(), '>-3')
+    //
+    //         .add(animationScene('.secAnim-1250inRewards', 'scale-up-in').restart(), `<+${animationScene('.secAnim-triangles', 'scale-up-out').duration() - 4}`)
+    //         .add(animationScene('.secAnim-1250inRewards', 'translate-up-out').restart(), '>-3')
+    //
+    //         .add(animationScene('.secAnim-2022Season2', 'translate-up-in').restart(), `<+${animationScene('.secAnim-1250inRewards', 'translate-up-out').duration() - 6.5}`)
+    //         .add(animationScene('.secAnim-2022Season2', 'scale-down-out').restart(), '>-3')
+    //
+    //         .add(animationScene('.secAnim-asYouPlan', 'scale-down-in').restart(), `<+${animationScene('.secAnim-2022Season', 'scale-down-out').duration() - 4}`)
+    //         .add(animationScene('.secAnim-asYouPlan', 'translate-left-out').restart(), '>-3')
+    //
+    //         .add(animationScene('.secAnim-consider', 'translate-left-in').restart(), `<+${animationScene('.secAnim-asYouPlan', 'translate-left-out').duration() - 6.5}`)
+    //         .add(animationScene('.secAnim-consider', 'scale-down-out').restart(), '>-3')
+    //
+    //         .add(animationScene('.secAnim-laptop', 'scale-down-in').restart(), `<+${animationScene('.secAnim-consider', 'scale-down-out').duration() - 4}`)
+    //         .add(animationScene('.secAnim-laptop', 'translate-left-out').restart(), '>-3')
+    //
+    //         .add(animationScene('.secAnim-andThisYear', 'translate-left-in').restart(), `<+${animationScene('.secAnim-laptop', 'translate-left-out').duration() - 6.5}`)
+    //         .add(animationScene('.secAnim-andThisYear', 'translate-right-out').restart(), '>-3')
+    //
+    //         .add(animationScene('.secAnim-barGraph', 'translate-right-in').restart(), `<+${animationScene('.secAnim-andThisYear', 'translate-right-out').duration() - 6.5}`)
+    //         .add(animationScene('.secAnim-barGraph', 'translate-up-out').restart(), '>-3')
+    //
+    //         .add(animationScene('.secAnim-justSpendSome', 'translate-up-in').restart(), `<+${animationScene('.secAnim-barGraph', 'translate-up-out').duration() - 6.5}`)
+    //         .add(animationScene('.secAnim-justSpendSome', 'scale-up-out').restart(), '>-3')
+    //
+    //         .add(animationScene('.secAnim-thankYouAnd', 'scale-up-in').restart(), `<+${animationScene('.secAnim-justSpendSome', 'scale-up-out').duration() - 4}`)
+    //         .add(animationScene('.secAnim-thankYouAnd', 'scale-up-out').restart(), '>-3')
+    //     stMainTl.play()
+    //     GSDevTools.create({ paused: true, id: "stMainTl", animation: stMainTl, inTime: 0 })
+    //     document.querySelector('.btn1').style.display = 'none'
+    //     document.querySelector('.btn2').style.display = 'none'
+    // })
         // stMainTl
         //     .add(animationScene('.secAnim-greetings', 'scale-up').restart())
         //     .add(animationScene('.secAnim-thankYouFor', 'scale-up').restart())
@@ -516,63 +524,63 @@ setTimeout(()=>{
 
 
 
-    getFile("assets/img/greetingsBg copy.svg", '.main_animation_container .secAnim-greetings .imgBg', null)
-    getFile("assets/img/greetings copy.svg", '.main_animation_container .secAnim-greetings .imgCon', null)
+    getFile("assets/svg/greetings/greetingsBg copy.svg", '.main_animation_container .secAnim-greetings .imgBg', null)
+    getFile("assets/svg/greetings/greetings copy.svg", '.main_animation_container .secAnim-greetings .imgCon', null)
 
-    getFile("assets/img/thankYouForBg copy.svg", '.main_animation_container .secAnim-thankYouFor .imgBg', null)
-    getFile("assets/img/thankYouFor copy.svg", '.main_animation_container .secAnim-thankYouFor .imgCon', null)
+    getFile("assets/svg/thankYouFor/thankYouForBg copy.svg", '.main_animation_container .secAnim-thankYouFor .imgBg', null)
+    getFile("assets/svg/thankYouFor/thankYouFor copy.svg", '.main_animation_container .secAnim-thankYouFor .imgCon', null)
 
-    getFile("assets/img/brainBg copy.svg", '.main_animation_container .secAnim-brain .imgBg', null)
-    getFile("assets/img/brain copy.svg", '.main_animation_container .secAnim-brain .imgCon', null)
+    getFile("assets/svg/brain/brainBg copy.svg", '.main_animation_container .secAnim-brain .imgBg', null)
+    getFile("assets/svg/brain/brain copy.svg", '.main_animation_container .secAnim-brain .imgCon', null)
 
-    getFile("assets/img/triangles copy.svg", '.main_animation_container .secAnim-triangles .imgCon', null)
+    getFile("assets/svg/triangles/triangles copy.svg", '.main_animation_container .secAnim-triangles .imgCon', null)
 
-    getFile("assets/img/andThoseChoicesBg copy.svg", '.main_animation_container .secAnim-andThoseChoices .imgBg', null)
-    getFile("assets/img/andThoseChoices copy.svg", '.main_animation_container .secAnim-andThoseChoices .imgCon', null)
+    getFile("assets/svg/andThoseChoices/andThoseChoicesBg copy.svg", '.main_animation_container .secAnim-andThoseChoices .imgBg', null)
+    getFile("assets/svg/andThoseChoices/andThoseChoices copy.svg", '.main_animation_container .secAnim-andThoseChoices .imgCon', null)
 
-    getFile("assets/img/2455inRewardsBg copy.svg", '.main_animation_container .secAnim-2455inRewards .imgBg', null)
-    getFile("assets/img/2455inRewards copy.svg", '.main_animation_container .secAnim-2455inRewards .imgCon', null)
+    getFile("assets/svg/2455inRewards/2455inRewardsBg copy.svg", '.main_animation_container .secAnim-2455inRewards .imgBg', null)
+    getFile("assets/svg/2455inRewards/2455inRewards copy.svg", '.main_animation_container .secAnim-2455inRewards .imgCon', null)
 
-    getFile("assets/img/745BalanceBg copy.svg", '.main_animation_container .secAnim-745Balance .imgBg', null)
-    getFile("assets/img/745Balance copy.svg", '.main_animation_container .secAnim-745Balance .imgCon', null)
+    getFile("assets/svg/745Balance/745BalanceBg copy.svg", '.main_animation_container .secAnim-745Balance .imgBg', null)
+    getFile("assets/svg/745Balance/745Balance copy.svg", '.main_animation_container .secAnim-745Balance .imgCon', null)
 
-    getFile("assets/img/2022SeasonBg copy.svg", '.main_animation_container .secAnim-2022Season .imgBg', null)
-    getFile("assets/img/2022Season copy.svg", '.main_animation_container .secAnim-2022Season .imgCon', null)
+    getFile("assets/svg/2022Season/2022SeasonBg copy.svg", '.main_animation_container .secAnim-2022Season .imgBg', null)
+    getFile("assets/svg/2022Season/2022Season copy.svg", '.main_animation_container .secAnim-2022Season .imgCon', null)
 
-    getFile("assets/img/1250inRewardsBg copy.svg", '.main_animation_container .secAnim-1250inRewards .imgBg', null)
-    getFile("assets/img/1250inRewards copy.svg", '.main_animation_container .secAnim-1250inRewards .imgCon', null)
+    getFile("assets/svg/1250inRewards/1250inRewardsBg copy.svg", '.main_animation_container .secAnim-1250inRewards .imgBg', null)
+    getFile("assets/svg/1250inRewards/1250inRewards copy.svg", '.main_animation_container .secAnim-1250inRewards .imgCon', null)
 
-    getFile("assets/img/2022Season2Bg copy.svg", '.main_animation_container .secAnim-2022Season2 .imgBg', null)
-    getFile("assets/img/2022Season2 copy.svg", '.main_animation_container .secAnim-2022Season2 .imgCon', null)
+    getFile("assets/svg/2022Season2/2022Season2Bg copy.svg", '.main_animation_container .secAnim-2022Season2 .imgBg', null)
+    getFile("assets/svg/2022Season2/2022Season2 copy.svg", '.main_animation_container .secAnim-2022Season2 .imgCon', null)
 
-    getFile("assets/img/asYouPlanBg copy.svg", '.main_animation_container .secAnim-asYouPlan .imgBg', null)
-    getFile("assets/img/asYouPlan copy.svg", '.main_animation_container .secAnim-asYouPlan .imgCon', null)
+    getFile("assets/svg/asYouPlan/asYouPlanBg copy.svg", '.main_animation_container .secAnim-asYouPlan .imgBg', null)
+    getFile("assets/svg/asYouPlan/asYouPlan copy.svg", '.main_animation_container .secAnim-asYouPlan .imgCon', null)
 
-    getFile("assets/img/considerBg copy.svg", '.main_animation_container .secAnim-consider .imgBg', null)
-    getFile("assets/img/consider copy.svg", '.main_animation_container .secAnim-consider .imgCon', null)
+    getFile("assets/svg/consider/considerBg copy.svg", '.main_animation_container .secAnim-consider .imgBg', null)
+    getFile("assets/svg/consider/consider copy.svg", '.main_animation_container .secAnim-consider .imgCon', null)
 
-    getFile("assets/img/laptopBg copy.svg", '.main_animation_container .secAnim-laptop .imgBg', null)
-    getFile("assets/img/laptop copy.svg", '.main_animation_container .secAnim-laptop .imgCon', null)
+    getFile("assets/svg/laptop/laptopBg copy.svg", '.main_animation_container .secAnim-laptop .imgBg', null)
+    getFile("assets/svg/laptop/laptop copy.svg", '.main_animation_container .secAnim-laptop .imgCon', null)
 
-    getFile("assets/img/andThisYear copy.svg", '.main_animation_container .secAnim-andThisYear .imgCon', null)
+    getFile("assets/svg/andThisYear/andThisYear copy.svg", '.main_animation_container .secAnim-andThisYear .imgCon', null)
 
-    getFile("assets/img/barGraphBg copy.svg", '.main_animation_container .secAnim-barGraph .imgBg', null)
-    getFile("assets/img/barGraph copy.svg", '.main_animation_container .secAnim-barGraph .imgCon', null)
+    getFile("assets/svg/barGraph/barGraphBg copy.svg", '.main_animation_container .secAnim-barGraph .imgBg', null)
+    getFile("assets/svg/barGraph/barGraph copy.svg", '.main_animation_container .secAnim-barGraph .imgCon', null)
 
-    getFile("assets/img/justSpendSomeBg copy.svg", '.main_animation_container .secAnim-justSpendSome .imgBg', null)
-    getFile("assets/img/justSpendSome copy.svg", '.main_animation_container .secAnim-justSpendSome .imgCon', null)
+    getFile("assets/svg/justSpendSome/justSpendSomeBg copy.svg", '.main_animation_container .secAnim-justSpendSome .imgBg', null)
+    getFile("assets/svg/justSpendSome/justSpendSome copy.svg", '.main_animation_container .secAnim-justSpendSome .imgCon', null)
 
-    getFile("assets/img/justSendAllBg copy.svg", '.main_animation_container .secAnim-justSendAll .imgBg', null)
-    getFile("assets/img/justSendAll copy.svg", '.main_animation_container .secAnim-justSendAll .imgCon', null)
+    getFile("assets/svg/justSendAll/justSendAllBg copy.svg", '.main_animation_container .secAnim-justSendAll .imgBg', null)
+    getFile("assets/svg/justSendAll/justSendAll copy.svg", '.main_animation_container .secAnim-justSendAll .imgCon', null)
 
-    getFile("assets/img/thankYouAndBg copy.svg", '.main_animation_container .secAnim-thankYouAnd .imgBg', null)
-    getFile("assets/img/thankYouAnd copy.svg", '.main_animation_container .secAnim-thankYouAnd .imgCon', null)
+    getFile("assets/svg/thankYouAnd/thankYouAndBg copy.svg", '.main_animation_container .secAnim-thankYouAnd .imgBg', null)
+    getFile("assets/svg/thankYouAnd/thankYouAnd copy.svg", '.main_animation_container .secAnim-thankYouAnd .imgCon', null)
 
-    getFile("assets/img/plus copy.svg", '.main_animation_container .secAnim-plus .imgCon', null)
+    getFile("assets/svg/plus/plus copy.svg", '.main_animation_container .secAnim-plus .imgCon', null)
 
-    getFile("assets/img/endScene copy.svg", '.main_animation_container .secAnim-endScene .imgCon', null)
+    getFile("assets/svg/endScene/endScene copy.svg", '.main_animation_container .secAnim-endScene .imgCon', null)
 
     //
-    getFile("assets/img/Dots_N_Lines copy.svg", '.pointBgPre', null)
-    getFile("assets/img/DotsRectScena1 copy.svg", '.pointBgScena1', null)
+    getFile("assets/svg/dotForBgAnim/Dots_N_Lines copy.svg", '.pointBgPre', null)
+    getFile("assets/svg/dotForBgAnim/DotsRectScena1 copy.svg", '.pointBgScena1', null)
 

@@ -1,5 +1,5 @@
-<svg>
-	<symbol id="forUse1" width="3224px" height="2370px" viewBox="0 0 3224 2370">
+<svg id="dotPre">
+	<symbol id="forUseA" width="3224px" height="2370px" viewBox="0 0 3224 2370">
 		<g opacity="0.5">
 			<g id="_x2D_.dotAndLine-">
 				<g id="_x2D_.lines-">
@@ -173,7 +173,7 @@
 			</g>
 		</g>
 	</symbol>
-	<symbol id="forUse2" width="3224px" height="1365px" viewBox="0 0 3224 1365">
+	<symbol id="forUseB" width="3224px" height="1365px" viewBox="0 0 3224 1365">
 		<g opacity="0.5">
 			<g id="_x2D_.lines-">
 				<polyline fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" stroke-dashoffset="1" points="

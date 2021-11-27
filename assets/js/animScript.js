@@ -1,53 +1,8 @@
-async function getFile(pathToSVGfile, insertEl, anim) {
-    const res = await fetch(`${pathToSVGfile}`)
-    res.text().then(res => {
-        document.querySelector(insertEl).innerHTML = res
-        let idSvg = document.querySelector(insertEl+ " svg").getAttribute("id")
-        document.querySelector(insertEl).innerHTML = res.replaceAll("SVGID", idSvg + "_SVGID")
-            .replace('<?xml version="1.0" encoding="utf-8"?>',"")
-            .replace('<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->',"");
-    }).then(() => {
-        let idSvg = document.querySelector(insertEl+ " svg").getAttribute("id")
-        // document.querySelector("head title").innerHTML = idSvg
-        //// set class
-        document.querySelectorAll(`${insertEl} svg *`).forEach((elem) => {
-            if (elem.getAttribute('id')) {
-                let tempId = elem.getAttribute('id');
+////////////////////////////////////
+////////////////////////////////////
+////////////////////////////////////
 
-                if ((tempId[0] == '_' && tempId[1] == 'x' && tempId[2] == '2') || (tempId[0] == '_' && tempId[1] == '-')) {
-                    if(tempId[0] == '_' && tempId[1] == '-')tempId = tempId.slice(3)
-                    else tempId = tempId.slice(6)
-
-                    let tempClassList = '';
-                    do {
-                        if (tempId[0] == '.') {
-                            tempClassList += ' '
-                            tempId = tempId.slice(1)
-                        }
-                        if (tempId[0] == '-') {
-                            break;
-                        }
-
-                        tempClassList += tempId.slice(0, 1)
-                        tempId = tempId.slice(1)
-
-                    } while (tempId.length > 0)
-                    elem.setAttribute('class', tempClassList)
-                }
-            }
-        })
-
-        // if ()
-        if(idSvg[idSvg.length-5] == "B" && idSvg[idSvg.length-4] == "g")
-        document.querySelector(insertEl +" svg").setAttribute("preserveAspectRatio","none")
-        // document.querySelector(insertEl +" svg").setAttribute("preserveAspectRatio","xMidYMid slice")
-        // console.log(document.querySelector(insertEl).innerHTML)
-        if(anim) anim()
-
-    })
-
-}
-const anim = () => {
+const anim = function(){
 
     function getRandomInt(max) {
         return Math.floor(Math.random() * max);
@@ -384,6 +339,7 @@ const anim = () => {
         document.querySelector('.btn2').style.display = 'none'
     }
     varAnim1()
+
     // setTimeout(()=>{varAnim1()}, 2000)
     // document.querySelector('.btn1').addEventListener('click', varAnim1)
     //
@@ -433,154 +389,139 @@ const anim = () => {
     //     document.querySelector('.btn1').style.display = 'none'
     //     document.querySelector('.btn2').style.display = 'none'
     // })
-        // stMainTl
-        //     .add(animationScene('.secAnim-greetings', 'scale-up').restart())
-        //     .add(animationScene('.secAnim-thankYouFor', 'scale-up').restart())
-        //     .add(animationScene('.secAnim-brain', 'translate-down').restart())
-        //     .add(animationScene('.secAnim-triangles', 'translate-left').restart())
-        //     .add(animationScene('.secAnim-andThoseChoices', 'scale-up').restart())
-        //     .add(animationScene('.secAnim-2455inRewards', 'translate-up').restart())
-        //     .add(animationScene('.secAnim-745Balance', 'translate-right').restart())
-        //     .add(animationScene('.secAnim-2022Season', 'translate-down').restart())
-        //     .add(animationScene('.secAnim-asYouPlan', 'scale-down').restart())
-        //     .add(animationScene('.secAnim-consider', 'translate-left').restart())
-        //     .add(animationScene('.secAnim-laptop', 'scale-down').restart())
-        //     .add(animationScene('.secAnim-andThisYear', 'translate-left').restart())
-        //     .add(animationScene('.secAnim-barGraph', 'translate-right').restart())
-        //     .add(animationScene('.secAnim-justSpendSome', 'translate-up').restart())
-        //     .add(animationScene('.secAnim-thankYouAnd', 'scale-up').restart())
-
-        // stMainTl2
-        //     .add(animationScene('.secAnim-greetings', 'scale-up').restart())
-        //     .add(animationScene('.secAnim-thankYouFor', 'scale-up').restart())
-        //     .add(animationScene('.secAnim-brain', 'translate-down').restart())
-        //     .add(animationScene('.secAnim-triangles', 'translate-left').restart())
-        //     .add(animationScene('.secAnim-1250inRewards', 'scale-up').restart())
-        //     .add(animationScene('.secAnim-2022Season2', 'translate-up').restart())
-        //     .add(animationScene('.secAnim-asYouPlan', 'scale-down').restart())
-        //     .add(animationScene('.secAnim-consider', 'translate-left').restart())
-        //     .add(animationScene('.secAnim-laptop', 'scale-down').restart())
-        //     .add(animationScene('.secAnim-andThisYear', 'translate-left').restart())
-        //     .add(animationScene('.secAnim-barGraph', 'translate-right').restart())
-        //     .add(animationScene('.secAnim-justSpendSome', 'translate-up').restart())
-        //     .add(animationScene('.secAnim-thankYouAnd', 'scale-up').restart())
-
-    // moveElements.forEach(function (elem,index) {
-    //     let temBgColor = document.querySelector(".secAnim:nth-child("+(index+1)+") .bgColor").getAttribute("fill")
-    //     stMainTl
-    //         .set(".secAnim:nth-child("+(index+1)+")",{autoAlpha:1},(index == 0) ? ">" : "<-4" )
-    //         // .set(elem,{scale:5,transformOrigin:"50% 50%"},"<")
-    //         .to(".main_animation_container",{duration:3,background:temBgColor,ease:"sine.inOut"},"<")
-    //         .from(elem,{duration:3,scale:0.5,autoAlpha:0,transformOrigin:"50% 50%",ease:"power4.inOut",stagger:{each:0.2,from:"end"}},"<")
-
-    //         .to(elem,{duration:5,scale:2,transformOrigin:"50% 50%",ease:"sine.in",stagger:{each:0.3,from:"end"}},"<+5")
-    //         .to(elem,{duration:0.2,autoAlpha:0,ease:"none",stagger:{each:0.3,from:"end"}},"<+3")
-    //         .set(".secAnim:nth-child("+(index+1)+")",{autoAlpha:0},">")
-    // })
-        // .set(".secAnim1",{autoAlpha:1})
-        // .from(moveElements.sc1,{duration:3,scale:0.5,autoAlpha:0,transformOrigin:"50% 50%",ease:"sine.out",stagger:{each:0.2,from:"end"}},"<")
-        //
-        // .to(moveElements.sc1,{duration:5,scale:5,transformOrigin:"50% 50%",ease:"sine.in",stagger:{each:0.5,from:"end"}},"<+5")
-        // .to(moveElements.sc1,{duration:0.2,autoAlpha:0,ease:"none",stagger:{each:0.5,from:"end"}},"<+3")
-        // .set(".secAnim1",{autoAlpha:1},">")
-        //
-        // .set(".secAnim2",{autoAlpha:1},"<-6")
-        // .from(moveElements.sc2,{duration:3,scale:0.5,autoAlpha:0,transformOrigin:"50% 50%",ease:"sine.out",stagger:{each:0.2,from:"end"}},"<")
-        //
-        // .to(moveElements.sc2,{duration:5,scale:5,transformOrigin:"50% 50%",ease:"sine.in",stagger:{each:0.5,from:"end"}},"<+5")
-        // .to(moveElements.sc2,{duration:0.2,autoAlpha:0,ease:"none",stagger:{each:0.5,from:"end"}},"<+3")
-        // .set(".secAnim2",{autoAlpha:1},">")
-
-
-
-        // .from([pointArrG],{duration:4,scale:0,autoAlpha:0,transformOrigin:"50% 50%",stagger:{amount:2,from:"end"}},"<")
-        // .set(".secAnim1",{autoAlpha:0})
-        // .set(".main_animation_container",{background:"linear-gradient(110deg, rgba(0,31,72,1) 0%, rgba(0,192,241,1) 0%, rgba(0,192,241,1) 100%, rgba(255,255,255,1) 100%)"},"<")
-        //
-        // .to(".main_animation_container",{duration:4,background:"linear-gradient(110deg, rgba(0,31,72,1) 0%, rgba(0,192,241,1) 0%, rgba(0,192,241,1) 0%, rgba(255,255,255,1) 0%)"},"+=3")
-        // .to(".secAnim2",{duration:2,z:1000,ease:"sine.in"},"<")
-        // .to([pointArrG],{duration:4,scale:5,transformOrigin:"50% 50%",stagger:{amount:2,from:"end"}},"<")
-        // .from(".secAnim3 .imgBg, .secAnim3 h2",{duration:4,scale:0.1,autoAlpha:0,transformOrigin:"50% 50%",stagger:{amount:2,from:"end"}},"<")
-        //
-        // // .to(".main_animation_container",{duration:1,background:"linear-gradient(110deg, rgba(0,31,72,1) 0%, rgba(0,192,241,1) 0%, rgba(0,192,241,1) 0%, rgba(165,205,56,1) 0%)"},"<")
-        // .set(".secAnim2",{autoAlpha:0})
-        // .set(".main_animation_container",{duration:1,background:"linear-gradient(110deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%, rgba(0,192,241,1) 100%, rgba(0,192,241,1) 100%)"},"<")
-        //
-        // .to([".secAnim3 .imgBg",".secAnim3 h2"],{duration:2,scale:5,transformOrigin:"50% 50%",ease:"sine.in",stagger:{amount:1,from:"start"}},"+=3")
-        // .to(".secAnim3",{duration:2,z:1000,ease:"sine.in"},"<")
-        // .from([".secAnim4 .imgBg",".secAnim4 h2"],{duration:4,scale:0.1,autoAlpha:0,transformOrigin:"50% 50%",stagger:{amount:2,from:"end"}},"<")
-        // .to(".main_animation_container",{duration:4,background:"linear-gradient(110deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(0,192,241,1) 0%, rgba(0,192,241,1) 0%)"},"<")
-        // .set(".secAnim3",{autoAlpha:0})
-
 
     gsap.set(".main_animation_container",{opacity:1})
 
-    // GSDevTools.create({paused:true,id:"stMainTl",animation:stMainTl,inTime: 0})
+}
+
+
+///////////////////////////////////////
+///////////////////////////////////////
+///////////////////////////////////////
+
+/**
+ * load svg content
+ */
+
+let countContentSvg = [0]
+let arrContentSvg = [
+    ["assets/svg/greetings/greetingsBg copy.svg", '.main_animation_container .secAnim-greetings .imgBg', anim, countContentSvg],
+    ["assets/svg/greetings/greetings copy.svg", '.main_animation_container .secAnim-greetings .imgCon', anim, countContentSvg],
+
+    ["assets/svg/thankYouFor/thankYouForBg copy.svg", '.main_animation_container .secAnim-thankYouFor .imgBg', anim, countContentSvg],
+    ["assets/svg/thankYouFor/thankYouFor copy.svg", '.main_animation_container .secAnim-thankYouFor .imgCon', anim, countContentSvg],
+
+    ["assets/svg/brain/brainBg copy.svg", '.main_animation_container .secAnim-brain .imgBg', anim, countContentSvg],
+    ["assets/svg/brain/brain copy.svg", '.main_animation_container .secAnim-brain .imgCon', anim, countContentSvg],
+
+    ["assets/svg/triangles/triangles copy.svg", '.main_animation_container .secAnim-triangles .imgCon', anim, countContentSvg],
+
+    ["assets/svg/andThoseChoices/andThoseChoicesBg copy.svg", '.main_animation_container .secAnim-andThoseChoices .imgBg', anim, countContentSvg],
+    ["assets/svg/andThoseChoices/andThoseChoices copy.svg", '.main_animation_container .secAnim-andThoseChoices .imgCon', anim, countContentSvg],
+
+    ["assets/svg/2455inRewards/2455inRewardsBg copy.svg", '.main_animation_container .secAnim-2455inRewards .imgBg', anim, countContentSvg],
+    ["assets/svg/2455inRewards/2455inRewards copy.svg", '.main_animation_container .secAnim-2455inRewards .imgCon', anim, countContentSvg],
+
+    ["assets/svg/745Balance/745BalanceBg copy.svg", '.main_animation_container .secAnim-745Balance .imgBg', anim, countContentSvg],
+    ["assets/svg/745Balance/745Balance copy.svg", '.main_animation_container .secAnim-745Balance .imgCon', anim, countContentSvg],
+
+    ["assets/svg/2022Season/2022SeasonBg copy.svg", '.main_animation_container .secAnim-2022Season .imgBg', anim, countContentSvg],
+    ["assets/svg/2022Season/2022Season copy.svg", '.main_animation_container .secAnim-2022Season .imgCon', anim, countContentSvg],
+
+    ["assets/svg/1250inRewards/1250inRewardsBg copy.svg", '.main_animation_container .secAnim-1250inRewards .imgBg', anim, countContentSvg],
+    ["assets/svg/1250inRewards/1250inRewards copy.svg", '.main_animation_container .secAnim-1250inRewards .imgCon', anim, countContentSvg],
+
+    ["assets/svg/2022Season2/2022Season2Bg copy.svg", '.main_animation_container .secAnim-2022Season2 .imgBg', anim, countContentSvg],
+    ["assets/svg/2022Season2/2022Season2 copy.svg", '.main_animation_container .secAnim-2022Season2 .imgCon', anim, countContentSvg],
+
+    ["assets/svg/asYouPlan/asYouPlanBg copy.svg", '.main_animation_container .secAnim-asYouPlan .imgBg', anim, countContentSvg],
+    ["assets/svg/asYouPlan/asYouPlan copy.svg", '.main_animation_container .secAnim-asYouPlan .imgCon', anim, countContentSvg],
+
+    ["assets/svg/consider/considerBg copy.svg", '.main_animation_container .secAnim-consider .imgBg', anim, countContentSvg],
+    ["assets/svg/consider/consider copy.svg", '.main_animation_container .secAnim-consider .imgCon', anim, countContentSvg],
+
+    ["assets/svg/laptop/laptopBg copy.svg", '.main_animation_container .secAnim-laptop .imgBg', anim, countContentSvg],
+    ["assets/svg/laptop/laptop copy.svg", '.main_animation_container .secAnim-laptop .imgCon', anim, countContentSvg],
+
+    ["assets/svg/andThisYear/andThisYear copy.svg", '.main_animation_container .secAnim-andThisYear .imgCon', anim, countContentSvg],
+
+    ["assets/svg/barGraph/barGraphBg copy.svg", '.main_animation_container .secAnim-barGraph .imgBg', anim, countContentSvg],
+    ["assets/svg/barGraph/barGraph copy.svg", '.main_animation_container .secAnim-barGraph .imgCon', anim, countContentSvg],
+
+    ["assets/svg/justSpendSome/justSpendSomeBg copy.svg", '.main_animation_container .secAnim-justSpendSome .imgBg', anim, countContentSvg],
+    ["assets/svg/justSpendSome/justSpendSome copy.svg", '.main_animation_container .secAnim-justSpendSome .imgCon', anim, countContentSvg],
+
+    ["assets/svg/justSendAll/justSendAllBg copy.svg", '.main_animation_container .secAnim-justSendAll .imgBg', anim, countContentSvg],
+    ["assets/svg/justSendAll/justSendAll copy.svg", '.main_animation_container .secAnim-justSendAll .imgCon', anim, countContentSvg],
+
+    ["assets/svg/thankYouAnd/thankYouAndBg copy.svg", '.main_animation_container .secAnim-thankYouAnd .imgBg', anim, countContentSvg],
+    ["assets/svg/thankYouAnd/thankYouAnd copy.svg", '.main_animation_container .secAnim-thankYouAnd .imgCon', anim, countContentSvg],
+
+    ["assets/svg/plus/plus copy.svg", '.main_animation_container .secAnim-plus .imgCon', anim, countContentSvg],
+
+    ["assets/svg/endScene/endScene copy.svg", '.main_animation_container .secAnim-endScene .imgCon', anim, countContentSvg],
+
+//
+    ["assets/svg/dotForBgAnim/Dots_N_Lines copy.svg", '.pointBgPre', anim, countContentSvg],
+    ["assets/svg/dotForBgAnim/DotsRectScena1 copy.svg", '.pointBgScena1', anim, countContentSvg],
+
+]
+
+async function getFile(pathToSVGfile, insertEl, anim, counter) {
+    const res = await fetch(`${pathToSVGfile}`)
+    res.text().then(res => {
+        document.querySelector(insertEl).innerHTML = res
+        let idSvg = document.querySelector(insertEl+ " svg").getAttribute("id")
+        document.querySelector(insertEl).innerHTML = res.replaceAll("SVGID", idSvg + "_SVGID")
+            .replace('<?xml version="1.0" encoding="utf-8"?>',"")
+            .replace('<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->',"");
+    }).then(() => {
+        let idSvg = document.querySelector(insertEl+ " svg").getAttribute("id")
+        // document.querySelector("head title").innerHTML = idSvg
+        //// set class
+        document.querySelectorAll(`${insertEl} svg *`).forEach((elem) => {
+            if (elem.getAttribute('id')) {
+                let tempId = elem.getAttribute('id');
+
+                if ((tempId[0] == '_' && tempId[1] == 'x' && tempId[2] == '2') || (tempId[0] == '_' && tempId[1] == '-')) {
+                    if(tempId[0] == '_' && tempId[1] == '-')tempId = tempId.slice(3)
+                    else tempId = tempId.slice(6)
+
+                    let tempClassList = '';
+                    do {
+                        if (tempId[0] == '.') {
+                            tempClassList += ' '
+                            tempId = tempId.slice(1)
+                        }
+                        if (tempId[0] == '-') {
+                            break;
+                        }
+
+                        tempClassList += tempId.slice(0, 1)
+                        tempId = tempId.slice(1)
+
+                    } while (tempId.length > 0)
+                    elem.setAttribute('class', tempClassList)
+                }
+            }
+        })
+
+        // if ()
+        if(idSvg[idSvg.length-5] == "B" && idSvg[idSvg.length-4] == "g")
+            document.querySelector(insertEl +" svg").setAttribute("preserveAspectRatio","none")
+        // document.querySelector(insertEl +" svg").setAttribute("preserveAspectRatio","xMidYMid slice")
+        // console.log(document.querySelector(insertEl).innerHTML)
+        counter[0]++
+        if(counter[0] == arrContentSvg.length ){anim()}
+
+    })
 
 }
-setTimeout(()=>{
-    anim()
-},2000)
 
-
-
-    getFile("assets/svg/greetings/greetingsBg copy.svg", '.main_animation_container .secAnim-greetings .imgBg', null)
-    getFile("assets/svg/greetings/greetings copy.svg", '.main_animation_container .secAnim-greetings .imgCon', null)
-
-    getFile("assets/svg/thankYouFor/thankYouForBg copy.svg", '.main_animation_container .secAnim-thankYouFor .imgBg', null)
-    getFile("assets/svg/thankYouFor/thankYouFor copy.svg", '.main_animation_container .secAnim-thankYouFor .imgCon', null)
-
-    getFile("assets/svg/brain/brainBg copy.svg", '.main_animation_container .secAnim-brain .imgBg', null)
-    getFile("assets/svg/brain/brain copy.svg", '.main_animation_container .secAnim-brain .imgCon', null)
-
-    getFile("assets/svg/triangles/triangles copy.svg", '.main_animation_container .secAnim-triangles .imgCon', null)
-
-    getFile("assets/svg/andThoseChoices/andThoseChoicesBg copy.svg", '.main_animation_container .secAnim-andThoseChoices .imgBg', null)
-    getFile("assets/svg/andThoseChoices/andThoseChoices copy.svg", '.main_animation_container .secAnim-andThoseChoices .imgCon', null)
-
-    getFile("assets/svg/2455inRewards/2455inRewardsBg copy.svg", '.main_animation_container .secAnim-2455inRewards .imgBg', null)
-    getFile("assets/svg/2455inRewards/2455inRewards copy.svg", '.main_animation_container .secAnim-2455inRewards .imgCon', null)
-
-    getFile("assets/svg/745Balance/745BalanceBg copy.svg", '.main_animation_container .secAnim-745Balance .imgBg', null)
-    getFile("assets/svg/745Balance/745Balance copy.svg", '.main_animation_container .secAnim-745Balance .imgCon', null)
-
-    getFile("assets/svg/2022Season/2022SeasonBg copy.svg", '.main_animation_container .secAnim-2022Season .imgBg', null)
-    getFile("assets/svg/2022Season/2022Season copy.svg", '.main_animation_container .secAnim-2022Season .imgCon', null)
-
-    getFile("assets/svg/1250inRewards/1250inRewardsBg copy.svg", '.main_animation_container .secAnim-1250inRewards .imgBg', null)
-    getFile("assets/svg/1250inRewards/1250inRewards copy.svg", '.main_animation_container .secAnim-1250inRewards .imgCon', null)
-
-    getFile("assets/svg/2022Season2/2022Season2Bg copy.svg", '.main_animation_container .secAnim-2022Season2 .imgBg', null)
-    getFile("assets/svg/2022Season2/2022Season2 copy.svg", '.main_animation_container .secAnim-2022Season2 .imgCon', null)
-
-    getFile("assets/svg/asYouPlan/asYouPlanBg copy.svg", '.main_animation_container .secAnim-asYouPlan .imgBg', null)
-    getFile("assets/svg/asYouPlan/asYouPlan copy.svg", '.main_animation_container .secAnim-asYouPlan .imgCon', null)
-
-    getFile("assets/svg/consider/considerBg copy.svg", '.main_animation_container .secAnim-consider .imgBg', null)
-    getFile("assets/svg/consider/consider copy.svg", '.main_animation_container .secAnim-consider .imgCon', null)
-
-    getFile("assets/svg/laptop/laptopBg copy.svg", '.main_animation_container .secAnim-laptop .imgBg', null)
-    getFile("assets/svg/laptop/laptop copy.svg", '.main_animation_container .secAnim-laptop .imgCon', null)
-
-    getFile("assets/svg/andThisYear/andThisYear copy.svg", '.main_animation_container .secAnim-andThisYear .imgCon', null)
-
-    getFile("assets/svg/barGraph/barGraphBg copy.svg", '.main_animation_container .secAnim-barGraph .imgBg', null)
-    getFile("assets/svg/barGraph/barGraph copy.svg", '.main_animation_container .secAnim-barGraph .imgCon', null)
-
-    getFile("assets/svg/justSpendSome/justSpendSomeBg copy.svg", '.main_animation_container .secAnim-justSpendSome .imgBg', null)
-    getFile("assets/svg/justSpendSome/justSpendSome copy.svg", '.main_animation_container .secAnim-justSpendSome .imgCon', null)
-
-    getFile("assets/svg/justSendAll/justSendAllBg copy.svg", '.main_animation_container .secAnim-justSendAll .imgBg', null)
-    getFile("assets/svg/justSendAll/justSendAll copy.svg", '.main_animation_container .secAnim-justSendAll .imgCon', null)
-
-    getFile("assets/svg/thankYouAnd/thankYouAndBg copy.svg", '.main_animation_container .secAnim-thankYouAnd .imgBg', null)
-    getFile("assets/svg/thankYouAnd/thankYouAnd copy.svg", '.main_animation_container .secAnim-thankYouAnd .imgCon', null)
-
-    getFile("assets/svg/plus/plus copy.svg", '.main_animation_container .secAnim-plus .imgCon', null)
-
-    getFile("assets/svg/endScene/endScene copy.svg", '.main_animation_container .secAnim-endScene .imgCon', null)
-
-    //
-    getFile("assets/svg/dotForBgAnim/Dots_N_Lines copy.svg", '.pointBgPre', null)
-    getFile("assets/svg/dotForBgAnim/DotsRectScena1 copy.svg", '.pointBgScena1', null)
+function loadContent(){
+    arrContentSvg.forEach(function (elem) {
+        getFile(elem[0], elem[1], elem[2], elem[3])
+    })
+}
+loadContent()
 

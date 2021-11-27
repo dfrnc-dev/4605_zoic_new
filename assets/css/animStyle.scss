@@ -94,6 +94,7 @@ body{
     margin: 0;
     //background: aquamarine;
     font-family: "Roboto",sans-serif;
+    background: #F2F2F2;
 }
 h1,h2,h3,h4,h5,p,span{
     padding: 0;
@@ -136,7 +137,6 @@ foreignObject{
     //perspective-origin: 50% 50%;
     //background:  rgba(0,192,241,1);
     //background: rgb(0,31,72);
-    background: #F2F2F2;
     //background: linsear-gradient(110deg, rgba(0,31,72,1) 10%, rgba(0,192,241,1) 10%, rgba(0,192,241,1) 90%, rgba(165,205,56,1) 90%);
 
     *{
@@ -155,7 +155,7 @@ foreignObject{
 }
 .pointBg{
     opacity: 0;
-    z-index: 0;   
+    z-index: 0;
 }
 
 .pointBgTempPos{

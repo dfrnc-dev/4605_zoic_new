@@ -4,21 +4,23 @@
 	 y="0px" width="1920px" height="1080px" viewBox="0 0 1920 1080" enable-background="new 0 0 1920 1080" xml:space="preserve">
 <g id="_x2D_.contForPoint-">
 	<g id="_x2D_.moveElements-_2_" opacity="0.17">
-		<rect id="_x2D_.contForPointB-_8_" x="629.25" y="243.38" opacity="0.33" fill="#0010B9" width="627.36" height="340.94"/>
-		<rect id="_x2D_.contForPointB-_7_" x="1349.54" y="179" opacity="0.33" fill="#0010B9" width="698.44" height="379.57"/>
-		<rect id="_x2D_.contForPointB-_6_" x="-182.9" y="269.95" opacity="0.33" fill="#0010B9" width="528.63" height="287.28"/>
-		<rect x="-0.5" y="0.5" fill="none" width="1920" height="1079"/>
+		<rect id="_x2D_.contForPointB-_8_" x="676.75" y="289.84" opacity="0.33" fill="#0010B9" width="529.1" height="287.54"/>
+		<rect id="_x2D_.contForPointB-_7_" x="1284.23" y="235.54" opacity="0.33" fill="#0010B9" width="589.05" height="320.12"/>
+		<rect id="_x2D_.contForPointB-_6_" x="-0.19" y="274.25" opacity="0.33" fill="#0010B9" width="445.83" height="242.29"/>
+		<rect id="_x2D_.contForPointB-_9_" x="273.81" y="44.25" opacity="0.33" fill="#0010B9" width="402.53" height="218.75"/>
+		<rect id="_x2D_.contForPointB-_10_" x="1161.23" y="49.03" opacity="0.33" fill="#0010B9" width="469.64" height="241.23"/>
+		<rect x="145.64" y="85" fill="none" width="1619.28" height="910"/>
 	</g>
 	<g id="_x2D_.moveElements-_1_" opacity="0.43">
-		<rect id="_x2D_.contForPointB-_5_" x="13" y="299.94" opacity="0.33" fill="#0010B9" width="718.81" height="390.64"/>
-		<rect id="_x2D_.contForPointB-_4_" x="1296.57" y="285.66" opacity="0.33" fill="#0010B9" width="688.43" height="374.13"/>
-		<rect id="_x2D_.contForPointB-_3_" x="617.12" y="510.54" opacity="0.33" fill="#0010B9" width="735.55" height="399.73"/>
-		<rect x="-0.5" y="0.5" fill="none" width="1920" height="1079"/>
+		<rect id="_x2D_.contForPointB-_5_" x="-7.98" y="476.54" opacity="0.33" fill="#0010B9" width="606.22" height="329.45"/>
+		<rect id="_x2D_.contForPointB-_4_" x="1239.56" y="325.5" opacity="0.33" fill="#0010B9" width="580.6" height="315.53"/>
+		<rect id="_x2D_.contForPointB-_3_" x="569.37" y="500.19" opacity="0.33" fill="#0010B9" width="620.34" height="337.13"/>
+		<rect x="145.64" y="85" fill="none" width="1619.28" height="910"/>
 	</g>
 	<g id="_x2D_.moveElements-">
-		<rect id="_x2D_.contForPointB-_2_" x="-835" y="381.52" opacity="0.33" fill="#0010B9" width="1356.15" height="737.01"/>
-		<rect id="_x2D_.contForPointB-_1_" x="48.57" y="925.94" opacity="0.33" fill="#0010B9" width="1356.15" height="737.01"/>
-		<rect id="_x2D_.contForPointB-" x="320.07" y="410" opacity="0.33" fill="#0010B9" width="1356.15" height="737.01"/>
+		<rect id="_x2D_.contForPointB-_2_" x="-467.07" y="693.01" opacity="0.33" fill="#0010B9" width="988.15" height="537.01"/>
+		<rect id="_x2D_.contForPointB-_1_" x="172.02" y="851.79" opacity="0.33" fill="#0010B9" width="1085.43" height="589.88"/>
+		<rect id="_x2D_.contForPointB-" x="405.86" y="595.01" opacity="0.33" fill="#0010B9" width="945.82" height="514.01"/>
 		<rect id="_x2D_.contForPointA-" x="1133.82" y="-44.5" opacity="0.33" fill="#0010B9" width="1701.48" height="1210.04"/>
 		<rect x="-0.5" y="0.5" fill="none" width="1920" height="1079"/>
 	</g>

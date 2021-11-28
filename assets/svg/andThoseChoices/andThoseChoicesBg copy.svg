@@ -21,19 +21,25 @@
 	</g>
 </g>
 <g id="_x2D_.lineBG-_2_">
-	
-		<line fill="#FFFFFF" stroke="#012B48" stroke-width="5" stroke-miterlimit="10" x1="852.82" y1="-96.75" x2="-37.97" y2="1635.57"/>
-	<rect x="-5.43" y="-25.96" fill="none" width="3859.51" height="2188.66"/>
+	<g>
+		
+			<line fill="#FFFFFF" stroke="#012B48" stroke-width="5" stroke-miterlimit="10" x1="852.82" y1="-96.75" x2="-37.97" y2="1635.57"/>
+		<rect x="-5.43" y="-25.96" fill="none" width="3859.51" height="2188.66"/>
+	</g>
 </g>
 <g id="_x2D_.lineBG-_1_">
-	
-		<line fill="#012B48" stroke="#012B48" stroke-width="5" stroke-miterlimit="10" x1="3803.15" y1="-140.26" x2="3611.7" y2="2300.25"/>
-	<rect x="-5.43" y="-25.96" fill="none" width="3859.51" height="2188.66"/>
+	<g>
+		
+			<line fill="#012B48" stroke="#012B48" stroke-width="5" stroke-miterlimit="10" x1="3803.15" y1="-140.26" x2="3611.7" y2="2300.25"/>
+		<rect x="-5.43" y="-25.96" fill="none" width="3859.51" height="2188.66"/>
+	</g>
 </g>
 <g id="_x2D_.lineBG-">
-	
-		<line fill="#012B48" stroke="#A4CD38" stroke-width="5" stroke-miterlimit="10" x1="2661.01" y1="2326.57" x2="4146.68" y2="32.7"/>
-	<rect x="-5.43" y="-25.96" fill="none" width="3859.51" height="2188.66"/>
+	<g>
+		
+			<line fill="#012B48" stroke="#A4CD38" stroke-width="5" stroke-miterlimit="10" x1="2661.01" y1="2326.57" x2="4146.68" y2="32.7"/>
+		<rect x="-5.43" y="-25.96" fill="none" width="3859.51" height="2188.66"/>
+	</g>
 </g>
 <rect x="-5.43" y="-25.96" fill="none" width="3859.51" height="2188.66"/>
 </svg>

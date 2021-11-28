@@ -5,7 +5,9 @@
 	 xml:space="preserve">
 <rect id="_x2D_.bgColor-" x="-6.86" y="1.69" fill="#F2F2F2" width="3855.86" height="2166.02"/>
 <g id="_x2D_.lineBG-">
-	<polygon fill="#EB163C" points="292.87,2190.23 288.28,2190.23 898.28,-66 902.87,-66 	"/>
-	<rect x="-6.86" y="1.69" fill="none" width="3855.86" height="2166.02"/>
+	<g>
+		<line fill="#FFFFFF" stroke="#00C0F2" stroke-width="5" stroke-miterlimit="10" x1="900.06" y1="-66" x2="290.53" y2="2190.23"/>
+		<rect x="-6.86" y="1.69" fill="none" width="3855.86" height="2166.02"/>
+	</g>
 </g>
 </svg>

@@ -7,19 +7,19 @@
 	<g id="_x2D_.moveElements-">
 		<g>
 			<g>
-				<polygon fill="#00C0F2" points="3717.1,140.99 3836.74,2116.51 2997.18,2238.46 				"/>
+				<polygon opacity="0.59" fill="#00C0F2" points="3199.05,650.22 3247.38,1448.3 2908.21,1497.56 				"/>
 				<rect x="-207.88" y="-9.51" fill="none" width="3687.88" height="2166.8"/>
 			</g>
 		</g>
 		<g>
 			<g>
-				<polygon opacity="0.25" fill="#FFFFFF" points="-197.88,0.49 -197.88,2189.47 -140.06,2206.14 634.11,-5.9 				"/>
+				<polygon opacity="0.25" fill="#FFFFFF" points="-80.63,556.32 -80.63,1490.45 -55.95,1497.56 274.42,553.59 				"/>
 				<rect x="-207.88" y="-9.51" fill="none" width="3687.88" height="2166.8"/>
 			</g>
 		</g>
 		<g>
 			<g>
-				<polygon fill="#012B48" points="-33.34,-329.55 -193.54,1189.72 457.48,-47.4 				"/>
+				<polygon opacity="0.59" fill="#012B48" points="112.84,57.56 34.28,802.61 353.54,195.93 				"/>
 				<rect x="-207.88" y="-9.51" fill="none" width="3687.88" height="2166.8"/>
 			</g>
 		</g>
@@ -27,13 +27,15 @@
 </g>
 <g id="_x2D_.lineBG-_1_">
 	<g>
-		<polygon fill="#012B48" points="-253.5,1866.73 -258.25,1864.43 517.45,-69.43 522.2,-67.13 		"/>
+		
+			<line fill="#F2F2F2" stroke="#012B48" stroke-width="5" stroke-miterlimit="10" x1="519.78" y1="-68.3" x2="-255.92" y2="1865.56"/>
 		<rect x="-207.88" y="-9.51" fill="none" width="3687.88" height="2166.8"/>
 	</g>
 </g>
 <g id="_x2D_.lineBG-">
 	<g>
-		<polygon fill="#012B48" points="3167.95,2267.43 3163.2,2265.13 3508.89,-48.73 3513.64,-46.43 		"/>
+		
+			<line fill="#012B48" stroke="#012B48" stroke-width="5" stroke-miterlimit="10" x1="3165.15" y1="2266.07" x2="3511.32" y2="-47.55"/>
 		<rect x="-207.88" y="-9.51" fill="none" width="3687.88" height="2166.8"/>
 	</g>
 </g>

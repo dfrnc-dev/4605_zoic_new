@@ -8,26 +8,28 @@
 	<g id="_x2D_.moveElements-">
 		<g>
 			<g>
-				<polygon fill="#A4CD38" points="83.16,431.86 501.04,659.45 203.17,1817.36 				"/>
+				<polygon opacity="0.6" fill="#A4CD38" points="83.16,431.86 501.04,659.45 203.17,1817.36 				"/>
 				<rect y="5.4" fill="none" width="3842.48" height="2183.33"/>
 			</g>
 		</g>
 		<g>
 			<g>
-				<polygon fill="#00C0F2" points="3816.11,200.53 3481.7,1005.73 3848.7,1172.38 				"/>
+				<polygon opacity="0.6" fill="#00C0F2" points="3816.11,200.53 3481.7,1005.73 3848.7,1172.38 				"/>
 				<rect y="5.4" fill="none" width="3842.48" height="2183.33"/>
 			</g>
 		</g>
 	</g>
 	<g id="_x2D_.lineBG-_1_">
 		<g>
-			<polygon fill="#012B48" points="388.79,-413.11 104.28,2260.39 112.48,2264.99 396.99,-408.52 			"/>
+			
+				<line fill="#FFFFFF" stroke="#012B48" stroke-width="9" stroke-miterlimit="10" x1="107.85" y1="2262.39" x2="392.82" y2="-410.85"/>
 			<rect y="5.4" fill="none" width="3842.48" height="2183.33"/>
 		</g>
 	</g>
 	<g id="_x2D_.lineBG-">
 		<g>
-			<polygon fill="#A4CD38" points="3839.44,-228.41 3392.65,2571.54 3401.91,2573.17 3848.7,-226.77 			"/>
+			
+				<line fill="#012B48" stroke="#A4CD38" stroke-width="9" stroke-miterlimit="10" x1="3843.98" y1="-227.61" x2="3397.28" y2="2572.36"/>
 			<rect y="5.4" fill="none" width="3842.48" height="2183.33"/>
 		</g>
 	</g>

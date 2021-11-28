@@ -4,6 +4,20 @@
 	 width="3840px" height="2160px" viewBox="0 0 3840 2160" enable-background="new 0 0 3840 2160" xml:space="preserve">
 <rect id="_x2D_.bgColor-" x="4" y="1.14" fill="#F2F2F2" width="3842.78" height="2162.75"/>
 <g id="_x2D_.contentScene-">
+	<g id="_x2D_.contForPoint-" opacity="0.3">
+		<g id="_x2D_.moveElements-_2_">
+			<g>
+				<g>
+					<rect id="_x2D_.contForPointB-_3_" x="2451.72" y="1014.75" opacity="0.33" fill="#0010B9" width="2038.6" height="1112.56"/>
+					<rect id="_x2D_.contForPointB-_4_" x="-1.39" y="-45.08" opacity="0.33" fill="#0010B9" width="1941.97" height="1059.83"/>
+					<rect id="_x2D_.contForPointB-_2_" x="-636.26" y="-203.13" opacity="0.33" fill="#0010B9" width="2157.7" height="1177.56"/>
+					<rect id="_x2D_.contForPointB-_1_" x="1583.46" y="1477.14" opacity="0.33" fill="#0010B9" width="1867.28" height="1019.07"/>
+					<rect id="_x2D_.contForPointB-_5_" x="769.84" y="-298.18" opacity="0.33" fill="#0010B9" width="1867.28" height="1019.07"/>
+					<rect x="9.82" y="1.14" fill="none" width="3836.96" height="2158.11"/>
+				</g>
+			</g>
+		</g>
+	</g>
 	<g id="_x2D_.moveElements-">
 		<g>
 			<g id="plusEndLogo">
@@ -16,18 +30,4 @@
 	</g>
 </g>
 <rect x="4" y="1.14" fill="none" width="3842.78" height="2165.72"/>
-<g id="_x2D_.contForPoint-" opacity="0.3">
-	<g id="_x2D_.moveElements-_2_">
-		<g>
-			<g>
-				<rect id="_x2D_.contForPointB-_3_" x="2451.72" y="1014.75" opacity="0.33" fill="#0010B9" width="2038.6" height="1112.56"/>
-				<rect id="_x2D_.contForPointB-_4_" x="-1.39" y="-45.08" opacity="0.33" fill="#0010B9" width="1941.97" height="1059.83"/>
-				<rect id="_x2D_.contForPointB-_2_" x="-636.26" y="-203.13" opacity="0.33" fill="#0010B9" width="2157.7" height="1177.56"/>
-				<rect id="_x2D_.contForPointB-_1_" x="1583.46" y="1477.14" opacity="0.33" fill="#0010B9" width="1867.28" height="1019.07"/>
-				<rect id="_x2D_.contForPointB-_5_" x="769.84" y="-298.18" opacity="0.33" fill="#0010B9" width="1867.28" height="1019.07"/>
-				<rect x="9.82" y="1.14" fill="none" width="3836.96" height="2158.11"/>
-			</g>
-		</g>
-	</g>
-</g>
 </svg>

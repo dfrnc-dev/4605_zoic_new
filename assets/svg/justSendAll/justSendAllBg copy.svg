@@ -10,13 +10,13 @@
 			<polygon display="none" fill="#FFFFFF" points="9016.39,8307.1 5536.39,8307.1 5536.39,8165.21 5536.39,6148.56 9016.39,6148.56 
 							"/>
 			<g>
-				<polygon fill="#A4CD38" points="10008.52,5527.68 9079.77,8560.87 9987.79,8350.15 				"/>
+				<polygon fill="#A4CD38" points="9104.12,6895.56 8952.08,8124.39 9286.92,7982.01 				"/>
 				<rect x="5288.76" y="6131.08" fill="none" width="3830.74" height="2148.42"/>
 			</g>
 		</g>
 		<g>
 			<g>
-				<polygon fill="#00C0F2" points="5835.09,6016.61 5295.44,5653.12 5196.39,7475.21 				"/>
+				<polygon fill="#00C0F2" points="5722.37,6510.5 5438.78,6318.94 5386.73,7279.17 				"/>
 				<rect x="5288.76" y="6131.08" fill="none" width="3830.74" height="2148.42"/>
 			</g>
 		</g>
@@ -25,13 +25,14 @@
 <g id="_x2D_.lineBG-_1_">
 	<g>
 		
-			<rect x="7757.3" y="7239.93" transform="matrix(0.0783 -0.9969 0.9969 0.0783 1057.7511 15629.2119)" fill="#012B48" width="2448" height="5.28"/>
+			<line fill="#012B48" stroke="#012B48" stroke-width="5" stroke-miterlimit="10" x1="8885.5" y1="8462.81" x2="9077.14" y2="6022.32"/>
 		<rect x="5288.76" y="6131.08" fill="none" width="3830.74" height="2148.42"/>
 	</g>
 </g>
 <g id="_x2D_.lineBG-">
 	<g>
-		<polygon fill="#FFFFFF" points="5158.25,8249.59 5153.74,8246.85 5734.22,6064.35 5738.73,6067.09 		"/>
+		
+			<line fill="#012B48" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" x1="5736.55" y1="6065.76" x2="5155.86" y2="8248.14"/>
 		<rect x="5288.76" y="6131.08" fill="none" width="3830.74" height="2148.42"/>
 	</g>
 </g>

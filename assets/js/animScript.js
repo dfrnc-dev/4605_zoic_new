@@ -168,7 +168,7 @@ const anim = function(){
                 .from(`${nameScene} .lineBG > * > *`, { duration: 1, drawSVG: 0, ease: "power1.out", stagger: { each: 0.01, from: "end" } }, "qq+=0.2")
                 .to(`${nameScene} .container`, { duration: tweenDuration, scale: 1.15,  transformOrigin: "50% 50%", ease: "none" }, 0)
                 .from(`${nameScene} .elLine`, { duration: 1, drawSVG: 0, ease: "power4.out", stagger: { each: 0.02, from: "end" } }, "qq+=1")
-                .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "power4.out", stagger: { each: 0.05, from: "end" } }, "qq+=0.5")
+                .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "power4.out", stagger: { each: 0.05, from: "end" } }, "qq+=1.5")
                 .duration(tweenDuration)
         }
 
@@ -316,10 +316,10 @@ const anim = function(){
 
             .add(animationScene('.secAnim-triangles', 'translate-left-in',5).restart(),"<")
             .add(animationScene('.secAnim-triangles', 'scale-up-out',0.5).restart(), '>')
-            //
-            // .add(animationScene('.secAnim-andThoseChoices', 'scale-up-in').restart(), `<+${animationScene('.secAnim-triangles', 'scale-up-out').duration() - 4}`)
-            // .add(animationScene('.secAnim-andThoseChoices', 'translate-up-out').restart(), '>-3')
-            //
+            
+            .add(animationScene('.secAnim-andThoseChoices', 'scale-up-in',4).restart(), `<`)
+            .add(animationScene('.secAnim-andThoseChoices', 'translate-up-out',0.5).restart(), '>')
+            
             // .add(animationScene('.secAnim-2455inRewards', 'translate-up-in').restart(), `<+${animationScene('.secAnim-andThoseChoices', 'translate-up-out').duration() - 6.5}`)
             // .add(animationScene('.secAnim-2455inRewards', 'translate-right-out').restart(), '>-3')
             //

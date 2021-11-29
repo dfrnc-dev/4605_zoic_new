@@ -177,3 +177,7 @@ foreignObject {
   color: #012B48; }
 
 /*# sourceMappingURL=animStyle.css.map */
+
+.btn3, .btn4, .btn5, .btn6, .btn7, .btn8, .btn9{
+  display: none;
+}

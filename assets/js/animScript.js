@@ -50,8 +50,8 @@ const anim = function(){
     }
 
     /**
-     * anim for bg circle and line
-     */
+      * anim for bg circle and line
+      */
     document.querySelectorAll(".contForPoint").forEach(function (elem) {
         let tempAddHtml = ""
         let parentElem = ""
@@ -60,8 +60,12 @@ const anim = function(){
             child.classList.add("pointBgTempPos")
             parentElem = child.parentNode
             console.log(parentElem)
+            // tempAddHtml += `
+            //     <use xlink:href="#forUseA" class="dotAnim" x="${child.getAttribute("x")}" y="${child.getAttribute("y")}"  width="${child.getAttribute("width")}" height="${child.getAttribute("height")}" />
+            // `;
             tempAddHtml += `
-                <use xlink:href="#forUseA" class="dotAnim" x="${child.getAttribute("x")}" y="${child.getAttribute("y")}"  width="${child.getAttribute("width")}" height="${child.getAttribute("height")}" />
+                <image class="dotAnim" overflow="visible" x="${child.getAttribute("x")}" y="${child.getAttribute("y")}" width="${child.getAttribute("width")}" height="${child.getAttribute("height")}"  xlink:href="assets/svg/dotForBgAnim/Dots_N_Lines_A copy.svg">
+          </image>
             `;
         })
         parentElem.innerHTML += tempAddHtml
@@ -71,8 +75,12 @@ const anim = function(){
             child.classList.add("pointBgTempPos")
             parentElem = child.parentNode
             console.log(parentElem)
+            // tempAddHtml += `
+            //     <use xlink:href="#forUseB" class="dotAnim" x="${child.getAttribute("x")}" y="${child.getAttribute("y")}"  width="${child.getAttribute("width")}" height="${child.getAttribute("height")}" />
+            // `;
             tempAddHtml += `
-                <use xlink:href="#forUseB" class="dotAnim" x="${child.getAttribute("x")}" y="${child.getAttribute("y")}"  width="${child.getAttribute("width")}" height="${child.getAttribute("height")}" />
+                <image class="dotAnim" overflow="visible" x="${child.getAttribute("x")}" y="${child.getAttribute("y")}" width="${child.getAttribute("width")}" height="${child.getAttribute("height")}"  xlink:href="assets/svg/dotForBgAnim/Dots_N_Lines_B copy.svg">
+          </image>
             `;
         })
         parentElem.innerHTML += tempAddHtml
@@ -300,125 +308,247 @@ const anim = function(){
         }
 
     }
-
-
+    
     function varAnim1() {
-        stMainTl
-            .to(".pointBgScena1", {duration: 1, autoAlpha: 0.5})
-            .from(".pointBgScena1 .contForPoint", {duration: 1.5, scale: 0.5, transformOrigin: "50% 50%"}, "<")
-            .add(animationScene('.secAnim-greetings', 'scale-up-in',4, 1.15).restart(), "<")
-            .add(animationScene('.secAnim-greetings', 'scale-up-out', 1, 1.15).restart(), '>')
-            .to(".pointBgScena1 .contForPoint", {duration: 1, scale: 1.5, transformOrigin: "50% 30%",ease:"sine.inOut"}, "<")
-            .to(".pointBgScena1 .contForPoint > *:nth-last-child(3)", {duration: 1, opacity: 0.4}, "<")
-
-            .add(animationScene('.secAnim-thankYouFor', 'scale-up-in', 4, 1.15).restart(), "<")
-            .add(animationScene('.secAnim-thankYouFor', 'translate-down-out', 1, 1.15).restart(), '>')
-            .to(".pointBgScena1 .contForPoint", {duration: 1, y:"100%",ease:"sine.inOut"}, "<")
-            .set(".pointBgScena1",{autoAlpha:0})
-
-            .add(animationScene('.secAnim-brain', 'translate-down-in', 3.5, 1.15).restart(), ">-0.5")
-            .add(animationScene('.secAnim-brain', 'translate-left-out', 1, 1.15).restart(), '>')
-
-            .add(animationScene('.secAnim-triangles', 'translate-left-in', 5, 1.15).restart(),"<")
-            .add(animationScene('.secAnim-triangles', 'scale-up-out', 0.5, 1.15).restart(), '>')
-            
-            .add(animationScene('.secAnim-andThoseChoices', 'scale-up-in', 4, 1.15).restart(), `<`)
-            .add(animationScene('.secAnim-andThoseChoices', 'translate-up-out', 1, 1.15).restart(), '>')
-            
-            .add(animationScene('.secAnim-2455inRewards', 'translate-up-in', 3.5, 1.15).restart(), `<`)
-            .add(animationScene('.secAnim-2455inRewards', 'translate-right-out', 1, 1.15).restart(), '>')
-            
-            .add(animationScene('.secAnim-745Balance', 'translate-right-in', 4, 1.15).restart(), `<`)
-            .add(animationScene('.secAnim-745Balance', 'translate-down-out', 1, 1.15).restart(), '>')
-            
-            .add(animationScene('.secAnim-2022Season', 'translate-down-in', 4, 0.85).restart(), `<`)
-            .add(animationScene('.secAnim-2022Season', 'scale-down-out', 1, 0.85).restart(), '>')
-            
-            .add(animationScene('.secAnim-asYouPlan', 'scale-down-in', 3.5, 0.85).restart(), `<`)
-            .add(animationScene('.secAnim-asYouPlan', 'translate-left-out', 1, 0.85).restart(), '>')
-            
-            .add(animationScene('.secAnim-consider', 'translate-left-in', 4, 0.9).restart(), `<`)
-            .add(animationScene('.secAnim-consider', 'scale-down-out', 1, 0.9).restart(), '>')
-            
-            .add(animationScene('.secAnim-laptop', 'scale-down-in', 4, 0.9).restart(), `<`)
-            .add(animationScene('.secAnim-laptop', 'translate-left-out', 1, 0.9).restart(), '>')
-            
-            .add(animationScene('.secAnim-andThisYear', 'translate-left-in', 4, 1.15).restart(), `<`)
-            .add(animationScene('.secAnim-andThisYear', 'translate-right-out', 1, 1.15).restart(), '>')
-            
-            .add(animationScene('.secAnim-barGraph', 'translate-right-in', 4, 1.10).restart(), `<`)
-            .add(animationScene('.secAnim-barGraph', 'translate-up-out',1, 1.10).restart(), '>')
-            
-            .add(animationScene('.secAnim-justSendAll', 'translate-up-in', 4, 1.15).restart(), `<`)
-            .add(animationScene('.secAnim-justSendAll', 'scale-up-out', 1, 1.15).restart(), '>')
-            
-            .add(animationScene('.secAnim-thankYouAnd', 'scale-up-in', 4, 1.15).restart(), `<`)
-            .add(animationScene('.secAnim-thankYouAnd', 'scale-up-out',1, 1.15).restart(), '>')
-            
-            .add(animationScene('.secAnim-plus', 'scale-up-in', 4, 1.05).restart(), `<`)
-            .add(animationScene('.secAnim-plus', 'scale-up-out', 1, 1.05).restart(), '>')
-            
-            .add(animationScene('.secAnim-endScene', 'scale-up-in', 6, 1.15).restart(), `<`)
-            .add(animationScene('.secAnim-endScene', 'scale-up-out', 1, 1.15).restart(), '>')
-
-        GSDevTools.create({paused: false, id: "stMainTl", animation: stMainTl
-            // , inTime: 0
-        })
-        stMainTl.play()
         document.querySelector('.btn1').style.display = 'none'
         document.querySelector('.btn2').style.display = 'none'
+        document.querySelector('.btn3').style.display = 'inline-block'
+        document.querySelector('.btn4').style.display = 'inline-block'
+        document.querySelector('.btn5').style.display = 'inline-block'
+        document.querySelector('.btn6').style.display = 'inline-block'
+        document.querySelector('.btn7').style.display = 'inline-block'
+
+        function laptopChange(laptopName) {
+            function mobileChange(mobileName) {
+                stMainTl
+                    .to(".pointBgScena1", { duration: 1, autoAlpha: 0.5 })
+                    .from(".pointBgScena1 .contForPoint", { duration: 1.5, scale: 0.5, transformOrigin: "50% 50%" }, "<")
+                    .add(animationScene('.secAnim-greetings', 'scale-up-in', 4, 1.15).restart(), "<")
+                    .add(animationScene('.secAnim-greetings', 'scale-up-out', 1, 1.15).restart(), '>')
+                    .to(".pointBgScena1 .contForPoint", { duration: 1, scale: 1.5, transformOrigin: "50% 30%", ease: "sine.inOut" }, "<")
+                    .to(".pointBgScena1 .contForPoint > *:nth-last-child(3)", { duration: 1, opacity: 0.4 }, "<")
+
+                    .add(animationScene('.secAnim-thankYouFor', 'scale-up-in', 4, 1.15).restart(), "<")
+                    .add(animationScene('.secAnim-thankYouFor', 'translate-down-out', 1, 1.15).restart(), '>')
+                    .to(".pointBgScena1 .contForPoint", { duration: 1, y: "100%", ease: "sine.inOut" }, "<")
+                    .set(".pointBgScena1", { autoAlpha: 0 })
+
+                    .add(animationScene('.secAnim-brain', 'translate-down-in', 3.5, 1.15).restart(), ">-0.5")
+                    .add(animationScene('.secAnim-brain', 'translate-left-out', 1, 1.15).restart(), '>')
+
+                    .add(animationScene('.secAnim-triangles', 'translate-left-in', 5, 1.15).restart(), "<")
+                    .add(animationScene('.secAnim-triangles', 'scale-up-out', 1, 1.15).restart(), '>')
+
+                    .add(animationScene('.secAnim-andThoseChoices', 'scale-up-in', 4, 1.15).restart(), `<`)
+                    .add(animationScene('.secAnim-andThoseChoices', 'translate-up-out', 1, 1.15).restart(), '>')
+
+                    .add(animationScene('.secAnim-2455inRewards', 'translate-up-in', 3.5, 1.15).restart(), `<`)
+                    .add(animationScene('.secAnim-2455inRewards', 'translate-right-out', 1, 1.15).restart(), '>')
+
+                    .add(animationScene('.secAnim-745Balance', 'translate-right-in', 4, 1.15).restart(), `<`)
+                    .add(animationScene('.secAnim-745Balance', 'translate-down-out', 1, 1.15).restart(), '>')
+
+                    .add(animationScene('.secAnim-2022Season', 'translate-down-in', 4, 0.85).restart(), `<`)
+                    .add(animationScene('.secAnim-2022Season', 'scale-down-out', 1, 0.85).restart(), '>')
+
+                    .add(animationScene('.secAnim-asYouPlan', 'scale-down-in', 3.5, 0.85).restart(), `<`)
+                    .add(animationScene('.secAnim-asYouPlan', 'translate-left-out', 1, 0.85).restart(), '>')
+
+
+                    .add(animationScene(mobileName, 'translate-left-in', 4, 0.9).restart(), `<`)
+                    .add(animationScene(mobileName, 'scale-down-out', 1, 0.9).restart(), '>')
+
+                    .add(animationScene(laptopName, 'scale-down-in', 4, 0.9).restart(), `<`)
+                    .add(animationScene(laptopName, 'translate-left-out', 1, 0.9).restart(), '>')
+
+                    .add(animationScene('.secAnim-andThisYear', 'translate-left-in', 4, 1.15).restart(), `<`)
+                    .add(animationScene('.secAnim-andThisYear', 'translate-right-out', 1, 1.15).restart(), '>')
+
+                    .add(animationScene('.secAnim-barGraph', 'translate-right-in', 4, 1.10).restart(), `<`)
+                    .add(animationScene('.secAnim-barGraph', 'translate-up-out', 1, 1.10).restart(), '>')
+
+                    .add(animationScene('.secAnim-justSendAll', 'translate-up-in', 4, 1.15).restart(), `<`)
+                    .add(animationScene('.secAnim-justSendAll', 'scale-up-out', 1, 1.15).restart(), '>')
+
+                    .add(animationScene('.secAnim-thankYouAnd', 'scale-up-in', 4, 1.15).restart(), `<`)
+                    .add(animationScene('.secAnim-thankYouAnd', 'scale-up-out', 1, 1.15).restart(), '>')
+
+                    .add(animationScene('.secAnim-plus', 'scale-up-in', 4, 1.05).restart(), `<`)
+                    .add(animationScene('.secAnim-plus', 'scale-up-out', 1, 1.05).restart(), '>')
+
+                    .add(animationScene('.secAnim-endScene', 'scale-up-in', 6, 1.15).restart(), `<`)
+                    .add(animationScene('.secAnim-endScene', 'scale-up-out', 1, 1.15).restart(), '>')
+
+                GSDevTools.create({
+                    paused: false, id: "stMainTl", animation: stMainTl
+                    // , inTime: 0
+                })
+                stMainTl.play()
+                document.querySelector('.btn8').style.display = 'none'
+                document.querySelector('.btn9').style.display = 'none'
+            }
+
+            document.querySelector('.btn8').addEventListener('click', () => {
+                mobileChange('.secAnim-consider')
+            })
+
+            document.querySelector('.btn9').addEventListener('click', () => {
+                mobileChange('.secAnim-3models')
+            })
+
+
+            document.querySelector('.btn3').style.display = 'none'
+            document.querySelector('.btn4').style.display = 'none'
+            document.querySelector('.btn5').style.display = 'none'
+            document.querySelector('.btn6').style.display = 'none'
+            document.querySelector('.btn7').style.display = 'none'
+            document.querySelector('.btn8').style.display = 'inline-block'
+            document.querySelector('.btn9').style.display = 'inline-block'
+        }
+
+        document.querySelector('.btn3').addEventListener('click', () => {
+            laptopChange('.secAnim-laptop')
+        })
+        document.querySelector('.btn4').addEventListener('click', () => {
+            laptopChange('.secAnim-laptop-Aeris')
+        })
+        document.querySelector('.btn5').addEventListener('click', () => {
+            laptopChange('.secAnim-laptop-HuskyFamily')
+        })
+        document.querySelector('.btn6').addEventListener('click', () => {
+            laptopChange('.secAnim-laptop-Presaro')
+        })
+        document.querySelector('.btn7').addEventListener('click', () => {
+            laptopChange('.secAnim-laptop-SCH')
+        })
+
     }
-    varAnim1()
+
+    function varAnim2() {
+        document.querySelector('.btn1').style.display = 'none'
+        document.querySelector('.btn2').style.display = 'none'
+        document.querySelector('.btn3').style.display = 'inline-block'
+        document.querySelector('.btn4').style.display = 'inline-block'
+        document.querySelector('.btn5').style.display = 'inline-block'
+        document.querySelector('.btn6').style.display = 'inline-block'
+        document.querySelector('.btn7').style.display = 'inline-block'
+
+        function laptopChange(laptopName) {
+            function mobileChange(mobileName){
+                stMainTl
+                    .to(".pointBgScena1", { duration: 1, autoAlpha: 0.5 })
+                    .from(".pointBgScena1 .contForPoint", { duration: 1.5, scale: 0.5, transformOrigin: "50% 50%" }, "<")
+                    .add(animationScene('.secAnim-greetings', 'scale-up-in', 4, 1.15).restart(), "<")
+                    .add(animationScene('.secAnim-greetings', 'scale-up-out', 1, 1.15).restart(), '>')
+                    .to(".pointBgScena1 .contForPoint", { duration: 1, scale: 1.5, transformOrigin: "50% 30%", ease: "sine.inOut" }, "<")
+                    .to(".pointBgScena1 .contForPoint > *:nth-last-child(3)", { duration: 1, opacity: 0.4 }, "<")
+
+                    .add(animationScene('.secAnim-thankYouFor', 'scale-up-in', 4, 1.15).restart(), "<")
+                    .add(animationScene('.secAnim-thankYouFor', 'translate-down-out', 1, 1.15).restart(), '>')
+                    .to(".pointBgScena1 .contForPoint", { duration: 1, y: "100%", ease: "sine.inOut" }, "<")
+                    .set(".pointBgScena1", { autoAlpha: 0 })
+
+                    .add(animationScene('.secAnim-brain', 'translate-down-in', 3.5, 1.15).restart(), ">-0.5")
+                    .add(animationScene('.secAnim-brain', 'translate-left-out', 1, 1.15).restart(), '>')
+
+                    .add(animationScene('.secAnim-triangles', 'translate-left-in', 5, 1.15).restart(), "<")
+                    .add(animationScene('.secAnim-triangles', 'scale-up-out', 1, 1.15).restart(), '>')
+
+                    .add(animationScene('.secAnim-andThoseChoices', 'scale-up-in', 4, 1.15).restart(), `<`)
+                    .add(animationScene('.secAnim-andThoseChoices', 'translate-up-out', 1, 1.15).restart(), '>')
+                    
+                    // .add(animationScene('.secAnim-2455inRewards', 'translate-up-in', 3.5, 1.15).restart(), `<`)
+                    // .add(animationScene('.secAnim-2455inRewards', 'translate-right-out', 1, 1.15).restart(), '>')
+
+                    // .add(animationScene('.secAnim-745Balance', 'translate-right-in', 4, 1.15).restart(), `<`)
+                    // .add(animationScene('.secAnim-745Balance', 'translate-down-out', 1, 1.15).restart(), '>')
+
+                    // .add(animationScene('.secAnim-2022Season', 'translate-down-in', 4, 0.85).restart(), `<`)
+                    // .add(animationScene('.secAnim-2022Season', 'scale-down-out', 1, 0.85).restart(), '>')
+
+                    // .add(animationScene('.secAnim-asYouPlan', 'scale-down-in', 3.5, 0.85).restart(), `<`)
+                    // .add(animationScene('.secAnim-asYouPlan', 'translate-left-out', 1, 0.85).restart(), '>')
+
+                    .add(animationScene('.secAnim-1250inRewards', 'translate-up-in', 3.5, 1.15).restart(), `<`)
+                    .add(animationScene('.secAnim-1250inRewards', 'translate-right-out', 1, 1.15).restart(), '>')
+
+                    .add(animationScene('.secAnim-2022Season2', 'translate-down-in', 4, 0.85).restart(), `<`)
+                    .add(animationScene('.secAnim-2022Season2', 'scale-down-out', 1, 0.85).restart(), '>')
+
+                    .add(animationScene(mobileName, 'translate-left-in', 4, 0.9).restart(), `<`)
+                    .add(animationScene(mobileName, 'scale-down-out', 1, 0.9).restart(), '>')
+
+                    .add(animationScene(laptopName, 'scale-down-in', 4, 0.9).restart(), `<`)
+                    .add(animationScene(laptopName, 'translate-left-out', 1, 0.9).restart(), '>')
+
+                    .add(animationScene('.secAnim-andThisYear', 'translate-left-in', 4, 1.15).restart(), `<`)
+                    .add(animationScene('.secAnim-andThisYear', 'translate-right-out', 1, 1.15).restart(), '>')
+
+                    .add(animationScene('.secAnim-barGraph', 'translate-right-in', 4, 1.10).restart(), `<`)
+                    .add(animationScene('.secAnim-barGraph', 'translate-up-out', 1, 1.10).restart(), '>')
+
+                    .add(animationScene('.secAnim-justSendAll', 'translate-up-in', 4, 1.15).restart(), `<`)
+                    .add(animationScene('.secAnim-justSendAll', 'scale-up-out', 1, 1.15).restart(), '>')
+
+                    .add(animationScene('.secAnim-thankYouAnd', 'scale-up-in', 4, 1.15).restart(), `<`)
+                    .add(animationScene('.secAnim-thankYouAnd', 'scale-up-out', 1, 1.15).restart(), '>')
+
+                    .add(animationScene('.secAnim-plus', 'scale-up-in', 4, 1.05).restart(), `<`)
+                    .add(animationScene('.secAnim-plus', 'scale-up-out', 1, 1.05).restart(), '>')
+
+                    .add(animationScene('.secAnim-endScene', 'scale-up-in', 6, 1.15).restart(), `<`)
+                    .add(animationScene('.secAnim-endScene', 'scale-up-out', 1, 1.15).restart(), '>')
+
+                GSDevTools.create({
+                    paused: false, id: "stMainTl", animation: stMainTl
+                    // , inTime: 0
+                })
+                stMainTl.play()
+                document.querySelector('.btn8').style.display = 'none'
+                document.querySelector('.btn9').style.display = 'none'
+            }
+
+            document.querySelector('.btn8').addEventListener('click', () => {
+                mobileChange('.secAnim-consider')
+            })
+
+            document.querySelector('.btn9').addEventListener('click', () => {
+                mobileChange('.secAnim-3models')
+            })
+
+            
+            document.querySelector('.btn3').style.display = 'none'
+            document.querySelector('.btn4').style.display = 'none'
+            document.querySelector('.btn5').style.display = 'none'
+            document.querySelector('.btn6').style.display = 'none'
+            document.querySelector('.btn7').style.display = 'none'
+            document.querySelector('.btn8').style.display = 'inline-block'
+            document.querySelector('.btn9').style.display = 'inline-block'
+        }
+
+        document.querySelector('.btn3').addEventListener('click', () => {
+            laptopChange('.secAnim-laptop')
+        })
+        document.querySelector('.btn4').addEventListener('click', () => {
+            laptopChange('.secAnim-laptop-Aeris')
+        })
+        document.querySelector('.btn5').addEventListener('click', () => {
+            laptopChange('.secAnim-laptop-HuskyFamily')
+        })
+        document.querySelector('.btn6').addEventListener('click', () => {
+            laptopChange('.secAnim-laptop-Presaro')
+        })
+        document.querySelector('.btn7').addEventListener('click', () => {
+            laptopChange('.secAnim-laptop-SCH')
+        })
+
+    }
+
 
     // setTimeout(()=>{varAnim1()}, 2000)
-    // document.querySelector('.btn1').addEventListener('click', varAnim1)
-    //
-    // document.querySelector('.btn2').addEventListener('click', () => {
-    //     stMainTl
-    //         .to(".pointBg",{autoAlpha:1})
-    //         .add(animationScene('.secAnim-greetings', 'scale-up-in').restart())
-    //         .add(animationScene('.secAnim-greetings', 'scale-up-out').restart(), '>-3')
-    //
-    //         .add(animationScene('.secAnim-thankYouFor', 'scale-up-in').restart(), `<+${animationScene('.secAnim-greetings', 'scale-up-in').duration() - 6.5}`)
-    //         .add(animationScene('.secAnim-thankYouFor', 'translate-down-out').restart(), '>-3')
-    //
-    //         .add(animationScene('.secAnim-brain', 'translate-down-in').restart(), `<+${animationScene('.secAnim-thankYouFor', 'translate-down-out').duration() - 6.5}`)
-    //         .add(animationScene('.secAnim-brain', 'translate-left-out').restart(), '>-3')
-    //
-    //         .add(animationScene('.secAnim-triangles', 'translate-left-in').restart(), `<+${animationScene('.secAnim-brain', 'translate-left-out').duration() - 6.5}`)
-    //         .add(animationScene('.secAnim-triangles', 'scale-up-out').restart(), '>-3')
-    //
-    //         .add(animationScene('.secAnim-1250inRewards', 'scale-up-in').restart(), `<+${animationScene('.secAnim-triangles', 'scale-up-out').duration() - 4}`)
-    //         .add(animationScene('.secAnim-1250inRewards', 'translate-up-out').restart(), '>-3')
-    //
-    //         .add(animationScene('.secAnim-2022Season2', 'translate-up-in').restart(), `<+${animationScene('.secAnim-1250inRewards', 'translate-up-out').duration() - 6.5}`)
-    //         .add(animationScene('.secAnim-2022Season2', 'scale-down-out').restart(), '>-3')
-    //
-    //         .add(animationScene('.secAnim-asYouPlan', 'scale-down-in').restart(), `<+${animationScene('.secAnim-2022Season', 'scale-down-out').duration() - 4}`)
-    //         .add(animationScene('.secAnim-asYouPlan', 'translate-left-out').restart(), '>-3')
-    //
-    //         .add(animationScene('.secAnim-consider', 'translate-left-in').restart(), `<+${animationScene('.secAnim-asYouPlan', 'translate-left-out').duration() - 6.5}`)
-    //         .add(animationScene('.secAnim-consider', 'scale-down-out').restart(), '>-3')
-    //
-    //         .add(animationScene('.secAnim-laptop', 'scale-down-in').restart(), `<+${animationScene('.secAnim-consider', 'scale-down-out').duration() - 4}`)
-    //         .add(animationScene('.secAnim-laptop', 'translate-left-out').restart(), '>-3')
-    //
-    //         .add(animationScene('.secAnim-andThisYear', 'translate-left-in').restart(), `<+${animationScene('.secAnim-laptop', 'translate-left-out').duration() - 6.5}`)
-    //         .add(animationScene('.secAnim-andThisYear', 'translate-right-out').restart(), '>-3')
-    //
-    //         .add(animationScene('.secAnim-barGraph', 'translate-right-in').restart(), `<+${animationScene('.secAnim-andThisYear', 'translate-right-out').duration() - 6.5}`)
-    //         .add(animationScene('.secAnim-barGraph', 'translate-up-out').restart(), '>-3')
-    //
-    //         .add(animationScene('.secAnim-justSpendSome', 'translate-up-in').restart(), `<+${animationScene('.secAnim-barGraph', 'translate-up-out').duration() - 6.5}`)
-    //         .add(animationScene('.secAnim-justSpendSome', 'scale-up-out').restart(), '>-3')
-    //
-    //         .add(animationScene('.secAnim-thankYouAnd', 'scale-up-in').restart(), `<+${animationScene('.secAnim-justSpendSome', 'scale-up-out').duration() - 4}`)
-    //         .add(animationScene('.secAnim-thankYouAnd', 'scale-up-out').restart(), '>-3')
-    //     stMainTl.play()
-    //     GSDevTools.create({ paused: true, id: "stMainTl", animation: stMainTl, inTime: 0 })
-    //     document.querySelector('.btn1').style.display = 'none'
-    //     document.querySelector('.btn2').style.display = 'none'
-    // })
+    document.querySelector('.btn1').addEventListener('click', varAnim1)
+    
+    document.querySelector('.btn2').addEventListener('click', varAnim2)
 
     gsap.set(".main_animation_container",{opacity:1})
 
@@ -470,8 +600,23 @@ let arrContentSvg = [
     ["assets/svg/consider/considerBg copy.svg", '.main_animation_container .secAnim-consider .imgBg', anim, countContentSvg],
     ["assets/svg/consider/consider copy.svg", '.main_animation_container .secAnim-consider .imgCon', anim, countContentSvg],
 
+    ["assets/svg/consider/considerBg copy.svg", '.main_animation_container .secAnim-3models .imgBg', anim, countContentSvg],
+    ["assets/svg/consider/3models copy.svg", '.main_animation_container .secAnim-3models .imgCon', anim, countContentSvg],
+
     ["assets/svg/laptop/laptopBg copy.svg", '.main_animation_container .secAnim-laptop .imgBg', anim, countContentSvg],
     ["assets/svg/laptop/laptop copy.svg", '.main_animation_container .secAnim-laptop .imgCon', anim, countContentSvg],
+
+    ["assets/svg/laptop-Aeris/laptopBg copy.svg", '.main_animation_container .secAnim-laptop-Aeris .imgBg', anim, countContentSvg],
+    ["assets/svg/laptop-Aeris/laptop-Aeris copy.svg", '.main_animation_container .secAnim-laptop-Aeris .imgCon', anim, countContentSvg],
+
+    ["assets/svg/laptop-HuskyFamily/laptopBg copy.svg", '.main_animation_container .secAnim-laptop-HuskyFamily .imgBg', anim, countContentSvg],
+    ["assets/svg/laptop-HuskyFamily/laptop-HuskyFamily copy.svg", '.main_animation_container .secAnim-laptop-HuskyFamily .imgCon', anim, countContentSvg],
+
+    ["assets/svg/laptop-Presaro/laptopBg copy.svg", '.main_animation_container .secAnim-laptop-Presaro .imgBg', anim, countContentSvg],
+    ["assets/svg/laptop-Presaro/laptop-Presaro copy.svg", '.main_animation_container .secAnim-laptop-Presaro .imgCon', anim, countContentSvg],
+
+    ["assets/svg/laptop-SCH/laptopBg copy.svg", '.main_animation_container .secAnim-laptop-SCH .imgBg', anim, countContentSvg],
+    ["assets/svg/laptop-SCH/laptop-SCH copy.svg", '.main_animation_container .secAnim-laptop-SCH .imgCon', anim, countContentSvg],
 
     ["assets/svg/andThisYear/andThisYear copy.svg", '.main_animation_container .secAnim-andThisYear .imgCon', anim, countContentSvg],
 

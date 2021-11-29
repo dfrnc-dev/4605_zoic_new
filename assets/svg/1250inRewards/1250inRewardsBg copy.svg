@@ -4,33 +4,35 @@
 	 x="0px" y="0px" width="3840px" height="2165.6px" viewBox="0 0 3840 2165.6" enable-background="new 0 0 3840 2165.6"
 	 xml:space="preserve">
 <rect id="_x2D_.bgColor-" x="-5.1" fill="#F2F2F2" width="3850.19" height="2165.6"/>
-<g id="_x2D_.bgScene-">
-	<g id="_x2D_.moveElements-">
+<g id="_x2D_.bgScene-_1_">
+	<g id="_x2D_.moveElements-_1_">
 		<g>
 			<g>
-				<polygon fill="#A4CD38" points="-236.71,-439.3 568.78,-23.75 -5.39,2090.4 				"/>
-				<rect y="5.4" fill="none" width="3842.48" height="2183.33"/>
+				<polygon opacity="0.6" fill="#A4CD38" points="78.81,433.9 496.69,661.5 198.82,1819.4 				"/>
+				<rect x="-4.35" y="7.45" fill="none" width="3842.48" height="2183.33"/>
 			</g>
 		</g>
 		<g>
 			<g>
-				<polygon fill="#00C0F2" points="3842.18,620.55 3191.56,2187.11 3905.59,2511.34 				"/>
-				<rect y="5.4" fill="none" width="3842.48" height="2183.33"/>
+				<polygon opacity="0.6" fill="#00C0F2" points="3811.76,202.58 3477.35,1007.78 3844.35,1174.43 				"/>
+				<rect x="-4.35" y="7.45" fill="none" width="3842.48" height="2183.33"/>
 			</g>
 		</g>
 	</g>
-	<g id="_x2D_.lineBG-_1_">
+	<g id="_x2D_.lineBG-_3_">
 		<g>
-			<polygon fill="#012B48" points="388.79,-413.11 104.28,2260.39 112.48,2264.99 396.99,-408.52 			"/>
-			<rect y="5.4" fill="none" width="3842.48" height="2183.33"/>
+			
+				<line fill="#FFFFFF" stroke="#012B48" stroke-width="9" stroke-miterlimit="10" x1="103.5" y1="2264.44" x2="388.47" y2="-408.8"/>
+			<rect x="-4.35" y="7.45" fill="none" width="3842.48" height="2183.33"/>
 		</g>
 	</g>
-	<g id="_x2D_.lineBG-">
+	<g id="_x2D_.lineBG-_2_">
 		<g>
-			<polygon fill="#A4CD38" points="3839.44,-228.41 3392.65,2571.54 3401.91,2573.17 3848.7,-226.77 			"/>
-			<rect y="5.4" fill="none" width="3842.48" height="2183.33"/>
+			
+				<line fill="#012B48" stroke="#A4CD38" stroke-width="9" stroke-miterlimit="10" x1="3839.63" y1="-225.56" x2="3392.93" y2="2574.4"/>
+			<rect x="-4.35" y="7.45" fill="none" width="3842.48" height="2183.33"/>
 		</g>
 	</g>
-	<rect y="5.4" fill="none" width="3842.48" height="2183.33"/>
+	<rect x="-4.35" y="7.45" fill="none" width="3842.48" height="2183.33"/>
 </g>
 </svg>

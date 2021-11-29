@@ -849,10 +849,6 @@
 				<circle fill="#A4CD38" cx="1302" cy="1443.65" r="6.5"/>
 				<circle fill="#A4CD38" cx="1310.27" cy="1638.18" r="6.5"/>
 				<g>
-					
-						<text transform="matrix(1 0 0 1 1267.3705 1728.478)" fill="none" stroke="#012B48" font-family="'HelveticaNeueLTStd-Blk'" font-size="706.7555px">2</text>
-				</g>
-				<g>
 					<g>
 						<path fill="none" stroke="#012B48" stroke-dasharray="12" d="M1298.6,1447.04c-10.67-143.95,83.73-221.54,213.88-221.45
 							c122.53,0.08,205.91,61.05,203.76,158.78c-3.08,139.9-148.93,178.96-211.46,220.86c22.67-1.7,218.71,0,218.71,0v126.48

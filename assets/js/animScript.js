@@ -449,7 +449,7 @@ const anim = function(){
                     .add(animationScene('.secAnim-brain', 'translate-down-in', 3.5, 0.9).restart(), ">-0.5")
                     .add(animationScene('.secAnim-brain', 'translate-left-out', 1, 0.9).restart(), '>')
 
-                    .add(animationScene('.secAnim-triangles', 'translate-left-in', 3.5, 0.9).restart(), "<")
+                    .add(animationScene('.secAnim-triangles', 'translate-left-in', 3, 0.9).restart(), "<")
                     .add(animationScene('.secAnim-triangles', 'scale-up-out', 1, 0.9).restart(), '>')
 
                     .add(animationScene('.secAnim-andThoseChoices', 'scale-up-in', 5, 0.9).restart(), `<`)

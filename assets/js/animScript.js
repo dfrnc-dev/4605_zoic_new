@@ -336,7 +336,7 @@ const anim = function(){
                     .add(animationScene('.secAnim-brain', 'translate-down-in', 3.5, 0.9).restart(), ">-0.5")
                     .add(animationScene('.secAnim-brain', 'translate-left-out', 1, 0.9).restart(), '>')
 
-                    .add(animationScene('.secAnim-triangles', 'translate-left-in', 3.5, 0.9).restart(), "<")
+                    .add(animationScene('.secAnim-triangles', 'translate-left-in', 3, 0.9).restart(), "<")
                     .add(animationScene('.secAnim-triangles', 'scale-up-out', 1, 0.9).restart(), '>')
 
                     .add(animationScene('.secAnim-andThoseChoices', 'scale-up-in', 5, 0.9).restart(), `<`)
@@ -422,7 +422,7 @@ const anim = function(){
 
     }
 
-    function varAnim1() {
+    function varAnim2() {
         document.querySelector('.btn1').style.display = 'none'
         document.querySelector('.btn2').style.display = 'none'
         document.querySelector('.btn3').style.display = 'inline-block'
@@ -456,10 +456,10 @@ const anim = function(){
                     .add(animationScene('.secAnim-andThoseChoices', 'translate-up-out', 2, 0.9).restart(), '>')
 
                     .add(animationScene('.secAnim-1250inRewards', 'translate-up-in', 3.7, 0.9).restart(), `<`)
-                    .add(animationScene('.secAnim-1250inRewards', 'translate-right-out', 1.5, 0.9).restart(), '>')
+                    .add(animationScene('.secAnim-1250inRewards', 'scale-down-out', 1.5, 0.9).restart(), '>')
 
-                    .add(animationScene('.secAnim-2022Season2', 'translate-down-in', 4, 1.1).restart(), `<`)
-                    .add(animationScene('.secAnim-2022Season2', 'scale-down-out', 1, 1.1).restart(), '>')
+                    .add(animationScene('.secAnim-2022Season2', 'scale-down-in', 5.5, 1.1).restart(), `<`)
+                    .add(animationScene('.secAnim-2022Season2', 'translate-left-out', 1, 1.1).restart(), '>')
 
                     .add(animationScene(mobileName, 'translate-left-in', 4, 0.9).restart(), `<`)
                     .add(animationScene(mobileName, 'scale-down-out', 1, 0.9).restart(), '>')

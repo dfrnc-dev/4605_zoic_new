@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 24.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="trianglesSvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
 	 y="0px" width="1920px" height="1099px" viewBox="0 0 1920 1099" enable-background="new 0 0 1920 1099" xml:space="preserve">
 <rect id="_x2D_.bgColor-" x="-3.81" y="-0.03" fill="#F2F2F2" width="1923.81" height="1098.84"/>
 <g id="_x2D_.contentScene-">
-	<g id="_x2D_.contForPoint-">
+	<g id="_x2D_.contForPoint-" opacity="0.59">
 		<g id="_x2D_.moveElements-_2_">
 			<rect id="_x2D_.contForPointB-_3_" x="1099.95" y="204.57" opacity="0.33" fill="#0010B9" width="1159.77" height="632.41"/>
 			<rect id="_x2D_.contForPointB-_4_" x="1003.96" y="-153.37" opacity="0.33" fill="#0010B9" width="1131.97" height="617.25"/>
 			<rect id="_x2D_.contForPointB-_2_" x="387.37" y="181.8" opacity="0.33" fill="#0010B9" width="1086.44" height="592.42"/>
 			<rect id="_x2D_.contForPointB-_1_" x="166.78" y="697.31" opacity="0.33" fill="#0010B9" width="940.21" height="512.69"/>
-			<rect id="_x2D_.contForPointB-" x="1069.45" y="690.43" opacity="0.33" fill="#0010B9" width="823.15" height="448.86"/>
+			<rect id="_x2D_.contForPointB-" x="1107" y="729.23" opacity="0.33" fill="#0010B9" width="823.15" height="448.86"/>
+			<rect id="_x2D_.contForPointB-_5_" x="290.91" y="-224.43" opacity="0.33" fill="#0010B9" width="823.15" height="448.86"/>
 			<rect x="-16.1" y="14.93" fill="none" width="1931.98" height="1085.73"/>
 		</g>
 	</g>
 	<g id="_x2D_.gTriangleImage.moveElements-">
 		<g>
 			<g>
-				<polygon fill="#001F48" points="618.93,819.4 601.3,501.07 166.74,667.16 				"/>
+				<polygon fill="#001F48" points="639.16,752.79 304.67,468.5 702.48,444.54 				"/>
 				<g>
 					
-						<image overflow="visible" width="218" height="78" xlink:href="../../img/TestProducts2/corvus.png"  transform="matrix(1.0824 -0.0297 0.0297 1.0824 347.2817 611.0692)">
+						<image overflow="visible" width="218" height="78" xlink:href="../../img/TestProducts2/corvus.png"  transform="matrix(1.0279 -0.0282 0.0313 1.1438 443.4808 481.162)">
 					</image>
 				</g>
 				<rect x="73.02" y="43.86" fill="none" width="1770.14" height="1011.06"/>
@@ -28,10 +29,10 @@
 		</g>
 		<g>
 			<g>
-				<polygon fill="#001F48" points="1772.47,646.34 1269.68,516.49 1673.04,321.09 				"/>
+				<polygon fill="#001F48" points="1553.97,557.79 1223.08,197.79 1684.62,259.77 				"/>
 				<g>
 					
-						<image overflow="visible" width="1754" height="350" xlink:href="../../img/TestProducts2/baythroid.PNG"  transform="matrix(0.1482 2.686566e-04 -2.686566e-04 0.1482 1421.8888 470.7098)">
+						<image overflow="visible" width="1754" height="350" xlink:href="../../img/TestProducts2/baythroid.PNG"  transform="matrix(0.1483 2.687240e-04 -4.462543e-04 0.2462 1372.3427 270.4694)">
 					</image>
 				</g>
 				<rect x="73.02" y="43.86" fill="none" width="1770.14" height="1011.06"/>
@@ -39,10 +40,10 @@
 		</g>
 		<g>
 			<g>
-				<polygon fill="#001F48" points="871.75,684.01 1116.04,885.67 1305.48,660.24 				"/>
+				<polygon fill="#001F48" points="1278.09,956.22 910.78,644.04 1347.62,617.73 				"/>
 				<g>
 					
-						<image overflow="visible" width="981" height="438" xlink:href="../../img/TestProducts2/balance.PNG"  transform="matrix(0.2023 -0.0243 0.0243 0.2023 995.7086 709.3763)">
+						<image overflow="visible" width="981" height="438" xlink:href="../../img/TestProducts2/balance.PNG"  transform="matrix(0.2246 8.755459e-03 -0.0107 0.2757 1086.7416 646.0431)">
 					</image>
 				</g>
 				<rect x="73.02" y="43.86" fill="none" width="1770.14" height="1011.06"/>
@@ -50,10 +51,10 @@
 		</g>
 		<g>
 			<g>
-				<polygon fill="#001F48" points="987.52,127.55 657.4,464.06 1208.18,483.71 				"/>
+				<polygon fill="#001F48" points="1032.62,565.44 702.48,214.1 1174.57,273.32 				"/>
 				<g>
 					
-						<image overflow="visible" width="737" height="154" xlink:href="../../img/TestProducts2/axiom.PNG"  transform="matrix(0.4194 -4.678752e-03 4.678752e-03 0.4194 793.6089 329.8698)">
+						<image overflow="visible" width="737" height="154" xlink:href="../../img/TestProducts2/axiom.PNG"  transform="matrix(0.3745 -4.177777e-03 4.177777e-03 0.3745 852.567 285.412)">
 					</image>
 				</g>
 				<rect x="73.02" y="43.86" fill="none" width="1770.14" height="1011.06"/>

@@ -2,13 +2,59 @@
 <!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="dotAndLineASvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
 	 y="0px" width="3224px" height="2370px" viewBox="0 0 3224 2370" enable-background="new 0 0 3224 2370" xml:space="preserve">
+	<style>
+		@keyframes animTriangleRot1 {
+			0%{transform: rotate(0deg) scaleX(1)}
+			50%{transform: rotate(-180deg) scaleX(-1)}
+			100%{transform: rotate(-360deg) scaleX(1)}
+		}
+		@keyframes animTriangleRot2 {
+			0%{transform: rotate(0deg) scaleX(1)}
+			50%{transform: rotate(180deg) scaleX(-1)}
+			100%{transform: rotate(360deg) scaleX(1)}
+		}
+		.rectBgAnim > *{
+			transform-box: fill-box;
+			transform-origin: 50% 50%;
+		}
+		.rectBgAnim > *:nth-child(1){animation: animTriangleRot1 25s infinite linear -22s;}
+		.rectBgAnim > *:nth-child(2){animation: animTriangleRot1 30s infinite linear -12s;}
+		.rectBgAnim > *:nth-child(3){animation: animTriangleRot1 35s infinite linear -32s;}
+		.rectBgAnim > *:nth-child(4){animation: animTriangleRot1 40s infinite linear -42s;}
+
+		/*****************************/
+
+		@keyframes animDotsScale1 {
+			0%{transform: scale(1)}
+			100%{transform: scale(1.5)}
+		}
+		.dots > *{
+			transform-box: fill-box;
+			transform-origin: 50% 50%;
+		}
+		.dots > *:nth-child(3n+1){animation: animDotsScale1 1s infinite alternate linear -1s;}
+		.dots > *:nth-child(3n+2){animation: animDotsScale1 1s infinite alternate linear -0.5s;}
+		.dots > *:nth-child(3n+3){animation: animDotsScale1 1s infinite alternate linear -0s;}
+
+		/*****************************/
+
+		@keyframes animLines1 {
+			0%{stroke-dashoffset: 0px}
+			100%{stroke-dashoffset: 24px}
+		}
+		.lines > *:nth-child(3n+1){animation: animLines1 0.5s infinite linear -0s;}
+		.lines > *:nth-child(3n+2){animation: animLines1 0.5s infinite linear -0.5s;}
+		.lines > *:nth-child(3n+3){animation: animLines1 0.5s infinite linear -1s;}
+
+
+	</style>
 <g opacity="0.5">
 	<g id="_x2D_.dotAndLine-">
-		<g id="_x2D_.lines-">
+		<g id="_x2D_.lines-" class="lines">
 			<polyline fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" stroke-dashoffset="1" points="
 				815,1455.38 767.6,1448.24 554.14,1401.38 212,1530.06 			"/>
 			<polyline fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" stroke-dashoffset="1" points="
-				670.89,1605.25 533.01,1531.92 467.6,1766.42 670.89,1614.25 572.63,2054.1 467.6,1766.42 440.61,2060.28 257.96,1984.3 
+				670.89,1605.25 533.01,1531.92 467.6,1766.42 670.89,1614.25 572.63,2054.1 467.6,1766.42 440.61,2060.28 257.96,1984.3
 				467.6,1766.42 269.82,1708.12 533.01,1549.91 			"/>
 			<polyline fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" stroke-dashoffset="1" points="
 				313.63,1784.41 212,1557.82 139.99,2010.23 257.96,1984.3 223.86,1605.25 			"/>
@@ -17,20 +63,20 @@
 			<polyline fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" stroke-dashoffset="1" points="
 				431.62,2081.47 367.24,2231.3 572.63,2062.28 679.88,2100.2 382.56,2231.3 			"/>
 			<polyline fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" stroke-dashoffset="1" points="
-				572.63,2062.28 791.99,1840.4 679.88,2100.2 721.62,2100.42 791.99,1840.4 717.67,1748.43 788.74,1805.43 1019.9,1807.7 
+				572.63,2062.28 791.99,1840.4 679.88,2100.2 721.62,2100.42 791.99,1840.4 717.67,1748.43 788.74,1805.43 1019.9,1807.7
 				989.6,1648.53 			"/>
-			<polyline fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" stroke-dashoffset="1" points="815,2231.3 
+			<polyline fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" stroke-dashoffset="1" points="815,2231.3
 				721.62,2100.42 1019.9,1807.7 1115.16,2271.69 1215.07,1816.54 1337.02,2174.39 1135.07,2319.18 			"/>
-			
+
 				<line fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" stroke-dashoffset="1" x1="791.99" y1="1840.4" x2="1110.31" y2="2248.06"/>
 			<polyline fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" stroke-dashoffset="1" points="
 				791.99,1840.4 1019.9,1807.7 1215.07,1816.55 			"/>
 			<polyline fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" stroke-dashoffset="1" points="
 				1337.02,2183.23 1528.16,2116.57 1460.27,1873.39 			"/>
 			<polyline fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" stroke-dashoffset="1" points="
-				1600.33,2215.01 1528.16,2116.57 1924.44,2161.17 1949.71,2222.67 2066.9,2098.55 1924.44,2161.17 1675.12,1920.5 
+				1600.33,2215.01 1528.16,2116.57 1924.44,2161.17 1949.71,2222.67 2066.9,2098.55 1924.44,2161.17 1675.12,1920.5
 				1613.24,1438.33 1600.33,1267.03 1332.65,1318.2 			"/>
-			
+
 				<line fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" stroke-dashoffset="1" x1="1528.16" y1="2116.57" x2="1675.12" y2="1920.5"/>
 			<polyline fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" stroke-dashoffset="1" points="
 				1937.65,2134.59 2142.26,1920.5 2384.25,1877.92 2338.05,2161.17 2066.9,2098.55 2384.25,1877.92 			"/>
@@ -47,38 +93,38 @@
 			<polyline fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" stroke-dashoffset="1" points="
 				2338.05,1781.47 2384.25,1877.92 2484.53,1826.7 2525.99,1663.78 2474.37,1631.38 			"/>
 			<polyline fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" stroke-dashoffset="1" points="
-				2384.25,1877.92 2604.22,1818.54 2631.88,1970.31 2661.81,1826.7 2639.79,1783.64 2551.53,1447.13 2488.49,1455.09 
+				2384.25,1877.92 2604.22,1818.54 2631.88,1970.31 2661.81,1826.7 2639.79,1783.64 2551.53,1447.13 2488.49,1455.09
 				2639.79,1783.64 			"/>
 			<polyline fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" stroke-dashoffset="1" points="
-				2338.05,2161.17 2458.87,2019.68 2631.88,1970.31 2754.35,2140.03 2687.09,1988.35 2882.84,2000.41 2754.35,2140.03 
+				2338.05,2161.17 2458.87,2019.68 2631.88,1970.31 2754.35,2140.03 2687.09,1988.35 2882.84,2000.41 2754.35,2140.03
 				2534.9,2232.11 			"/>
 			<polyline fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" stroke-dashoffset="1" points="
-				2687.09,1988.35 2840.79,1870.12 2639.79,1783.64 2806.82,1697.97 2796.66,1648.39 2751.67,1428.29 2640.32,1791.63 
-				2796.66,1648.39 3174.22,1608.37 2806.82,1697.97 2840.79,1870.12 3161.46,1607.86 2882.84,2000.41 3053.04,2025.72 
+				2687.09,1988.35 2840.79,1870.12 2639.79,1783.64 2806.82,1697.97 2796.66,1648.39 2751.67,1428.29 2640.32,1791.63
+				2796.66,1648.39 3174.22,1608.37 2806.82,1697.97 2840.79,1870.12 3161.46,1607.86 2882.84,2000.41 3053.04,2025.72
 				3155.14,1613.02 			"/>
 			<polyline fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" stroke-dashoffset="1" points="
 				2394.35,2249.09 2458.87,2019.68 2754.35,2140.03 2716.05,2305.39 			"/>
-			<polyline fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" stroke-dashoffset="1" points="3042,1998 
-				2750.28,1432.83 3155.14,1613.02 2887.43,1377.2 2750.28,1432.83 2854.76,1241.47 2887.43,1377.2 3026.38,1131.86 
+			<polyline fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" stroke-dashoffset="1" points="3042,1998
+				2750.28,1432.83 3155.14,1613.02 2887.43,1377.2 2750.28,1432.83 2854.76,1241.47 2887.43,1377.2 3026.38,1131.86
 				2816.98,945.05 2854.76,1226.54 			"/>
 			<polyline fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" stroke-dashoffset="1" points="
 				2796.66,1648.39 2887.43,1377.2 3053.04,2025.72 3108.99,2215.77 			"/>
 			<polyline fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" stroke-dashoffset="1" points="
 				2816.98,945.05 2947.52,640.14 2699.94,582.19 			"/>
-			
+
 				<line fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" stroke-dashoffset="1" x1="3171.03" y1="406.2" x2="2770.57" y2="417.82"/>
 			<polyline fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" stroke-dashoffset="1" points="
 				2610.47,233.55 2471.07,413.55 2501.2,573.61 			"/>
 			<polyline fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" stroke-dashoffset="1" points="
 				2152.43,372.16 2471.07,413.55 2271.15,573.61 			"/>
-			
+
 				<line fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" stroke-dashoffset="1" x1="2273.15" y1="600.61" x2="2200.44" y2="862.91"/>
 			<polyline fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" stroke-dashoffset="1" points="
 				2126.53,68.15 2291.33,220.71 2014.82,305.47 2042.47,164.49 2282.75,220.71 			"/>
-			
+
 				<line fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" stroke-dashoffset="1" x1="877.37" y1="1075.26" x2="1125.12" y2="1469.79"/>
 		</g>
-		<g id="_x2D_.dots-">
+		<g id="_x2D_.dots-" class="dots">
 			<circle fill="#012B48" cx="877.37" cy="1075.26" r="19.91"/>
 			<circle fill="#012B48" cx="767.6" cy="1448.24" r="19.94"/>
 			<circle fill="#012B48" cx="815" cy="1455.38" r="16.62"/>
@@ -167,7 +213,7 @@
 			<circle fill="#012B48" cx="1613.24" cy="1438.33" r="12.91"/>
 		</g>
 	</g>
-	<g id="_x2D_.rectBgAnim-">
+	<g id="_x2D_.rectBgAnim-" class="rectBgAnim">
 		<polygon fill="#00C0F2" points="2246.02,94 2501.8,349.78 2693.28,237.96 		"/>
 		<polygon fill="#00C0F2" points="1285.61,1966.56 1541.39,2222.34 1732.88,2110.53 		"/>
 		<polygon fill="#00C0F2" points="2747.73,1923.35 3003.51,2179.13 3195,2067.32 		"/>

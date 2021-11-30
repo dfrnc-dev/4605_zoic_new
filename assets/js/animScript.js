@@ -64,7 +64,7 @@ const anim = function(){
             //     <use xlink:href="#forUseA" class="dotAnim" x="${child.getAttribute("x")}" y="${child.getAttribute("y")}"  width="${child.getAttribute("width")}" height="${child.getAttribute("height")}" />
             // `;
             tempAddHtml += `
-                <image class="dotAnim" overflow="visible" x="${child.getAttribute("x")}" y="${child.getAttribute("y")}" width="${child.getAttribute("width")}" height="${child.getAttribute("height")}"  xlink:href="assets/svg/dotForBgAnim/Dots_N_Lines_A copy.svg">
+                <image class="dotAnim" overflow="visible" x="${child.getAttribute("x")}" y="${child.getAttribute("y")}" width="${child.getAttribute("width")}" height="${child.getAttribute("height")}"  xlink:href="assets/svg/dotForBgAnim/Dots_N_Lines_A.svg">
           </image>
             `;
         })
@@ -79,7 +79,7 @@ const anim = function(){
             //     <use xlink:href="#forUseB" class="dotAnim" x="${child.getAttribute("x")}" y="${child.getAttribute("y")}"  width="${child.getAttribute("width")}" height="${child.getAttribute("height")}" />
             // `;
             tempAddHtml += `
-                <image class="dotAnim" overflow="visible" x="${child.getAttribute("x")}" y="${child.getAttribute("y")}" width="${child.getAttribute("width")}" height="${child.getAttribute("height")}"  xlink:href="assets/svg/dotForBgAnim/Dots_N_Lines_B copy.svg">
+                <image class="dotAnim" overflow="visible" x="${child.getAttribute("x")}" y="${child.getAttribute("y")}" width="${child.getAttribute("width")}" height="${child.getAttribute("height")}"  xlink:href="assets/svg/dotForBgAnim/Dots_N_Lines_B.svg">
           </image>
             `;
         })
@@ -87,20 +87,20 @@ const anim = function(){
 
     })
 
-    gsap.to(".dots > *",{duration:1,scale:1.5,delay:-10,transformOrigin:"50% 50%",ease:"sine.inOut", stagger:{each:0.1,repeat:-1,yoyo:true}})
-    gsap.to(".lines > *",{duration:0.5,strokeDashoffset: 24,delay:-10,transformOrigin:"50% 50%",ease:"none", stagger:{each:0.1,repeat:-1}})
-
-    gsap.to(".rectBgAnim > *:nth-child(1)",{duration:25,delay:-5,rotation:-360,transformOrigin:"50% 50%",ease:"none", stagger:{each:0.1,repeat:-1}})
-    gsap.to(".rectBgAnim > *:nth-child(1)",{duration:22,delay:-5,scaleX:-1,transformOrigin:"50% 50%",ease:"none",repeat:-1,yoyo:true})
-
-    gsap.to(".rectBgAnim > *:nth-child(2)",{duration:25,delay:-15,rotation:360,transformOrigin:"50% 50%",ease:"none", stagger:{each:0.1,repeat:-1}})
-    gsap.to(".rectBgAnim > *:nth-child(2)",{duration:22,delay:-15,scaleX:-1,transformOrigin:"50% 50%",ease:"none",repeat:-1,yoyo:true})
-
-    gsap.to(".rectBgAnim > *:nth-child(3)",{duration:22,delay:-20,rotation:-360,transformOrigin:"50% 50%",ease:"none", stagger:{each:0.1,repeat:-1}})
-    gsap.to(".rectBgAnim > *:nth-child(3)",{duration:25,delay:-20,scaleX:-1,transformOrigin:"50% 50%",ease:"none",repeat:-1,yoyo:true})
-
-    gsap.to(".rectBgAnim > *:nth-child(4)",{duration:22,rotation:360,transformOrigin:"50% 50%",ease:"none", stagger:{each:0.1,repeat:-1}})
-    gsap.to(".rectBgAnim > *:nth-child(4)",{duration:25,scaleX:-1,transformOrigin:"50% 50%",ease:"none",repeat:-1,yoyo:true})
+    // gsap.to(".dots > *",{duration:1,scale:1.5,delay:-10,transformOrigin:"50% 50%",ease:"sine.inOut", stagger:{each:0.1,repeat:-1,yoyo:true}})
+    // gsap.to(".lines > *",{duration:0.5,strokeDashoffset: 24,delay:-10,transformOrigin:"50% 50%",ease:"none", stagger:{each:0.1,repeat:-1}})
+    //
+    // gsap.to(".rectBgAnim > *:nth-child(1)",{duration:25,delay:-5,rotation:-360,transformOrigin:"50% 50%",ease:"none", stagger:{each:0.1,repeat:-1}})
+    // gsap.to(".rectBgAnim > *:nth-child(1)",{duration:22,delay:-5,scaleX:-1,transformOrigin:"50% 50%",ease:"none",repeat:-1,yoyo:true})
+    //
+    // gsap.to(".rectBgAnim > *:nth-child(2)",{duration:25,delay:-15,rotation:360,transformOrigin:"50% 50%",ease:"none", stagger:{each:0.1,repeat:-1}})
+    // gsap.to(".rectBgAnim > *:nth-child(2)",{duration:22,delay:-15,scaleX:-1,transformOrigin:"50% 50%",ease:"none",repeat:-1,yoyo:true})
+    //
+    // gsap.to(".rectBgAnim > *:nth-child(3)",{duration:22,delay:-20,rotation:-360,transformOrigin:"50% 50%",ease:"none", stagger:{each:0.1,repeat:-1}})
+    // gsap.to(".rectBgAnim > *:nth-child(3)",{duration:25,delay:-20,scaleX:-1,transformOrigin:"50% 50%",ease:"none",repeat:-1,yoyo:true})
+    //
+    // gsap.to(".rectBgAnim > *:nth-child(4)",{duration:22,rotation:360,transformOrigin:"50% 50%",ease:"none", stagger:{each:0.1,repeat:-1}})
+    // gsap.to(".rectBgAnim > *:nth-child(4)",{duration:25,scaleX:-1,transformOrigin:"50% 50%",ease:"none",repeat:-1,yoyo:true})
 
 
 
@@ -204,7 +204,7 @@ const anim = function(){
                 .from(`${nameScene} .elLine`, { duration: 1, drawSVG: 0, ease: "power4.out", stagger: { each: 0.02, from: "end" } }, "qq+=1")
                 .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "power4.out", stagger: { each: 0.05, from: "end" } }, "qq+=1.5")
                 .duration(tweenDuration)
-         
+
         }
 
         if (typeAnimation == 'scale-down-out') {
@@ -271,7 +271,7 @@ const anim = function(){
                 .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "sine.out", stagger: { each: 0.05, from: "end" } }, "qq+=1")
                 .duration(tweenDuration)
                 .to(`${nameScene} .contentScene`, { duration: tweenDuration, scale: scaleScene, transformOrigin: "50% 50%", ease: "none" }, 0)
-          
+
         }
 
         if (typeAnimation == 'translate-right-out') {
@@ -294,7 +294,7 @@ const anim = function(){
                 .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "sine.out", stagger: { each: 0.05, from: "end" } }, "qq+=1")
                 .duration(tweenDuration)
                 .to(`${nameScene} .contentScene`, { duration: tweenDuration, scale: scaleScene, transformOrigin: "50% 50%", ease: "none" }, 0)
-        
+
 
         }
 
@@ -308,7 +308,7 @@ const anim = function(){
         }
 
     }
-    
+
     function varAnim1() {
         document.querySelector('.btn1').style.display = 'none'
         document.querySelector('.btn2').style.display = 'none'
@@ -456,7 +456,7 @@ const anim = function(){
 
                     .add(animationScene('.secAnim-andThoseChoices', 'scale-up-in', 4, 1.15).restart(), `<`)
                     .add(animationScene('.secAnim-andThoseChoices', 'translate-up-out', 1, 1.15).restart(), '>')
-                    
+
                     // .add(animationScene('.secAnim-2455inRewards', 'translate-up-in', 3.5, 1.15).restart(), `<`)
                     // .add(animationScene('.secAnim-2455inRewards', 'translate-right-out', 1, 1.15).restart(), '>')
 
@@ -516,7 +516,7 @@ const anim = function(){
                 mobileChange('.secAnim-3models')
             })
 
-            
+
             document.querySelector('.btn3').style.display = 'none'
             document.querySelector('.btn4').style.display = 'none'
             document.querySelector('.btn5').style.display = 'none'
@@ -547,7 +547,7 @@ const anim = function(){
 
     // setTimeout(()=>{varAnim1()}, 2000)
     document.querySelector('.btn1').addEventListener('click', varAnim1)
-    
+
     document.querySelector('.btn2').addEventListener('click', varAnim2)
 
     gsap.set(".main_animation_container",{opacity:1})

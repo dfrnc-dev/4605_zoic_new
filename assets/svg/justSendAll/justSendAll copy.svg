@@ -908,7 +908,7 @@
 				<circle fill="#A4CD38" cx="2732.8" cy="1592.45" r="6.5"/>
 				<polyline fill="none" stroke="#012B48" stroke-miterlimit="10" stroke-dasharray="12" points="1291.15,1081.71 2373.75,1318.92 
 					2903.09,1542.33 				"/>
-				<rect x="-442.57" y="-506.91" fill="none" width="3840" height="2160"/>
+				<rect x="0" y="-2.81" fill="none" width="3840" height="2160"/>
 			</g>
 		</g>
 		<g>

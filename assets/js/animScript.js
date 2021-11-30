@@ -226,14 +226,14 @@ const anim = function(){
                 .from(`${nameScene} .elLine`, { duration: 1, drawSVG: 0, ease: "sine.out", stagger: { each: 0.02, from: "end" } }, "qq+=1.5")
                 .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "sine.out", stagger: { each: 0.05, from: "end" } }, "qq+=1")
                 .duration(tweenDuration)
-                .to(`${nameScene} .contentScene`, { duration: tweenDuration, scale: scaleScene, transformOrigin: "50% 50%", ease: "none" }, 0)
+                .from(`${nameScene} .contentScene`, { duration: tweenDuration, scale: scaleScene, transformOrigin: "50% 50%", ease: "none" }, 0)
         }
 
         if (typeAnimation == 'translate-up-out') {
             return gsap.timeline({ paused: true })
                 .to(`${nameScene} .moveElements > *`, { duration: 2, y: "-150%", transformOrigin: "50% 50%", ease: "power4.inOut", stagger: { each: 0.08, from: "end" } }, )
                 .to(`${nameScene} .lineBG > *`, { duration: 1, autoAlpha: 0, ease: "power4.inOut", stagger: { each: 0.2, from: "end" } }, "<")
-                // .to(`${nameScene} .moveElements > *`, { duration: 0.2, autoAlpha: 0, ease: "none", stagger: { each: 0.1, from: "end" } }, "<+4")
+                .to(`${nameScene} .moveElements > *`, { duration: 0.2, autoAlpha: 0, ease: "none", stagger: { each: 0.1, from: "end" } }, "<+4")
                 .set(`${nameScene}`, { autoAlpha: 0 }, ">")
                 .duration(tweenDuration)
         }

@@ -355,7 +355,7 @@ const anim = function(){
                     .add(animationScene('.secAnim-andThoseChoices', 'translate-up-out', 4, 0.9).restart(), '>')
 
                     .add(animationScene('.secAnim-2455inRewards', 'translate-up-in', 3.7, 0.9).restart(), `<+0.2`)
-                    .add(animationScene('.secAnim-2455inRewards', 'translate-right-out', 1.5, 0.9).restart(), '>')
+                    .add(animationScene('.secAnim-2455inRewards', 'translate-right-out', 2.5, 0.9).restart(), '>')
 
                     .add(animationScene('.secAnim-745Balance', 'translate-right-in', 3.7, 0.9).restart(), `<`)
                     .add(animationScene('.secAnim-745Balance', 'translate-down-out', 1, 0.9).restart(), '>')
@@ -377,6 +377,7 @@ const anim = function(){
 
                     .add(animationScene('.secAnim-barGraph', 'translate-right-in', 4, 0.9).restart(), `<`)
                     .add(animationScene('.secAnim-barGraph', 'translate-up-out', 2, 0.9).restart(), '>')
+                    .to('.secAnim-barGraph .customTextAn', {duration: 1, y:'-=100%'}, '<')
 
                     .add(animationScene('.secAnim-justSendAll', 'translate-up-in', 4, 0.9).restart(), `<`)
                     .add(animationScene('.secAnim-justSendAll', 'scale-up-out', 1, 0.9).restart(), '>')

@@ -8,11 +8,11 @@
 		<g id="_x2D_.moveElements-_2_">
 			<g>
 				<g>
-					<rect id="_x2D_.contForPointB-_3_" x="2451.72" y="1014.75" opacity="0.33" fill="#0010B9" width="2038.6" height="1112.56"/>
+					<rect id="_x2D_.contForPointB-_3_" x="2827.48" y="1080.2" opacity="0.33" fill="#0010B9" width="2038.6" height="1112.56"/>
 					<rect id="_x2D_.contForPointB-_4_" x="-1.39" y="-45.08" opacity="0.33" fill="#0010B9" width="1941.97" height="1059.83"/>
-					<rect id="_x2D_.contForPointB-_2_" x="-636.26" y="-203.13" opacity="0.33" fill="#0010B9" width="2157.7" height="1177.56"/>
-					<rect id="_x2D_.contForPointB-_1_" x="1583.46" y="1477.14" opacity="0.33" fill="#0010B9" width="1867.28" height="1019.07"/>
-					<rect id="_x2D_.contForPointB-_5_" x="769.84" y="-298.18" opacity="0.33" fill="#0010B9" width="1867.28" height="1019.07"/>
+					<rect id="_x2D_.contForPointB-_2_" x="-1028.43" y="10.67" opacity="0.33" fill="#0010B9" width="2157.7" height="1177.56"/>
+					<rect id="_x2D_.contForPointB-_1_" x="1448.65" y="1560.55" opacity="0.33" fill="#0010B9" width="1867.28" height="1019.07"/>
+					<rect id="_x2D_.contForPointB-_5_" x="960.2" y="-379.88" opacity="0.33" fill="#0010B9" width="1867.28" height="1019.07"/>
 					<rect x="9.82" y="1.14" fill="none" width="3836.96" height="2158.11"/>
 				</g>
 			</g>
@@ -411,7 +411,7 @@
 						<text transform="matrix(1 0 0 1 1223.8286 1755.4958)" fill="#012B48" font-family="'HelveticaNeueLTStd-Th'" font-size="44px">ved.</text>
 				</g>
 				
-					<image overflow="visible" width="1585" height="837" id="endScene-plus" xlink:href="assets/img/TestProducts2/plus.png"  transform="matrix(0.9936 0 0 0.9936 1132.5532 664.1685)">
+					<image overflow="visible" width="1585" height="837" id="endScene-plus" xlink:href="../../img/TestProducts2/plus.png"  transform="matrix(1.1483 0 0 1.1483 1010 599.4511)">
 				</image>
 				<rect x="-1.39" y="-45.08" fill="none" width="3842.78" height="2165.72"/>
 			</g>

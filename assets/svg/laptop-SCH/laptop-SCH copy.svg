@@ -19,12 +19,6 @@
 	<g id="_x2D_.moveElements-">
 		<g>
 			<g>
-				<text transform="matrix(1 0 0 1 1270.8113 596.5767)" fill="#012B48" font-family="'HelveticaNeueLTStd-Bd'" font-size="85px">to keep your crops weed-free throughout the entire season.</text>
-				<rect fill="none" width="3840" height="2160"/>
-			</g>
-		</g>
-		<g>
-			<g>
 				<text transform="matrix(1 0 0 1 1141.155 220.399)"><tspan x="0" y="0" fill="#012B48" font-family="'HelveticaNeueLTStd-Bd'" font-size="85px" letter-spacing="281">	</tspan><tspan x="304.74" y="0" fill="#012B48" font-family="'HelveticaNeueLTStd-Bd'" font-size="85px">Our portfolio of corn herbicides provides you with a</tspan></text>
 				<rect fill="none" width="3840" height="2160"/>
 			</g>
@@ -33,6 +27,12 @@
 			<g>
 				
 					<text transform="matrix(1 0 0 1 1080.7775 461.5013)" fill="#012B48" font-family="'HelveticaNeueLTStd-ThIt'" font-size="256px" letter-spacing="2">custom-tailored solution</text>
+				<rect fill="none" width="3840" height="2160"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<text transform="matrix(1 0 0 1 1270.8113 596.5767)" fill="#012B48" font-family="'HelveticaNeueLTStd-Bd'" font-size="85px">to keep your crops weed-free throughout the entire season.</text>
 				<rect fill="none" width="3840" height="2160"/>
 			</g>
 		</g>
@@ -527,7 +527,7 @@
 						<circle id="_x2D_.elCircle-" fill="none" stroke="#012B48" stroke-width="1.3571" stroke-miterlimit="10" cx="2474.87" cy="1793.51" r="42.62"/>
 					<g id="laptopImage">
 						
-							<image overflow="visible" width="887" height="657" xlink:href="assets/img/TestProducts2/6_logos_v2.svg"  transform="matrix(1.1698 0.0968 0.03 1.3639 523.876 617.5804)">
+							<image overflow="visible" width="887" height="657" xlink:href="../../img/TestProducts2/asgrow.png"  transform="matrix(1.1698 0.0968 0.03 1.3639 523.876 617.5804)">
 						</image>
 					</g>
 				</g>

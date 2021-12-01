@@ -19,17 +19,6 @@
 	<g id="_x2D_.moveElements-">
 		<g>
 			<g>
-				
-					<text transform="matrix(1 0 0 1 2589.271 1886.3894)" fill="#012B48" font-family="'HelveticaNeueLTStd-LtIt'" font-size="66px">*Compared to Prosaro</text>
-				
-					<text transform="matrix(0.583 0 0 0.583 3224.5786 1864.4114)" fill="#012B48" font-family="'HelveticaNeueLTStd-LtIt'" font-size="66px">®</text>
-				
-					<text transform="matrix(1 0 0 1 3255.1685 1886.3894)" fill="#012B48" font-family="'HelveticaNeueLTStd-LtIt'" font-size="66px"> Fungicide</text>
-				<rect fill="none" width="3840" height="2160"/>
-			</g>
-		</g>
-		<g>
-			<g>
 				<text transform="matrix(1 0 0 1 1063.4875 289.9592)" fill="#012B48" font-family="'HelveticaNeueLTStd-Bd'" font-size="85px">Increased yield potential &amp; improved consistency in a variety</text>
 				<rect fill="none" width="3840" height="2160"/>
 			</g>
@@ -37,6 +26,17 @@
 		<g>
 			<g>
 				<text transform="matrix(1 0 0 1 1378.2299 537.6122)"><tspan x="0" y="0" fill="#012B48" font-family="'HelveticaNeueLTStd-ThIt'" font-size="256px" letter-spacing="-2">of growing c</tspan><tspan x="1283.05" y="0" fill="#012B48" font-family="'HelveticaNeueLTStd-ThIt'" font-size="256px" letter-spacing="-6">on</tspan><tspan x="1540.58" y="0" fill="#012B48" font-family="'HelveticaNeueLTStd-ThIt'" font-size="256px" letter-spacing="2">d</tspan><tspan x="1685.48" y="0" fill="#012B48" font-family="'HelveticaNeueLTStd-ThIt'" font-size="256px" letter-spacing="6">it</tspan><tspan x="1807.33" y="0" fill="#012B48" font-family="'HelveticaNeueLTStd-ThIt'" font-size="256px" letter-spacing="2">i</tspan><tspan x="1852.64" y="0" fill="#012B48" font-family="'HelveticaNeueLTStd-ThIt'" font-size="256px" letter-spacing="-2">on</tspan><tspan x="2117.85" y="0" fill="#012B48" font-family="'HelveticaNeueLTStd-ThIt'" font-size="256px" letter-spacing="-12">s.</tspan></text>
+				<rect fill="none" width="3840" height="2160"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<text transform="matrix(1 0 0 1 2589.271 1886.3894)" fill="#012B48" font-family="'HelveticaNeueLTStd-LtIt'" font-size="66px">*Compared to Prosaro</text>
+				
+					<text transform="matrix(0.583 0 0 0.583 3224.5786 1864.4114)" fill="#012B48" font-family="'HelveticaNeueLTStd-LtIt'" font-size="66px">®</text>
+				
+					<text transform="matrix(1 0 0 1 3255.1685 1886.3894)" fill="#012B48" font-family="'HelveticaNeueLTStd-LtIt'" font-size="66px"> Fungicide</text>
 				<rect fill="none" width="3840" height="2160"/>
 			</g>
 		</g>
@@ -531,7 +531,7 @@
 						<circle id="_x2D_.elCircle-" fill="none" stroke="#012B48" stroke-width="1.3571" stroke-miterlimit="10" cx="2474.87" cy="1793.51" r="42.62"/>
 					<g id="laptopImage">
 						
-							<image overflow="visible" width="887" height="657" xlink:href="assets/img/TestProducts2/ProsaroPro.png"  transform="matrix(1.1698 0.0968 0.03 1.3639 523.876 617.5804)">
+							<image overflow="visible" width="887" height="657" xlink:href="../../img/TestProducts2/asgrow.png"  transform="matrix(1.1698 0.0968 0.03 1.3639 523.876 617.5804)">
 						</image>
 					</g>
 				</g>

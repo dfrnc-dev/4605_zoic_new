@@ -685,14 +685,14 @@
 	<g id="_x2D_.moveElements-">
 		<g>
 			<g>
-				<text transform="matrix(1 0 0 1 737.9336 366.9648)" fill="#012B48" font-family="'HelveticaNeueLTStd-Bd'" font-size="148px">And those choices</text>
+				
+					<text transform="matrix(1 0 0 1 1168.3945 697.7505)" fill="#012B48" font-family="'HelveticaNeueLTStd-ThIt'" font-size="321.3157px" letter-spacing="-1">paid off.</text>
 				<rect fill="none" width="3840" height="2149.45"/>
 			</g>
 		</g>
 		<g>
 			<g>
-				
-					<text transform="matrix(1 0 0 1 1168.3945 667.3359)" fill="#012B48" font-family="'HelveticaNeueLTStd-ThIt'" font-size="321.3157px" letter-spacing="-1">paid off.</text>
+				<text transform="matrix(1 0 0 1 737.9336 366.9648)" fill="#012B48" font-family="'HelveticaNeueLTStd-Bd'" font-size="148px">And those choices</text>
 				<rect fill="none" width="3840" height="2149.45"/>
 			</g>
 		</g>

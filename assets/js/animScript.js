@@ -278,7 +278,7 @@ const anim = function(){
                 .from(`${nameScene} .elLine`, { duration: 1, drawSVG: 0, ease: "sine.out", stagger: { each: 0.02, from: "end" } }, "qq+=1.5")
                 .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "sine.out", stagger: { each: 0.05, from: "end" } }, "qq+=1")
                 .duration(tweenDuration)
-                .from(`${nameScene} .contentScene`, { duration: tweenDuration, scale: scaleScene, transformOrigin: "50% 75%", ease: "none" }, 0)
+                .from(`${nameScene} .contentScene`, { duration: tweenDuration, scale: scaleScene, transformOrigin: "75% 50%", ease: "none" }, 0)
                 .to(`${nameScene} .rotationRight`, { duration: tweenDuration, rotation: 9, transformOrigin: "50% 50%", ease: "none" }, 0)
                 .to(`${nameScene} .rotationLeft`, { duration: tweenDuration, rotation: -9, transformOrigin: "50% 50%", ease: "none" }, 0)
 

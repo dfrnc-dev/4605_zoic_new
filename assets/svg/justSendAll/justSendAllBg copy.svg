@@ -8,13 +8,13 @@
 		<g>
 			<polygon display="none" fill="#FFFFFF" points="3736.89,2187.6 256.89,2187.6 256.89,2045.71 256.89,29.06 3736.89,29.06 			"/>
 			<g>
-				<polygon fill="#A4CD38" points="3687.9,620.83 3450.68,1786.36 3813.82,1727.27 				"/>
+				<polygon id="_x2D_.rotationRight-" fill="#A4CD38" points="3687.9,620.83 3450.68,1786.36 3813.82,1727.27 				"/>
 				<rect x="9.26" y="11.58" fill="none" width="3830.74" height="2148.42"/>
 			</g>
 		</g>
 		<g>
 			<g>
-				<polygon fill="#00C0F2" points="442.87,391 159.28,199.44 107.23,1159.67 				"/>
+				<polygon id="_x2D_.rotationLeft-" fill="#00C0F2" points="442.87,391 159.28,199.44 107.23,1159.67 				"/>
 				<rect x="9.26" y="11.58" fill="none" width="3830.74" height="2148.42"/>
 			</g>
 		</g>

@@ -23,6 +23,13 @@
 	<g id="_x2D_.moveElements-_1_">
 		<g>
 			<g>
+				
+					<text transform="matrix(1 0 0 1 592.5173 1593.2306)" fill="#012B48" font-family="'HelveticaNeueLTStd-Bd'" font-size="151.0856px" letter-spacing="-1">in rewards dollars earned.</text>
+				<rect y="-9.01" fill="none" width="3840" height="2174.61"/>
+			</g>
+		</g>
+		<g>
+			<g>
 				<g>
 					
 						<text transform="matrix(1 0 0 1 622.9768 1409.5983)" fill="#002C4F" font-family="'HelveticaNeueLTStd-ThIt'" font-size="336.497px" letter-spacing="-5">2455</text>
@@ -31,13 +38,6 @@
 					
 						<text transform="matrix(1 0 0 1 528.7833 1305.9302)" fill="#002C4F" font-family="'HelveticaNeueLTStd-Th'" font-size="177.1729px" letter-spacing="-3">$</text>
 				</g>
-				<rect y="-9.01" fill="none" width="3840" height="2174.61"/>
-			</g>
-		</g>
-		<g>
-			<g>
-				
-					<text transform="matrix(1 0 0 1 592.5173 1593.2306)" fill="#012B48" font-family="'HelveticaNeueLTStd-Bd'" font-size="151.0856px" letter-spacing="-1">in rewards dollars earned.</text>
 				<rect y="-9.01" fill="none" width="3840" height="2174.61"/>
 			</g>
 		</g>

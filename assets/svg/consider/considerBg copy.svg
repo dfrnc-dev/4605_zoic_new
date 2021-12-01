@@ -7,7 +7,8 @@
 	<g id="_x2D_.moveElements-">
 		<g>
 			<g>
-				<polygon opacity="0.59" fill="#00C0F2" points="3199.05,650.22 3247.38,1448.3 2908.21,1497.56 				"/>
+				<polygon id="_x2D_.rotationLeft-" opacity="0.59" fill="#00C0F2" points="3199.05,650.22 3247.38,1448.3 2908.21,1497.56 				
+					"/>
 				<rect x="-207.88" y="-9.51" fill="none" width="3687.88" height="2166.8"/>
 			</g>
 		</g>
@@ -19,7 +20,7 @@
 		</g>
 		<g>
 			<g>
-				<polygon opacity="0.59" fill="#012B48" points="112.84,57.56 34.28,802.61 353.54,195.93 				"/>
+				<polygon id="_x2D_.rotationRight-" opacity="0.59" fill="#012B48" points="112.84,57.56 34.28,802.61 353.54,195.93 				"/>
 				<rect x="-207.88" y="-9.51" fill="none" width="3687.88" height="2166.8"/>
 			</g>
 		</g>

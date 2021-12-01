@@ -13,13 +13,13 @@
 		</g>
 		<g>
 			<g>
-				<polygon opacity="0.56" fill="#012B48" points="598.05,1188.88 -249.3,1188.88 91.96,1807.15 				"/>
+				<polygon id="_x2D_.rotationRight-" opacity="0.4" fill="#012B48" points="598.05,1188.88 -249.3,1188.88 91.96,1807.15 				"/>
 				<rect x="-5.43" y="-25.96" fill="none" width="3845.43" height="2185.96"/>
 			</g>
 		</g>
 		<g>
 			<g>
-				<polygon opacity="0.56" fill="#00C0F2" points="3888.14,184.4 3527.48,1482.95 3897.84,1802.57 				"/>
+				<polygon id="_x2D_.rotationLeft-" opacity="0.4" fill="#00C0F2" points="3888.14,184.4 3527.48,1482.95 3897.84,1802.57 				"/>
 				<rect x="-5.43" y="-25.96" fill="none" width="3845.43" height="2185.96"/>
 			</g>
 		</g>

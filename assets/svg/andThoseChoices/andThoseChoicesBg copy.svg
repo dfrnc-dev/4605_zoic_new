@@ -8,13 +8,14 @@
 	<g id="_x2D_.moveElements-">
 		<g>
 			<g>
-				<polygon opacity="0.6" fill="#00C0F2" points="558.28,130.56 204.37,-111.74 204.37,1254.6 				"/>
+				<polygon id="_x2D_.rotationRight-" opacity="0.6" fill="#00C0F2" points="558.28,130.56 204.37,-111.74 204.37,1254.6 				"/>
 				<rect x="-5.43" y="-25.96" fill="none" width="3859.51" height="2188.66"/>
 			</g>
 		</g>
 		<g>
 			<g>
-				<polygon opacity="0.6" fill="#A4CD38" points="3784.08,920.36 3370.21,1955.67 3917.67,2051.74 				"/>
+				<polygon id="_x2D_.rotationLeft-" opacity="0.6" fill="#A4CD38" points="3784.08,920.36 3370.21,1955.67 3917.67,2051.74 				
+					"/>
 				<rect x="-5.43" y="-25.96" fill="none" width="3859.51" height="2188.66"/>
 			</g>
 		</g>

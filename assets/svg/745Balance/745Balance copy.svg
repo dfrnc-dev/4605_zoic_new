@@ -21,19 +21,21 @@
 	<g id="_x2D_.moveElements-_1_">
 		<g>
 			<g>
-				<polygon opacity="0.32" fill="#00C0F2" points="2745.85,861.09 3306.53,1421.77 3726.28,1176.66 				"/>
+				<polygon id="_x2D_.rotationRight-_1_" opacity="0.32" fill="#00C0F2" points="2745.85,861.09 3306.53,1421.77 3726.28,1176.66 
+									"/>
 				<rect fill="none" width="3840" height="2148.64"/>
 			</g>
 		</g>
 		<g>
 			<g>
-				<polygon opacity="0.32" fill="#00C0F2" points="1615.3,1014.28 1673.51,1326.79 1845.09,1397.26 				"/>
+				<polygon id="_x2D_.rotationLeft-_1_" opacity="0.32" fill="#00C0F2" points="1615.3,1014.28 1673.51,1326.79 1845.09,1397.26 
+									"/>
 				<rect fill="none" width="3840" height="2148.64"/>
 			</g>
 		</g>
 		<g>
 			<g>
-				<polygon opacity="0.32" fill="#00C0F2" points="929,1492.23 552.15,2252.06 1272.15,1366.62 				"/>
+				<polygon id="_x2D_.rotationRight-" opacity="0.32" fill="#00C0F2" points="929,1492.23 552.15,2252.06 1272.15,1366.62 				"/>
 				<rect fill="none" width="3840" height="2148.64"/>
 			</g>
 		</g>
@@ -48,7 +50,7 @@
 		<g>
 			<g>
 				<g>
-					<polygon opacity="0.6" fill="#A4CD38" points="1361,52.23 956.57,1247.13 374.45,269.77 					"/>
+					<polygon id="_x2D_.rotationLeft-" opacity="0.4" fill="#A4CD38" points="1361,52.23 956.57,1247.13 374.45,269.77 					"/>
 					<rect fill="none" width="3840" height="2148.64"/>
 				</g>
 				<g>

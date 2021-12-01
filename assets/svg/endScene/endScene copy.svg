@@ -411,7 +411,7 @@
 						<text transform="matrix(1 0 0 1 1223.8286 1755.4958)" fill="#012B48" font-family="'HelveticaNeueLTStd-Th'" font-size="44px">ved.</text>
 				</g>
 				
-					<image overflow="visible" width="1585" height="837" id="endScene-plus" xlink:href="assets/img/TestProducts2/plus.png"  transform="matrix(0.7534 0 0 0.7534 1322.9032 764.6877)">
+					<image overflow="visible" width="1585" height="837" id="endScene-plus" xlink:href="assets/img/TestProducts2/plus.png"  transform="matrix(0.9936 0 0 0.9936 1132.5532 664.1685)">
 				</image>
 				<rect x="-1.39" y="-45.08" fill="none" width="3842.78" height="2165.72"/>
 			</g>

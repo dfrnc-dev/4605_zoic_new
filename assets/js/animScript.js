@@ -179,6 +179,8 @@ const anim = function(){
                 .from(`${nameScene} .moveElements > *`,{duration: 1.2, scale:0.5,autoAlpha:0,transformOrigin:"50% 50%",ease:"sine.inOut",stagger:{each:0.2,from:"end"}},"qq")
                 .from(`${nameScene} .lineBG > * > *`, { duration: 1, drawSVG: 0, ease: "power1.out", stagger: { each: 0.01, from: "end" } }, "qq+=0.2")
                 .from(`${nameScene} .contentScene`, { duration: tweenDuration, scale: scaleScene,  transformOrigin: "50% 50%", ease: "none" }, 0)
+                .to(`${nameScene} .rotationRight`, { duration: tweenDuration, rotation: 9, transformOrigin: "50% 50%", ease: "none" }, 0)
+                .to(`${nameScene} .rotationLeft`, { duration: tweenDuration, rotation: -9, transformOrigin: "50% 50%", ease: "none" }, 0)
                 .from(`${nameScene} .elLine`, { duration: 1, drawSVG: 0, ease: "power4.out", stagger: { each: 0.02, from: "end" } }, "qq+=1")
                 .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "power4.out", stagger: { each: 0.05, from: "end" } }, "qq+=1.5")
                 .duration(tweenDuration)
@@ -201,6 +203,8 @@ const anim = function(){
                 .from(`${nameScene} .moveElements > *`, { duration: 1.2, scale: 2, autoAlpha: 0, transformOrigin: "50% 50%", ease: "sine.inOut", stagger: { each: 0.2, from: "end" } }, "qq")
                 .from(`${nameScene} .lineBG > * > *`, { duration: 1, drawSVG: 0, ease: "power1.out", stagger: { each: 0.01, from: "end" } }, "qq+=0.2")
                 .from(`${nameScene} .contentScene`, { duration: tweenDuration, scale: scaleScene, transformOrigin: "50% 50%", ease: "none" }, 0)
+                .to(`${nameScene} .rotationRight`, { duration: tweenDuration, rotation: 9, transformOrigin: "50% 50%", ease: "none" }, 0)
+                .to(`${nameScene} .rotationLeft`, { duration: tweenDuration, rotation: -9, transformOrigin: "50% 50%", ease: "none" }, 0)
                 .from(`${nameScene} .elLine`, { duration: 1, drawSVG: 0, ease: "power4.out", stagger: { each: 0.02, from: "end" } }, "qq+=1")
                 .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "power4.out", stagger: { each: 0.05, from: "end" } }, "qq+=1.5")
                 .duration(tweenDuration)
@@ -227,6 +231,8 @@ const anim = function(){
                 .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "sine.out", stagger: { each: 0.05, from: "end" } }, "qq+=1")
                 .duration(tweenDuration)
                 .from(`${nameScene} .contentScene`, { duration: tweenDuration, scale: scaleScene, transformOrigin: "50% 25%", ease: "none" }, 0)
+                .to(`${nameScene} .rotationRight`, { duration: tweenDuration, rotation: 9, transformOrigin: "50% 50%", ease: "none" }, 0)
+                .to(`${nameScene} .rotationLeft`, { duration: tweenDuration, rotation: -9, transformOrigin: "50% 50%", ease: "none" }, 0)
         }
 
         if (typeAnimation == 'translate-up-out') {
@@ -245,10 +251,12 @@ const anim = function(){
                 .to(".main_animation_container", { duration: 1, background: temBgColor, ease: "sine.inOut" }, "qq")
                 .from(`${nameScene} .moveElements > *`, { duration: 1,  autoAlpha: 0, y: "-100%", ease: "sine.out", stagger: { each: 0.05, from: "end" } }, "qq")
                 .from(`${nameScene} .lineBG > * > *`, { duration: 1, drawSVG: 0, ease: "sine.inOut", stagger: { each: 0.2, from: "end" } }, "qq+=1")
-                .from(`${nameScene} .elLine`, { duration: 1, drawSVG: 0, ease: "sine.out", stagger: { each: 0.02, from: "end" } }, "qq+=1.5")
+                .from(`${nameScene} .elLine`, { duration: 1, drawSVG: 0, ease: "sine.out", stagger: { each: 0.05, from: "end" } }, "qq+=1.5")
                 .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "sine.out", stagger: { each: 0.05, from: "end" } }, "qq+=1")
                 .duration(tweenDuration)
                 .to(`${nameScene} .contentScene`, { duration: tweenDuration, scale: scaleScene,  transformOrigin: "50% 75%", ease: "none" },0)
+                .to(`${nameScene} .rotationRight`, { duration: tweenDuration, rotation: 9, transformOrigin: "50% 50%", ease: "none" }, 0)
+                .to(`${nameScene} .rotationLeft`, { duration: tweenDuration, rotation: -9, transformOrigin: "50% 50%", ease: "none" }, 0)
 
         }
 
@@ -271,6 +279,8 @@ const anim = function(){
                 .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "sine.out", stagger: { each: 0.05, from: "end" } }, "qq+=1")
                 .duration(tweenDuration)
                 .from(`${nameScene} .contentScene`, { duration: tweenDuration, scale: scaleScene, transformOrigin: "50% 75%", ease: "none" }, 0)
+                .to(`${nameScene} .rotationRight`, { duration: tweenDuration, rotation: 9, transformOrigin: "50% 50%", ease: "none" }, 0)
+                .to(`${nameScene} .rotationLeft`, { duration: tweenDuration, rotation: -9, transformOrigin: "50% 50%", ease: "none" }, 0)
 
         }
 
@@ -294,6 +304,8 @@ const anim = function(){
                 .from(`${nameScene} .elCircle`, { duration: 1, scale: 0, transformOrigin: "50% 50%", ease: "sine.out", stagger: { each: 0.05, from: "end" } }, "qq+=1")
                 .duration(tweenDuration)
                 .from(`${nameScene} .contentScene`, { duration: tweenDuration, scale: scaleScene, transformOrigin: "25% 50%", ease: "none" }, 0)
+                .to(`${nameScene} .rotationRight`, { duration: tweenDuration, rotation: 9, transformOrigin: "50% 50%", ease: "none" }, 0)
+                .to(`${nameScene} .rotationLeft`, { duration: tweenDuration, rotation: -9, transformOrigin: "50% 50%", ease: "none" }, 0)
 
 
         }
@@ -340,7 +352,7 @@ const anim = function(){
                     .add(animationScene('.secAnim-triangles', 'scale-up-out', 1, 0.9).restart(), '>')
 
                     .add(animationScene('.secAnim-andThoseChoices', 'scale-up-in', 5, 0.9).restart(), `<`)
-                    .add(animationScene('.secAnim-andThoseChoices', 'translate-up-out', 2, 0.9).restart(), '>')
+                    .add(animationScene('.secAnim-andThoseChoices', 'translate-up-out', 4, 0.9).restart(), '>')
 
                     .add(animationScene('.secAnim-2455inRewards', 'translate-up-in', 3.7, 0.9).restart(), `<+0.2`)
                     .add(animationScene('.secAnim-2455inRewards', 'translate-right-out', 1.5, 0.9).restart(), '>')
@@ -372,8 +384,9 @@ const anim = function(){
                     .add(animationScene('.secAnim-thankYouAnd', 'scale-up-in', 4.5, 0.9).restart(), `<`)
                     .add(animationScene('.secAnim-thankYouAnd', 'scale-up-out', 1, 0.9).restart(), '>')
 
-                    .add(animationScene('.secAnim-endScene', 'scale-up-in', 11, 0.8).restart(), `<`)
-                    .to('#endScene-plus', { duration: 0.5, opacity: 0}, '<+4')
+                    .add(animationScene('.secAnim-endScene', 'scale-up-in', 12, 0.8).restart(), `<`)
+                    .from('#endScene-plus', { duration: 0.5, opacity: 0 }, '<+1')
+                    .to('#endScene-plus', { duration: 0.5, opacity: 0}, '<+5')
                     .to('#endScene-text', { duration: 0.5, opacity: 1 }, '>')
                     .add(animationScene('.secAnim-endScene', 'scale-up-out', 1, 0.8).restart(), '>+6')
 
@@ -453,7 +466,7 @@ const anim = function(){
                     .add(animationScene('.secAnim-triangles', 'scale-up-out', 1, 0.9).restart(), '>')
 
                     .add(animationScene('.secAnim-andThoseChoices', 'scale-up-in', 5, 0.9).restart(), `<`)
-                    .add(animationScene('.secAnim-andThoseChoices', 'translate-up-out', 2, 0.9).restart(), '>')
+                    .add(animationScene('.secAnim-andThoseChoices', 'translate-up-out', 4, 0.9).restart(), '>')
 
                     .add(animationScene('.secAnim-1250inRewards', 'translate-up-in', 3.7, 0.9).restart(), `<+0.2`)
                     .add(animationScene('.secAnim-1250inRewards', 'scale-down-out', 1.5, 0.9).restart(), '>')
@@ -479,8 +492,9 @@ const anim = function(){
                     .add(animationScene('.secAnim-thankYouAnd', 'scale-up-in', 4.5, 0.9).restart(), `<`)
                     .add(animationScene('.secAnim-thankYouAnd', 'scale-up-out', 1, 0.9).restart(), '>')
 
-                    .add(animationScene('.secAnim-endScene', 'scale-up-in', 11, 0.8).restart(), `<`)
-                    .to('#endScene-plus', { duration: 0.5, opacity: 0 }, '<+4')
+                    .add(animationScene('.secAnim-endScene', 'scale-up-in', 12, 0.8).restart(), `<`)
+                    .from('#endScene-plus', { duration: 0.5, opacity: 0 }, '<+1')
+                    .to('#endScene-plus', { duration: 0.5, opacity: 0 }, '<+5')
                     .to('#endScene-text', { duration: 0.5, opacity: 1 }, '>')
                     .add(animationScene('.secAnim-endScene', 'scale-up-out', 1, 0.8).restart(), '>+6')
 

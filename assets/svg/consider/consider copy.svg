@@ -19,19 +19,6 @@
 	<g id="_x2D_.moveElements-">
 		<g>
 			<g>
-				<text transform="matrix(1 0 0 1 1308.38 1911.3523)" fill="#012B48" font-family="'HelveticaNeueLTStd-Hv'" font-size="85px">while combating weed resistance tomorrow.</text>
-				<rect fill="none" width="3480" height="2160"/>
-			</g>
-		</g>
-		<g>
-			<g>
-				
-					<text transform="matrix(1 0 0 1 971.562 1762.1349)" fill="#012B48" font-family="'HelveticaNeueLTStd-ThIt'" font-size="256px" letter-spacing="-6"> Controls weeds today</text>
-				<rect fill="none" width="3480" height="2160"/>
-			</g>
-		</g>
-		<g>
-			<g>
 				<path fill="none" stroke="#012B48" stroke-width="1.2333" stroke-miterlimit="10" d="M2209.23,1333.78H827.69
 					c-25.73,0-46.59-20.86-46.59-46.59V602.84c0-25.73,20.86-46.59,46.59-46.59h1381.54c25.73,0,46.59,20.86,46.59,46.59v684.35
 					C2255.82,1312.92,2234.96,1333.78,2209.23,1333.78z"/>
@@ -477,6 +464,19 @@
 						<image overflow="visible" width="887" height="657" xlink:href="../../img/TestProducts2/asgrow.png"  transform="matrix(0.6589 0 0 0.6589 1236.3236 732.0813)">
 					</image>
 				</g>
+				<rect fill="none" width="3480" height="2160"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<text transform="matrix(1 0 0 1 1308.38 1911.3523)" fill="#012B48" font-family="'HelveticaNeueLTStd-Hv'" font-size="85px">while combating weed resistance tomorrow.</text>
+				<rect fill="none" width="3480" height="2160"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<text transform="matrix(1 0 0 1 971.562 1762.1349)" fill="#012B48" font-family="'HelveticaNeueLTStd-ThIt'" font-size="256px" letter-spacing="-6"> Controls weeds today</text>
 				<rect fill="none" width="3480" height="2160"/>
 			</g>
 		</g>

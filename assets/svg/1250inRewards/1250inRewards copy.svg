@@ -4,35 +4,6 @@
 	 x="0px" y="0px" width="3840px" height="2165.6px" viewBox="0 0 3840 2165.6" enable-background="new 0 0 3840 2165.6"
 	 xml:space="preserve">
 <g id="_x2D_.contentScene-">
-	<g id="_x2D_.moveElements-_1_">
-		<g>
-			<g>
-				
-					<text transform="matrix(1 0 0 1 593.996 1593.2311)" fill="#012B48" font-family="'HelveticaNeueLTStd-Bd'" font-size="151.0856px" letter-spacing="-1">in rewards didn’t reach the $1500 minimum</text>
-				<rect y="-9.01" fill="none" width="3840" height="2174.61"/>
-			</g>
-		</g>
-		<g>
-			<g>
-				<g>
-					
-						<text transform="matrix(1 0 0 1 674.4556 1409.5988)" fill="#002C4F" font-family="'HelveticaNeueLTStd-ThIt'" font-size="336.497px" letter-spacing="-5">1250</text>
-				</g>
-				<g>
-					
-						<text transform="matrix(1 0 0 1 580.262 1305.9307)" fill="#002C4F" font-family="'HelveticaNeueLTStd-Th'" font-size="177.1729px" letter-spacing="-3">$</text>
-				</g>
-				<rect y="-9.01" fill="none" width="3840" height="2174.61"/>
-			</g>
-		</g>
-		<g>
-			<g>
-				
-					<text transform="matrix(1 0 0 1 590.2555 1072.704)" fill="#012B48" font-family="'HelveticaNeueLTStd-Bd'" font-size="151.0856px" letter-spacing="-1">While your </text>
-				<rect y="-9.01" fill="none" width="3840" height="2174.61"/>
-			</g>
-		</g>
-	</g>
 	<g id="_x2D_.moveElements-">
 		<g>
 			<g>
@@ -493,6 +464,35 @@
 				<line fill="none" stroke="#08274B" stroke-miterlimit="10" x1="2514.85" y1="645.08" x2="2675.39" y2="830.61"/>
 				<circle id="_x2D_.elCircle-_16_" fill="none" stroke="#08274B" stroke-miterlimit="10" cx="2139.98" cy="558.57" r="42.78"/>
 				<circle id="_x2D_.elCircle-_17_" fill="none" stroke="#08274B" stroke-miterlimit="10" cx="1964.35" cy="290.21" r="42.78"/>
+				<rect y="-9.01" fill="none" width="3840" height="2174.61"/>
+			</g>
+		</g>
+	</g>
+	<g id="_x2D_.moveElements-_1_">
+		<g>
+			<g>
+				
+					<text transform="matrix(1 0 0 1 593.996 1593.2311)" fill="#012B48" font-family="'HelveticaNeueLTStd-Bd'" font-size="151.0856px" letter-spacing="-1">in rewards didn’t reach the $1500 minimum</text>
+				<rect y="-9.01" fill="none" width="3840" height="2174.61"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				<g>
+					
+						<text transform="matrix(1 0 0 1 674.4556 1409.5988)" fill="#002C4F" font-family="'HelveticaNeueLTStd-ThIt'" font-size="336.497px" letter-spacing="-5">1250</text>
+				</g>
+				<g>
+					
+						<text transform="matrix(1 0 0 1 580.262 1305.9307)" fill="#002C4F" font-family="'HelveticaNeueLTStd-Th'" font-size="177.1729px" letter-spacing="-3">$</text>
+				</g>
+				<rect y="-9.01" fill="none" width="3840" height="2174.61"/>
+			</g>
+		</g>
+		<g>
+			<g>
+				
+					<text transform="matrix(1 0 0 1 590.2555 1072.704)" fill="#012B48" font-family="'HelveticaNeueLTStd-Bd'" font-size="151.0856px" letter-spacing="-1">While your </text>
 				<rect y="-9.01" fill="none" width="3840" height="2174.61"/>
 			</g>
 		</g>
